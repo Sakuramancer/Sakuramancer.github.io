@@ -1,0 +1,10 @@
+.item {
+  display: inline-block;
+  margin: 4px;
+}
+
+.title {
+  color: #3f3f3f;
+  padding: 4px;
+  text-align: center;
+}

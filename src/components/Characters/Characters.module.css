@@ -1,0 +1,12 @@
+.characters {
+  margin: auto;
+  margin-top: -15rem;
+  text-align: center;
+  position: relative;
+}
+
+.characters ul {
+  list-style: none;
+  margin-top: 0;
+  padding: 0;
+}
