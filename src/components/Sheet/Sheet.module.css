@@ -1,0 +1,163 @@
+.avatar {
+  display: block;
+  margin: 10px;
+  margin-top: -15rem;
+  padding: 0rem;
+  border: 1px #3f3f3f solid;
+  border-radius: 8px;
+  background-color: #FFFEF5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+  width: 38%;
+  max-width: 212px;
+  position: relative;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  padding: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.classList {
+  display: block;
+}
+
+.class {
+  display: inline-block;
+  margin: 8px;
+  padding: 4px 14px;
+  border-radius: 16px;
+  width: 45%;
+  max-width: 200px;
+  background-color: #EF5350;
+  color: #FAFAFA;
+  font-size: 1.2rem;
+}
+
+.class_name {
+  margin: 4px;
+}
+
+.class_value {
+  margin: 4px;
+}
+
+.abilities {
+  display: block;
+}
+
+.ability {
+  display: inline-block;
+  background-color: #FFFEF5;
+  margin: 8px;
+  padding: 8px;
+  border: 1px #3f3f3f solid;
+  border-radius: 8px;
+}  
+
+.ability_abbr {
+}  
+
+.ability_value {
+  font-size: 1.2rem;
+}  
+
+.ability_mod {
+  font-size: 1.6rem;
+}  
+
+.tag {
+  display: inline-block;
+  margin: 4px;
+  padding: 2px 14px;
+  border-radius: 16px;
+}
+
+.tag span {
+  margin: 0 4px;
+}
+
+.tag_value {
+  font-size: 1.2rem;
+}  
+
+.hitpoints {
+  background-color: #EF5350;
+  color: #FAFAFA;
+}
+
+.hitdices {
+  background-color: #F57C00;
+  color: #FAFAFA;
+}
+
+.initiative {
+  background-color: #388E3C;
+  color: #FAFAFA;
+}
+
+.armor {
+  background-color: #455A64;
+  color: #FAFAFA;
+}
+
+.proficiency {
+  background-color: #303F9F;
+  color: #FAFAFA;
+}
+
+.speed {
+  background-color: #8BC34A;
+  color: #000000;
+}
+
+.size {
+  background-color: #CE93D8;
+  color: #000000;
+}
+
+.skills {
+
+}
+
+.passives {
+
+}
+
+.passive {
+
+}
+
+.passive_name {
+
+}
+
+.passive_value {
+
+}
+
+.languages {
+
+}
+
+.tools {
+
+}
+
+.advantages {
+  
+}
+
+.disadvantages {
+
+}
+
+.resistances {
+
+}

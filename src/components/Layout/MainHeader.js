@@ -1,10 +1,15 @@
+import { NavLink } from "react-router-dom";
 import classes from './MainHeader.module.css';
 
 const MainHeader = (props) => {
   return (
     <header className={classes.header}>
-      <h1 className={classes.desktop}>Кампания из Эвенглена</h1>
-      <h1 className={classes.mobile}>КиЭ</h1>
+      <NavLink to="/" className={classes.mobile}>
+        <h1>КиЭ</h1>
+        </NavLink>
+      <NavLink to="/" className={classes.desktop}>
+        <h1>Кампания из Эвенглена</h1>
+      </NavLink>
       <nav>
         <ul>
         </ul>
