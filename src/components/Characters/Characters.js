@@ -1,37 +1,28 @@
 import Character from "./Character";
 import classes from "./Characters.module.css";
-
-import andrakasImage from "../../assets/characters/Andrakas h300.png";
-import placeholderImage from "../../assets/characters/Placeholder h300.png";
-import selenaImage from "../../assets/characters/Selena h300.png";
-import undaaratelImage from "../../assets/characters/Unda'aratel h300.png";
+import { assets } from "../UI/Assets"
 
 const Characters = (props) => {
   const items = [
     {
-      src: andrakasImage,
+      id: "andrakas",
       title: "Андракас",
-      alt: "D&D Halfling Fighter/Rogue/Bearstander by Brendon Chang @bchangart"
     },
     {
-      src: placeholderImage,
+      id: "talisin",
       title: "Талисин",
-      alt: "The Last Spark by Eleonor Piteira @eleonorpiteira"
     },
     {
-      src: placeholderImage,
+      id: "efelamon",
       title: "Эфеламон",
-      alt: "The Last Spark by Eleonor Piteira @eleonorpiteira"
     },
     {
-      src: selenaImage,
+      id: "selena",
       title: "Селена",
-      alt: "Enchantress by Lauren Walsh @laurenwalshart"
     },
     {
-      src: undaaratelImage,
+      id: "undaaratel",
       title: "Унда'аратель",
-      alt: "Shadar-Kai Scythemage by SirHancelot"
     },
   ]
   
@@ -41,10 +32,10 @@ const Characters = (props) => {
       {items.map((item, index) => (
         <Character
           key={index}
-          id={index}
+          id={item.id}
           title={item.title}
-          img={item.src}
-          alt={item.alt}
+          img={assets[item.id].path}
+          alt={assets[item.id].alt}
         />
       ))}
       </ul>

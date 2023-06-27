@@ -1,4 +1,38 @@
 .layout {
   text-align: center;
-  padding: 0 5px;
+  padding: 0 10px;
+  margin: auto;
+  margin-top: -15rem;
+  max-width: 1000px;
+}
+
+.backgroundMap {
+  width: 100%;
+  height: 25rem;
+  background: url("./../../assets/map.png") no-repeat;
+  background-size: cover;
+  background-position: left 55% top 100%;
+}
+
+.scrollUp {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  top: 88vh;
+  left: 85vw;
+  background-color: #FFF59D;
+  opacity: 0.9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  text-align: center;
+  font-size: 2rem;
+  color: #B82500;
+  cursor: pointer;
+}
+
+.scrollUp img {
+  margin: 10px;
+  width: 25px;
+  color:#B82500;
+  opacity: 0.9;
 }

@@ -1,0 +1,546 @@
+{
+  "andrakas": {
+    "name": "Андракас",
+    "origin": "Полурослик коренастый",
+    "classes": [
+      {
+        "name": "Воин",
+        "archetype": "Мастер боевых искусств",
+        "value": 7,
+        "style": {"backgroundColor": "#8D6E63"}
+      },
+      {
+        "name": "Колдун",
+        "archetype": "Ведьмовской клинок",
+        "value": 3,
+        "style": {"backgroundColor": "#AB47BC"}
+      }
+    ],
+    "abilities": [
+      {
+        "abbr": "СИЛ",
+        "value": 13,
+        "mod": "+1",
+        "save": "+5"
+      },
+      {
+        "abbr": "ЛОВ",
+        "value": 18,
+        "mod": "+4",
+        "save": "+4"
+      },
+      {
+        "abbr": "ТЕЛ",
+        "value": 14,
+        "mod": "+2",
+        "save": "+6"
+      },
+      {
+        "abbr": "ИНТ",
+        "value": 8,
+        "mod": "-1",
+        "save": "-1"
+      },
+      {
+        "abbr": "МДР",
+        "value": 11,
+        "mod": "+0",
+        "save": "+0"
+      },
+      {
+        "abbr": "ХАР",
+        "value": 14,
+        "mod": "+2",
+        "save": "+2"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Атлетика",
+        "value": "+5"
+      },
+      {
+        "name": "Скрытность",
+        "value": "+8"
+      },
+      {
+        "name": "Внимательность",
+        "value": "+4"
+      },
+      {
+        "name": "Проницательность",
+        "value": "+4"
+      },
+      {
+        "name": "Уход за животными",
+        "value": "+6"
+      }
+    ],
+    "hitpoints": 81,
+    "hitdices": "7d10 + 3d8",
+    "armor": 18,
+    "initiative": "+4",
+    "proficiency": "+4",
+    "speed": 25,
+    "size": "Маленький",
+    "spellSlots": "2 (2 уровень)",
+    "spellLevel": 2,
+    "passives": [
+      {
+        "name": "Анализ",
+        "value": 9
+      },
+      {
+        "name": "Внимательность",
+        "value": 14
+      },
+      {
+        "name": "Проницательность",
+        "value": 14
+      }
+    ],
+    "languages": [
+      "Общий", "Полуросликов", "Гоблинский"
+    ],
+    "tools": [
+      "Кузнец", "Алхимик", "Верховая езда"
+    ],
+    "senses": [
+      "Темное зрение 120 ф."
+    ],
+    "resistances": [
+      "Яд"
+    ],
+    "advantages": [
+      "против испуга",
+      "против яда"
+    ],
+    "disadvantages": [
+      "Скрытность в доспехах"
+    ]
+  },
+  "talisin": {
+    "name": "Талисин",
+    "origin": "Полуэльф",
+    "classes": [
+      {
+        "name": "Жрец",
+        "archetype": "Домен знания",
+        "value": 8,
+        "style": {"backgroundColor": "#FDD835", "color": "#000000"}
+      },
+      {
+        "name": "Друид",
+        "archetype": "Круг звезд",
+        "value": 2,
+        "style": {"backgroundColor": "#4CAF50"}
+      }
+    ],
+    "abilities": [
+      {
+        "abbr": "СИЛ",
+        "value": 8,
+        "mod": "-1",
+        "save": "-1"
+      },
+      {
+        "abbr": "ЛОВ",
+        "value": 16,
+        "mod": "+3",
+        "save": "+3"
+      },
+      {
+        "abbr": "ТЕЛ",
+        "value": 10,
+        "mod": "+0",
+        "save": "+0"
+      },
+      {
+        "abbr": "ИНТ",
+        "value": 12,
+        "mod": "+1",
+        "save": "+1"
+      },
+      {
+        "abbr": "МДР",
+        "value": 20,
+        "mod": "+5",
+        "save": "+9"
+      },
+      {
+        "abbr": "ХАР",
+        "value": 12,
+        "mod": "+1",
+        "save": "+5"
+      }
+    ],
+    "skills": [
+    ],
+    "hitpoints": 53,
+    "hitdices": "10d8",
+    "armor": 18,
+    "initiative": "+3",
+    "proficiency": "+4",
+    "speed": 30,
+    "size": "Средний",
+    "spellSlots": "4 + 3 + 3 + 3 + 2",
+    "spellLevel": 4,
+    "passives": [
+      {
+        "name": "Анализ",
+        "value": 11
+      },
+      {
+        "name": "Внимательность",
+        "value": 19
+      },
+      {
+        "name": "Проницательность",
+        "value": 19
+      }
+    ],
+    "languages": [
+      "Общий", "Первичный", "Драконий", "Эльфийский",
+      "Сильван", "Бездны", "Небесный", "Друидический"
+    ],
+    "tools": [
+      "Навигатор", "Вор"
+    ],
+    "senses": [
+      "Темное зрение 60 ф."
+    ],
+    "resistances": [
+    ],
+    "advantages": [
+      "против очарования",
+      "невозможно магически усыпить"
+    ],
+    "disadvantages": [
+    ]
+  },
+  "efelamon": {
+    "name": "Эфеламон",
+    "origin": "Тифлинг",
+    "classes": [
+      {
+        "name": "Волшебник",
+        "archetype": "Школа некромантии",
+        "value": 6,
+        "style": {"backgroundColor": "#1976D2"}
+      },
+      {
+        "name": "Чародей",
+        "archetype": "Наследие драконьей крови",
+        "value": 4,
+        "style": {"backgroundColor": "#D81B60"}
+      }
+    ],
+    "abilities": [
+      {
+        "abbr": "СИЛ",
+        "value": 8,
+        "mod": "-1",
+        "save": "-1"
+      },
+      {
+        "abbr": "ЛОВ",
+        "value": 10,
+        "mod": "+0",
+        "save": "+0"
+      },
+      {
+        "abbr": "ТЕЛ",
+        "value": 14,
+        "mod": "+2",
+        "save": "+2"
+      },
+      {
+        "abbr": "ИНТ",
+        "value": 18,
+        "mod": "+4",
+        "save": "+9"
+      },
+      {
+        "abbr": "МДР",
+        "value": 10,
+        "mod": "+0",
+        "save": "+4"
+      },
+      {
+        "abbr": "ХАР",
+        "value": 16,
+        "mod": "+3",
+        "save": "+3"
+      }
+    ],
+    "skills": [
+    ],
+    "hitpoints": 66,
+    "hitdices": "10d6",
+    "armor": 14,
+    "initiative": "+0",
+    "proficiency": "+4",
+    "speed": 30,
+    "size": "Средний",
+    "spellSlots": "4 + 3 + 3 + 3 + 2",
+    "spellLevel": 3,
+    "passives": [
+      {
+        "name": "Анализ",
+        "value": 14
+      },
+      {
+        "name": "Внимательность",
+        "value": 10
+      },
+      {
+        "name": "Проницательность",
+        "value": 14
+      }
+    ],
+    "languages": [
+      "Общий", "Первичный", "Драконий", "Эльфийский",
+      "Инфернальный"
+    ],
+    "tools": [
+    ],
+    "senses": [
+      "Темное зрение 60 ф."
+    ],
+    "resistances": [
+      "Огонь", "Силовое поле"
+    ],
+    "advantages": [
+    ],
+    "disadvantages": [
+    ]
+  },
+  "selena": {
+    "name": "Селена",
+    "origin": "Наследие фей",
+    "classes": [
+      {
+        "name": "Друид",
+        "archetype": "Круг пастыря",
+        "value": 10,
+        "style": {"backgroundColor": "#4CAF50"}
+      }
+    ],
+    "abilities": [
+      {
+        "abbr": "СИЛ",
+        "value": 8,
+        "mod": "-1",
+        "save": "-1"
+      },
+      {
+        "abbr": "ЛОВ",
+        "value": 14,
+        "mod": "+2",
+        "save": "+2"
+      },
+      {
+        "abbr": "ТЕЛ",
+        "value": 16,
+        "mod": "+3",
+        "save": "+3"
+      },
+      {
+        "abbr": "ИНТ",
+        "value": 10,
+        "mod": "+0",
+        "save": "+4"
+      },
+      {
+        "abbr": "МДР",
+        "value": 18,
+        "mod": "+4",
+        "save": "+8"
+      },
+      {
+        "abbr": "ХАР",
+        "value": 13,
+        "mod": "+1",
+        "save": "+1"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Скрытность",
+        "value": "+6"
+      },
+      {
+        "name": "Природа",
+        "value": "+4"
+      },
+      {
+        "name": "Внимательность",
+        "value": "+8"
+      },
+      {
+        "name": "Выживание",
+        "value": "+8"
+      },
+      {
+        "name": "Убеждение",
+        "value": "+5"
+      },
+      {
+        "name": "Уход за животными",
+        "value": "+8"
+      }
+    ],
+    "hitpoints": 83,
+    "hitdices": "10d8",
+    "armor": 19,
+    "initiative": "+2",
+    "proficiency": "+4",
+    "speed": 30,
+    "size": "Средний",
+    "spellSlots": "4 + 3 + 3 + 3 + 2",
+    "spellLevel": 5,
+    "passives": [
+      {
+        "name": "Анализ",
+        "value": 10
+      },
+      {
+        "name": "Внимательность",
+        "value": 18
+      },
+      {
+        "name": "Проницательность",
+        "value": 14
+      }
+    ],
+    "languages": [
+      "Общий", "Первичный", "Эльфийский", "Сильван",
+      "Друидический"
+    ],
+    "tools": [
+      "Травник", "Верховая езда"
+    ],
+    "senses": [
+      "Темное зрение 60 ф."
+    ],
+    "resistances": [
+      "Огонь", "Силовое поле"
+    ],
+    "advantages": [
+      "против очарования",
+      "невозможно магически усыпить",
+      "Сп концентрации"
+    ],
+    "disadvantages": [
+    ]
+  },
+  "undaaratel": {
+    "name": "Унда'аратель",
+    "origin": "Шадар-кай",
+    "classes": [
+      {
+        "name": "Паладин",
+        "archetype": "Клятва воронов",
+        "value": 8,
+        "style": {"backgroundColor": "#FFAB91", "color": "#000000" }
+      },
+      {
+        "name": "Воин",
+        "value": 2,
+        "style": {"backgroundColor": "#8D6E63"}
+      }
+    ],
+    "abilities": [
+      {
+        "abbr": "СИЛ",
+        "value": 8,
+        "mod": "-1",
+        "save": "+2"
+      },
+      {
+        "abbr": "ЛОВ",
+        "value": 18,
+        "mod": "+4",
+        "save": "+7"
+      },
+      {
+        "abbr": "ТЕЛ",
+        "value": 16,
+        "mod": "+3",
+        "save": "+6"
+      },
+      {
+        "abbr": "ИНТ",
+        "value": 8,
+        "mod": "-1",
+        "save": "+2"
+      },
+      {
+        "abbr": "МДР",
+        "value": 8,
+        "mod": "-1",
+        "save": "+6"
+      },
+      {
+        "abbr": "ХАР",
+        "value": 16,
+        "mod": "+3",
+        "save": "+10"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Внимательность",
+        "value": "+3"
+      },
+      {
+        "name": "Запугивание",
+        "value": "+7"
+      },
+      {
+        "name": "Убеждение",
+        "value": "+7"
+      }
+    ],
+    "hitpoints": 94,
+    "hitdices": "10d10",
+    "armor": 16,
+    "initiative": "+4",
+    "proficiency": "+4",
+    "speed": 30,
+    "size": "Средний",
+    "spellSlots": "4 + 3",
+    "spellLevel": 2,
+    "passives": [
+      {
+        "name": "Анализ",
+        "value": 9
+      },
+      {
+        "name": "Внимательность",
+        "value": 13
+      },
+      {
+        "name": "Проницательность",
+        "value": 9
+      }
+    ],
+    "languages": [
+      "Общий", "Эльфийский"
+    ],
+    "tools": [
+    ],
+    "senses": [
+      "Темное зрение 60 ф."
+    ],
+    "resistances": [
+      "Некротическая энергия", "Холод"
+    ],
+    "advantages": [
+      "против очарования",
+      "не может быть очарован, испуган и стать одержимым нежитью"
+    ],
+    "disadvantages": [
+    ]
+  }
+}

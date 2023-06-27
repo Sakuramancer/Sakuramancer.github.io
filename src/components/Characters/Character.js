@@ -6,7 +6,7 @@ const Character = (props) => {
 
   return (
     <li className={classes.card}>
-      <Link to="/sheet">
+      <Link to={`sheets/${id}`}>
         <img className={classes.image} src={img} alt={alt} />
         <div className={classes.title}>
           {title}

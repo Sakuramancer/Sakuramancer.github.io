@@ -1,109 +1,17 @@
-import { Fragment } from "react";
+import { Fragment, } from "react";
+import Error from "../UI/Error";
 import classes from "./Sheet.module.css"
-import andrakasImage from "../../assets/characters/Andrakas h300.png";
-
-const sheet = {
-  name: "Андракас",
-  classes: [
-    {
-      name: "Воин",
-      value: 7,
-      style: {backgroundColor: "#8D6E63"}
-    },
-    {
-      name: "Колдун",
-      value: 3,
-      style: {backgroundColor: "#AB47BC"}
-    },
-  ],
-  abilities: [
-    {
-      abbr: "СИЛ",
-      value: 13,
-      mod: "+1"
-    },
-    {
-      abbr: "ЛОВ",
-      value: 18,
-      mod: "+4"
-    },
-    {
-      abbr: "ТЕЛ",
-      value: 14,
-      mod: "+2"
-    },
-    {
-      abbr: "ИНТ",
-      value: 8,
-      mod: "-1"
-    },
-    {
-      abbr: "МДР",
-      value: 11,
-      mod: "+0"
-    },
-    {
-      abbr: "ХАР",
-      value: 14,
-      mod: "+2"
-    },
-  ],
-  skills: [
-    "Атлетика",
-    "Скрытность",
-    "Внимательность",
-    "Проницательность",
-    "Уход за животными",
-  ],
-  hitpoints: 81,
-  hitdices: "7d10 + 3d8",
-  armor: 18,
-  initiative: "+4",
-  proficiency: "+4",
-  speed: 25,
-  size: "Маленький",
-  passives: [
-    {
-      name: "Анализ",
-      value: 9,
-    },
-    {
-      name: "Внимательность",
-      value: 14,
-    },
-    {
-      name: "Проницательность",
-      value: 14,
-    },
-  ],
-  languages: [
-    "Общий", "Полуросликов", "Гоблинский"
-  ],
-  tools: [
-    "Кузнец", "Алхимик", "Верховая езда"
-  ],
-  senses: [
-    "Темное зрение 120 ф."
-  ],
-  resistanses: [
-    "Яд"
-  ],
-  advantages : [
-    "против испуга",
-    "против яда",
-  ],
-  disadvantages: [
-    "Скрытность в доспехах"
-  ]
-}
 
 const Sheet = (props) => {
+  const { sheet, asset } = props;
+  if (sheet === undefined || asset === undefined)
+    return <Error />
   return (
     <Fragment>
       <section className={classes.avatar}>
         <img className={classes.image}
-          src={andrakasImage}
-          alt={"D&D Halfling Fighter/Rogue/Bearstander by Brendon Chang @bchangart"}
+          src={asset.path}
+          alt={asset.alt}
         />
         <div className={classes.title}>{sheet.name}</div>
       </section>
@@ -115,6 +23,10 @@ const Sheet = (props) => {
           >
             <span className={classes.class_name}>{item.name}</span>
             <span className={classes.class_value}>{item.value}</span>
+            {item.archetype?.length &&
+              <span className={classes.class_archetype}>
+                {item.archetype}
+              </span>}
           </div>
         ))}
       </section>
@@ -123,64 +35,113 @@ const Sheet = (props) => {
           <div key={index} className={classes.ability}>
             <div className={classes.ability_abbr}>{item.abbr}</div>
             <div className={classes.ability_value}>{item.value}</div>
-            <div className={classes.ability_mod}>{item.mod}</div>
+            <div className={classes.ability_mod}>
+              <div className={classes.ability_mark}>м.</div>
+              {item.mod}
+            </div>
+            <div className={classes.ability_save}>
+              <div className={classes.ability_mark}>сп</div>
+              {item.save}
+            </div>
           </div>
         ))}
       </section>
-      <div className={[classes.tag, classes.hitpoints].join(" ")}>
-        <span>хиты</span>
-        <span className={classes.tag_value}>{sheet.hitpoints}</span>
-      </div>
-      <div className={[classes.tag, classes.hitdices].join(" ")}>
-        <span>кости хитов</span>
-        <span className={classes.tag_value}>{sheet.hitdices}</span>
-      </div>
-      <div className={[classes.tag, classes.initiative].join(" ")}>
-        <span>инициатива</span>
-        <span className={classes.tag_value}>{sheet.initiative}</span>
+      <section>
+        <div className={`${classes.tag} ${classes.hitpoints}`}>
+          <span>хиты</span>
+          <span className={classes.tag_value}>{sheet.hitpoints}</span>
         </div>
-      <div className={[classes.tag, classes.armor].join(" ")}>
-        <span>класс защиты</span>
-        <span className={classes.tag_value}>{sheet.armor}</span>
+        <div className={`${classes.tag} ${classes.hitdices}`}>
+          <span>кости хитов</span>
+          <span className={classes.tag_value}>{sheet.hitdices}</span>
         </div>
-      <div className={[classes.tag, classes.proficiency].join(" ")}>
-        <span>бонус мастерства</span>
-        <span className={classes.tag_value}>{sheet.proficiency}</span>
+        <div className={`${classes.tag} ${classes.initiative}`}>
+          <span>инициатива</span>
+          <span className={classes.tag_value}>{sheet.initiative}</span>
+          </div>
+        <div className={`${classes.tag} ${classes.armor}`}>
+          <span>класс защиты</span>
+          <span className={classes.tag_value}>{sheet.armor}</span>
+          </div>
+        <div className={`${classes.tag} ${classes.proficiency}`}>
+          <span>бонус мастерства</span>
+          <span className={classes.tag_value}>{sheet.proficiency}</span>
+        </div>
+        <div className={`${classes.tag} ${classes.speed}`}>
+          <span>скорость</span>
+          <span className={classes.tag_value}>{sheet.speed}</span>
+          <span>ф.</span>
+        </div>
+        <div className={`${classes.tag} ${classes.size}`}>
+          <span>размер</span>
+          <span className={classes.tag_value}>{sheet.size}</span>
+        </div>
+      </section>
+      <div className={`${classes.table} ${classes.skills}`}>
+        <div className={`${classes.table_header} ${classes.skills}`}>владение навыками</div>
+        {sheet.skills.map((item, index) => 
+          <div key={index} className={classes.table_item}>
+            <span>{item.name}</span>
+            <span className={classes.table_item_value}>{item.value}</span>
+          </div>)
+        }
       </div>
-      <div className={[classes.tag, classes.speed].join(" ")}>
-        <span>скорость</span>
-        <span className={classes.tag_value}>{sheet.speed}</span>
-        <span>ф.</span>
-      </div>
-      <div className={[classes.tag, classes.size].join(" ")}>
-        <span>размер</span>
-        <span className={classes.tag_value}>{sheet.size}</span>
-      </div>
-      <div className={classes.skills}>Владение навыками:
-        {sheet.skills.join(", ")}
-      </div>
-      <div className={classes.passives}>Пассивные
+      <div className={`${classes.table} ${classes.passives}`}>
+        <div className={`${classes.table_header} ${classes.passives}`}>пассивные навыки</div>
         {sheet.passives.map((item, index) => (
-          <div key={index} className={classes.passive}>
-            <div className={classes.passive_name}>{item.name}</div>
-            <div className={classes.passive_value}>{item.value}</div>
+          <div key={index} className={classes.table_item}>
+            <span>{item.name}</span>
+            <span className={classes.table_item_value}>{item.value}</span>
           </div>
         ))}
       </div>
-      <div className={classes.languages}>Языки:
-        {sheet.languages.join(", ")}
+      <div className={`${classes.table} ${classes.senses}`}>
+      <div className={`${classes.table_header} ${classes.senses}`}>чувства</div>
+        {sheet.senses.map((item, index) => (
+          <div key={index} className={classes.table_item}>
+            <span>{item}</span>
+          </div>
+        ))}
       </div>
-      <div className={classes.tools}>Инструменты и умения:
-        {sheet.tools.join(", ")}
+      <div className={`${classes.table} ${classes.resistances}`}>
+      <div className={`${classes.table_header} ${classes.resistances}`}>сопротивления</div>
+        {sheet.resistances.map((item, index) => (
+          <div key={index} className={classes.table_item}>
+            <span>{item}</span>
+          </div>
+        ))}
       </div>
-      <div className={classes.advantages}>Преимущества:
-        {sheet.advantages.join(", ")}
+      <div className={`${classes.table} ${classes.languages}`}>
+      <div className={`${classes.table_header} ${classes.languages}`}>языки</div>
+        {sheet.languages.map((item, index) => (
+          <div key={index} className={classes.table_item}>
+            <span>{item}</span>
+          </div>
+        ))}
       </div>
-      <div className={classes.disadvantages}>Помехи:
-        {sheet.disadvantages.join(", ")}
+      <div className={`${classes.table} ${classes.tools}`}>
+      <div className={`${classes.table_header} ${classes.tools}`}>инструменты</div>
+        {sheet.tools.map((item, index) => (
+          <div key={index} className={classes.table_item}>
+            <span>{item}</span>
+          </div>
+        ))}
       </div>
-      <div className={classes.resistanses}>Сопротивления к урону:
-        {sheet.resistanses.join(", ")}
+      <div className={`${classes.table} ${classes.advantages}`}>
+      <div className={`${classes.table_header} ${classes.advantages}`}>преимущества</div>
+        {sheet.advantages.map((item, index) => (
+          <div key={index} className={classes.table_item}>
+            <span>{item}</span>
+          </div>
+        ))}
+      </div>
+      <div className={`${classes.table} ${classes.disadvantages}`}>
+      <div className={`${classes.table_header} ${classes.disadvantages}`}>помехи</div>
+        {sheet.disadvantages.map((item, index) => (
+          <div key={index} className={classes.table_item}>
+            <span>{item}</span>
+          </div>
+        ))}
       </div>
     </Fragment>
   );
