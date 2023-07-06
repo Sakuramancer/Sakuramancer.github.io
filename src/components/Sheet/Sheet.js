@@ -1,32 +1,23 @@
-import { Fragment, } from "react";
 import Error from "../UI/Error";
-import classes from "./Sheet.module.css"
+import classes from "./Sheet.module.css";
 
 const Sheet = (props) => {
   const { sheet, asset } = props;
-  if (sheet === undefined || asset === undefined)
-    return <Error />
+  if (sheet === undefined || asset === undefined) return <Error />;
   return (
-    <Fragment>
+    <section className={classes.main}>
       <section className={classes.avatar}>
-        <img className={classes.image}
-          src={asset.path}
-          alt={asset.alt}
-        />
+        <img className={classes.image} src={asset.path} alt={asset.alt} />
         <div className={classes.title}>{sheet.name}</div>
       </section>
       <section className={classes.classList}>
         {sheet.classes.map((item, index) => (
-          <div key={index}
-            className={classes.class}
-            style={item.style}
-          >
+          <div key={index} className={classes.class} style={item.style}>
             <span className={classes.class_name}>{item.name}</span>
             <span className={classes.class_value}>{item.value}</span>
-            {item.archetype?.length &&
-              <span className={classes.class_archetype}>
-                {item.archetype}
-              </span>}
+            {item.archetype?.length && (
+              <span className={classes.class_archetype}>{item.archetype}</span>
+            )}
           </div>
         ))}
       </section>
@@ -58,11 +49,11 @@ const Sheet = (props) => {
         <div className={`${classes.tag} ${classes.initiative}`}>
           <span>инициатива</span>
           <span className={classes.tag_value}>{sheet.initiative}</span>
-          </div>
+        </div>
         <div className={`${classes.tag} ${classes.armor}`}>
           <span>класс защиты</span>
           <span className={classes.tag_value}>{sheet.armor}</span>
-          </div>
+        </div>
         <div className={`${classes.tag} ${classes.proficiency}`}>
           <span>бонус мастерства</span>
           <span className={classes.tag_value}>{sheet.proficiency}</span>
@@ -78,16 +69,20 @@ const Sheet = (props) => {
         </div>
       </section>
       <div className={`${classes.table} ${classes.skills}`}>
-        <div className={`${classes.table_header} ${classes.skills}`}>владение навыками</div>
-        {sheet.skills.map((item, index) => 
+        <div className={`${classes.table_header} ${classes.skills}`}>
+          владение навыками
+        </div>
+        {sheet.skills.map((item, index) => (
           <div key={index} className={classes.table_item}>
             <span>{item.name}</span>
             <span className={classes.table_item_value}>{item.value}</span>
-          </div>)
-        }
+          </div>
+        ))}
       </div>
       <div className={`${classes.table} ${classes.passives}`}>
-        <div className={`${classes.table_header} ${classes.passives}`}>пассивные навыки</div>
+        <div className={`${classes.table_header} ${classes.passives}`}>
+          пассивные навыки
+        </div>
         {sheet.passives.map((item, index) => (
           <div key={index} className={classes.table_item}>
             <span>{item.name}</span>
@@ -96,7 +91,9 @@ const Sheet = (props) => {
         ))}
       </div>
       <div className={`${classes.table} ${classes.senses}`}>
-      <div className={`${classes.table_header} ${classes.senses}`}>чувства</div>
+        <div className={`${classes.table_header} ${classes.senses}`}>
+          чувства
+        </div>
         {sheet.senses.map((item, index) => (
           <div key={index} className={classes.table_item}>
             <span>{item}</span>
@@ -104,7 +101,9 @@ const Sheet = (props) => {
         ))}
       </div>
       <div className={`${classes.table} ${classes.resistances}`}>
-      <div className={`${classes.table_header} ${classes.resistances}`}>сопротивления</div>
+        <div className={`${classes.table_header} ${classes.resistances}`}>
+          сопротивления
+        </div>
         {sheet.resistances.map((item, index) => (
           <div key={index} className={classes.table_item}>
             <span>{item}</span>
@@ -112,7 +111,9 @@ const Sheet = (props) => {
         ))}
       </div>
       <div className={`${classes.table} ${classes.languages}`}>
-      <div className={`${classes.table_header} ${classes.languages}`}>языки</div>
+        <div className={`${classes.table_header} ${classes.languages}`}>
+          языки
+        </div>
         {sheet.languages.map((item, index) => (
           <div key={index} className={classes.table_item}>
             <span>{item}</span>
@@ -120,7 +121,9 @@ const Sheet = (props) => {
         ))}
       </div>
       <div className={`${classes.table} ${classes.tools}`}>
-      <div className={`${classes.table_header} ${classes.tools}`}>инструменты</div>
+        <div className={`${classes.table_header} ${classes.tools}`}>
+          инструменты
+        </div>
         {sheet.tools.map((item, index) => (
           <div key={index} className={classes.table_item}>
             <span>{item}</span>
@@ -128,7 +131,9 @@ const Sheet = (props) => {
         ))}
       </div>
       <div className={`${classes.table} ${classes.advantages}`}>
-      <div className={`${classes.table_header} ${classes.advantages}`}>преимущества</div>
+        <div className={`${classes.table_header} ${classes.advantages}`}>
+          преимущества
+        </div>
         {sheet.advantages.map((item, index) => (
           <div key={index} className={classes.table_item}>
             <span>{item}</span>
@@ -136,15 +141,17 @@ const Sheet = (props) => {
         ))}
       </div>
       <div className={`${classes.table} ${classes.disadvantages}`}>
-      <div className={`${classes.table_header} ${classes.disadvantages}`}>помехи</div>
+        <div className={`${classes.table_header} ${classes.disadvantages}`}>
+          помехи
+        </div>
         {sheet.disadvantages.map((item, index) => (
           <div key={index} className={classes.table_item}>
             <span>{item}</span>
           </div>
         ))}
       </div>
-    </Fragment>
+    </section>
   );
-}
+};
 
 export default Sheet;

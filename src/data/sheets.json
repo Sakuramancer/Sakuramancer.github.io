@@ -7,13 +7,13 @@
         "name": "Воин",
         "archetype": "Мастер боевых искусств",
         "value": 7,
-        "style": {"backgroundColor": "#8D6E63"}
+        "style": { "backgroundColor": "#8D6E63" }
       },
       {
         "name": "Колдун",
         "archetype": "Ведьмовской клинок",
         "value": 3,
-        "style": {"backgroundColor": "#AB47BC"}
+        "style": { "backgroundColor": "#AB47BC" }
       }
     ],
     "abilities": [
@@ -99,25 +99,12 @@
         "value": 14
       }
     ],
-    "languages": [
-      "Общий", "Полуросликов", "Гоблинский"
-    ],
-    "tools": [
-      "Кузнец", "Алхимик", "Верховая езда"
-    ],
-    "senses": [
-      "Темное зрение 120 ф."
-    ],
-    "resistances": [
-      "Яд"
-    ],
-    "advantages": [
-      "против испуга",
-      "против яда"
-    ],
-    "disadvantages": [
-      "Скрытность в доспехах"
-    ]
+    "languages": ["Общий", "Полуросликов", "Гоблинский"],
+    "tools": ["Кузнец", "Алхимик", "Верховая езда"],
+    "senses": ["Темное зрение 120 ф."],
+    "resistances": ["Яд"],
+    "advantages": ["против испуга", "против яда"],
+    "disadvantages": ["Скрытность в доспехах"]
   },
   "talisin": {
     "name": "Талисин",
@@ -127,13 +114,13 @@
         "name": "Жрец",
         "archetype": "Домен знания",
         "value": 8,
-        "style": {"backgroundColor": "#FDD835", "color": "#000000"}
+        "style": { "backgroundColor": "#FDD835", "color": "#000000" }
       },
       {
         "name": "Друид",
         "archetype": "Круг звезд",
         "value": 2,
-        "style": {"backgroundColor": "#4CAF50"}
+        "style": { "backgroundColor": "#4CAF50" }
       }
     ],
     "abilities": [
@@ -174,8 +161,7 @@
         "save": "+5"
       }
     ],
-    "skills": [
-    ],
+    "skills": [],
     "hitpoints": 53,
     "hitdices": "10d8",
     "armor": 18,
@@ -200,23 +186,20 @@
       }
     ],
     "languages": [
-      "Общий", "Первичный", "Драконий", "Эльфийский",
-      "Сильван", "Бездны", "Небесный", "Друидический"
+      "Общий",
+      "Первичный",
+      "Драконий",
+      "Эльфийский",
+      "Сильван",
+      "Бездны",
+      "Небесный",
+      "Друидический"
     ],
-    "tools": [
-      "Навигатор", "Вор"
-    ],
-    "senses": [
-      "Темное зрение 60 ф."
-    ],
-    "resistances": [
-    ],
-    "advantages": [
-      "против очарования",
-      "невозможно магически усыпить"
-    ],
-    "disadvantages": [
-    ]
+    "tools": ["Навигатор", "Вор"],
+    "senses": ["Темное зрение 60 ф."],
+    "resistances": [],
+    "advantages": ["против очарования", "невозможно магически усыпить"],
+    "disadvantages": []
   },
   "efelamon": {
     "name": "Эфеламон",
@@ -226,13 +209,13 @@
         "name": "Волшебник",
         "archetype": "Школа некромантии",
         "value": 6,
-        "style": {"backgroundColor": "#1976D2"}
+        "style": { "backgroundColor": "#1976D2" }
       },
       {
         "name": "Чародей",
         "archetype": "Наследие драконьей крови",
         "value": 4,
-        "style": {"backgroundColor": "#D81B60"}
+        "style": { "backgroundColor": "#D81B60" }
       }
     ],
     "abilities": [
@@ -273,8 +256,7 @@
         "save": "+3"
       }
     ],
-    "skills": [
-    ],
+    "skills": [],
     "hitpoints": 66,
     "hitdices": "10d6",
     "armor": 14,
@@ -299,21 +281,17 @@
       }
     ],
     "languages": [
-      "Общий", "Первичный", "Драконий", "Эльфийский",
+      "Общий",
+      "Первичный",
+      "Драконий",
+      "Эльфийский",
       "Инфернальный"
     ],
-    "tools": [
-    ],
-    "senses": [
-      "Темное зрение 60 ф."
-    ],
-    "resistances": [
-      "Огонь", "Силовое поле"
-    ],
-    "advantages": [
-    ],
-    "disadvantages": [
-    ]
+    "tools": [],
+    "senses": ["Темное зрение 60 ф."],
+    "resistances": ["Огонь", "Силовое поле"],
+    "advantages": [],
+    "disadvantages": []
   },
   "selena": {
     "name": "Селена",
@@ -323,7 +301,7 @@
         "name": "Друид",
         "archetype": "Круг пастыря",
         "value": 10,
-        "style": {"backgroundColor": "#4CAF50"}
+        "style": { "backgroundColor": "#4CAF50" }
       }
     ],
     "abilities": [
@@ -414,25 +392,21 @@
       }
     ],
     "languages": [
-      "Общий", "Первичный", "Эльфийский", "Сильван",
+      "Общий",
+      "Первичный",
+      "Эльфийский",
+      "Сильван",
       "Друидический"
     ],
-    "tools": [
-      "Травник", "Верховая езда"
-    ],
-    "senses": [
-      "Темное зрение 60 ф."
-    ],
-    "resistances": [
-      "Огонь", "Силовое поле"
-    ],
+    "tools": ["Травник", "Верховая езда"],
+    "senses": ["Темное зрение 60 ф."],
+    "resistances": ["Огонь", "Силовое поле"],
     "advantages": [
       "против очарования",
       "невозможно магически усыпить",
       "Сп концентрации"
     ],
-    "disadvantages": [
-    ]
+    "disadvantages": []
   },
   "undaaratel": {
     "name": "Унда'аратель",
@@ -442,12 +416,12 @@
         "name": "Паладин",
         "archetype": "Клятва воронов",
         "value": 8,
-        "style": {"backgroundColor": "#FFAB91", "color": "#000000" }
+        "style": { "backgroundColor": "#FFAB91", "color": "#000000" }
       },
       {
         "name": "Воин",
         "value": 2,
-        "style": {"backgroundColor": "#8D6E63"}
+        "style": { "backgroundColor": "#8D6E63" }
       }
     ],
     "abilities": [
@@ -525,22 +499,14 @@
         "value": 9
       }
     ],
-    "languages": [
-      "Общий", "Эльфийский"
-    ],
-    "tools": [
-    ],
-    "senses": [
-      "Темное зрение 60 ф."
-    ],
-    "resistances": [
-      "Некротическая энергия", "Холод"
-    ],
+    "languages": ["Общий", "Эльфийский"],
+    "tools": [],
+    "senses": ["Темное зрение 60 ф."],
+    "resistances": ["Некротическая энергия", "Холод"],
     "advantages": [
       "против очарования",
-      "не может быть очарован, испуган и стать одержимым нежитью"
+      "не может быть очарована, испугана или одержима нежитью"
     ],
-    "disadvantages": [
-    ]
+    "disadvantages": []
   }
 }

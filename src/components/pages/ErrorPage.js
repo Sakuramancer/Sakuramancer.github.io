@@ -7,6 +7,6 @@ const ErrorPage = (props) => {
       <Error />
     </Layout>
   );
-}
+};
 
 export default ErrorPage;

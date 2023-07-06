@@ -1,0 +1,59 @@
+.card {
+  display: inline-block;
+  margin: 4px;
+  padding: 0rem;
+  border: 1px #3f3f3f solid;
+  border-radius: 8px;
+  background-color: #fffef5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 45%;
+  max-width: 212px;
+}
+
+.card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: 0% 0%;
+  outline: 100vmax solid rgb(0 0 0 / var(--_o, 0%));
+  outline-offset: -100vmax;
+  -webkit-mask: linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0);
+
+  cursor: pointer;
+  transition: outline-color 0.4s;
+}
+
+.image:hover {
+  --_o: 30%;
+}
+
+.title {
+  color: #3f3f3f;
+  padding: 4px;
+  text-align: center;
+  font-family: "El Messiri", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card a:hover,
+.card a:active {
+  color: black;
+  text-decoration: underline;
+}
+
+@media (min-width: 30rem) {
+  .image {
+    height: auto;
+  }
+}

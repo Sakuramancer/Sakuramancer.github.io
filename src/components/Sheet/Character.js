@@ -8,9 +8,7 @@ const Character = (props) => {
     <li className={classes.card}>
       <Link to={`sheets/${id}`}>
         <img className={classes.image} src={img} alt={alt} />
-        <div className={classes.title}>
-          {title}
-        </div>
+        <div className={classes.title}>{title}</div>
       </Link>
     </li>
   );

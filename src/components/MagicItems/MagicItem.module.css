@@ -1,0 +1,53 @@
+.main {
+  max-width: 800px;
+  margin: auto;
+  padding: 16px 20px;
+  border: 1px #3f3f3f solid;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background-color: #fffef5;
+}
+
+.main img {
+  max-width: 100%;
+  padding: 16px 0;
+}
+
+.title {
+  font-family: "El Messiri", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 4px 0 0 0;
+}
+
+.category {
+  font-family: "Cambria", serif;
+}
+
+.owner {
+  margin: 8px 0;
+  text-align: left;
+  text-indent: 1rem;
+}
+
+.owner a {
+  padding: 0 4px;
+  text-decoration: none;
+  color: #3f3f3f;
+  font-family: "El Messiri", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.owner a:hover,
+.owner a:active {
+  text-decoration: underline;
+}
+.description {
+  text-align: left;
+  text-indent: 1rem;
+}
+
+.description p {
+  margin: 8px 0;
+}

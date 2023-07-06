@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import classes from "./Error.module.css"
+import classes from "./Error.module.css";
 
 const Error = (props) => {
   useEffect(() => {
@@ -14,6 +14,6 @@ const Error = (props) => {
       <Link to="/">Вернуться на главную страницу</Link>
     </div>
   );
-}
+};
 
 export default Error;

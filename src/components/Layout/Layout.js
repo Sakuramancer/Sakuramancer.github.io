@@ -1,21 +1,21 @@
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import MainHeader from './MainHeader';
+import MainHeader from "./MainHeader";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
-import classes from "./Layout.module.css"
-import scrollImage from "../../assets/scrollarrow.svg"
+import classes from "./Layout.module.css";
+import scrollImage from "../../assets/scrollarrow.svg";
 
 const Layout = (props) => {
   useScrollToTop();
-  const [showButton, setShowButton] = useState(false)
-  
+  const [showButton, setShowButton] = useState(false);
+
   const scrollToTopHandler = () => {
     window.scrollTo(0, 0);
   };
 
   useEffect(() => {
     const handleScrollToTop = () => {
-      setShowButton(window.scrollY > 300)
+      setShowButton(window.scrollY > 300);
     };
     window.addEventListener("scroll", handleScrollToTop);
     return () => {
