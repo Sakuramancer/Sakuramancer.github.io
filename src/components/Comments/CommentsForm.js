@@ -39,6 +39,7 @@ const CommentsForm = () => {
           name="name"
           required
           autoComplete="on"
+          autoFocus
           defaultValue={name ? name : ""}
         />
       </p>
