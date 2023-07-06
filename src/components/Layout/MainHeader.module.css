@@ -58,10 +58,6 @@
   vertical-align: bottom;
 }
 
-.link:hover .commentIcon {
-  border: none;
-}
-
 .tooltip {
   visibility: hidden;
   position: absolute;
@@ -77,10 +73,6 @@
   color: #b82500;
 }
 
-.link:hover .tooltip {
-  visibility: visible;
-}
-
 @media (min-width: 30rem) {
   .header .desktop {
     display: inline-block;
@@ -90,5 +82,15 @@
   }
   .header nav {
     width: calc(100% - 300px);
+  }
+}
+
+@media (hover: hover) {
+  .link:hover .commentIcon {
+    border: none;
+  }
+
+  .link:hover .tooltip {
+    visibility: visible;
   }
 }
