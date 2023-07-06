@@ -1,10 +1,7 @@
-import { useEffect } from "react";
 import CommentsForm from "../Comments/CommentsForm";
 
 const AddCommentPage = () => {
-  useEffect(() => {
-    document.title = "Оставить комментарий | Кампания из Эвенглена";
-  }, []);
+  document.title = "Оставить комментарий | Кампания из Эвенглена";
   return <CommentsForm />;
 };
 

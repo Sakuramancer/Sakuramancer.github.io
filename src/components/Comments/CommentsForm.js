@@ -38,6 +38,7 @@ const CommentsForm = () => {
           type="text"
           name="name"
           required
+          autoComplete="on"
           defaultValue={name ? name : ""}
         />
       </p>

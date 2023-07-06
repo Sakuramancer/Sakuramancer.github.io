@@ -1,11 +1,8 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import classes from "./Error.module.css";
 
 const Error = (props) => {
-  useEffect(() => {
-    document.title = "Кампания из Эвенглена";
-  }, []);
+  document.title = "Кампания из Эвенглена";
 
   return (
     <div className={classes.panel}>
