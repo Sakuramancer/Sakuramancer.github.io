@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Sheet from "../Sheet/Sheet";
 import sheets from "../../data/sheets.json";
-import { characterAssets } from "../UI/Assets";
+import { characterAssets } from "../../assets/Assets";
 import MagicItems from "../MagicItems/MagicItems";
 import magicItems from "../../data/magicItems.json";
 

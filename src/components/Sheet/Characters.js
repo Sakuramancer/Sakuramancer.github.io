@@ -1,6 +1,6 @@
 import Character from "./Character";
 import classes from "./Characters.module.css";
-import { characterAssets } from "../UI/Assets";
+import { characterAssets } from "../../assets/Assets";
 import sheets from "../../data/sheets.json";
 
 const Characters = (props) => {

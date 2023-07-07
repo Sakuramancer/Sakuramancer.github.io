@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import sheets from "../../data/sheets.json";
 import magicItems from "../../data/magicItems.json";
-import { magicItemsAssets } from "../UI/Assets";
+import { magicItemsAssets } from "../../assets/Assets";
 import MagicItem from "../MagicItems/MagicItem";
 
 const MagicItemPage = (props) => {

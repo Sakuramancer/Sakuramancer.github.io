@@ -1,6 +1,7 @@
 {
   "daeruth": {
     "title": "Даэрут, Клинок памяти",
+    "asset": "weapon",
     "type": "Оружие (короткий меч)",
     "rarity": "артефакт",
     "attunement": true,
@@ -20,6 +21,7 @@
   },
   "revenge_of_the_crippled_souls": {
     "title": "Месть искалеченных душ",
+    "asset": "weapon",
     "type": "Оружие (короткий меч)",
     "rarity": "редкое",
     "attunement": true,
@@ -38,6 +40,7 @@
   },
   "bloodied_cloak": {
     "title": "Окровавленный плащ",
+    "asset": "backpack",
     "type": "Чудесный предмет",
     "rarity": "редкий",
     "attunement": true,
@@ -54,6 +57,7 @@
   },
   "bag_of_holding": {
     "title": "Сумка хранения",
+    "asset": "backpack",
     "type": "Чудесный предмет",
     "rarity": "необычный",
     "attunement": false,
@@ -69,6 +73,7 @@
   "NOT_Кровавый осколок": {},
   "dust_of_dryness": {
     "title": "Порошок сухости",
+    "asset": "trinket",
     "type": "Чудесный предмет",
     "rarity": "необычный",
     "attunement": false,
@@ -83,6 +88,7 @@
   },
   "ring_of_slow_motion": {
     "title": "Кольцо замедления",
+    "asset": "ring",
     "type": "Кольцо",
     "rarity": "редкое",
     "attunement": true,
@@ -98,6 +104,7 @@
   },
   "slippers_of_spider_climbing": {
     "title": "Туфли паука",
+    "asset": "backpack",
     "type": "Чудесный предмет",
     "rarity": "необычный",
     "attunement": true,
@@ -111,6 +118,7 @@
   },
   "unmistakable_pen": {
     "title": "Безошибочное перо",
+    "asset": "trinket",
     "type": "Чудесный предмет",
     "rarity": "обычный",
     "attunement": false,
@@ -123,6 +131,7 @@
   },
   "star_serpent_brooch": {
     "title": "Брошь Звездного змея",
+    "asset": "ring",
     "type": "Чудесный предмет",
     "rarity": "редкий",
     "attunement": false,
@@ -135,6 +144,7 @@
   },
   "ring_of_healthy_sleeping": {
     "title": "Кольцо здорового сна",
+    "asset": "ring",
     "type": "Кольцо",
     "rarity": "редкое",
     "attunement": true,
@@ -150,6 +160,7 @@
   },
   "glamoured_studded_leather": {
     "title": "Красивый проклепанный доспех",
+    "asset": "armor",
     "type": "Доспех (проклёпанная кожа)",
     "rarity": "редкий",
     "attunement": false,
@@ -162,6 +173,7 @@
   },
   "lunar_shard": {
     "title": "Лунный осколок",
+    "asset": "trinket",
     "type": "Чудесный предмет",
     "rarity": "редкий",
     "attunement": false,
@@ -176,6 +188,7 @@
   },
   "shield_of_twilight": {
     "title": "Щит сумерек",
+    "asset": "armor",
     "type": "Доспех (щит)",
     "rarity": "редкий",
     "attunement": false,
@@ -188,6 +201,7 @@
   },
   "sanguine_war_crescent": {
     "title": "Кровавый боевой полумесяц",
+    "asset": "weapon",
     "type": "Оружие (боевой полумесяц)",
     "rarity": "необычное",
     "attunement": false,
@@ -202,6 +216,7 @@
   },
   "vestments_of_the_channeled_arcana": {
     "title": "Облачение направленной арканы",
+    "asset": "armor",
     "type": "Доспех",
     "rarity": "очень редкий",
     "attunement": true,
@@ -222,6 +237,7 @@
   },
   "fisheye_headband": {
     "title": "Обруч рыбьего глаза",
+    "asset": "backpack",
     "type": "Чудесный предмет",
     "rarity": "редкий",
     "attunement": true,
@@ -237,6 +253,7 @@
   },
   "lightweight_elven_dagger": {
     "title": "Легкий эльфийский кинжал",
+    "asset": "weapon",
     "type": "Оружие (кинжал)",
     "rarity": "необычный",
     "attunement": false,
@@ -251,6 +268,7 @@
   },
   "negotiators_bracelet": {
     "title": "Браслет переговорщиков",
+    "asset": "ring",
     "type": "Чудесный предмет",
     "rarity": "редкий",
     "attunement": false,
@@ -264,6 +282,7 @@
   },
   "boots_of_winterlands": {
     "title": "Заполярные сапоги",
+    "asset": "backpack",
     "type": "Чудесный предмет",
     "rarity": "необычный",
     "attunement": true,
@@ -280,6 +299,7 @@
   },
   "ring_of_feather_falling": {
     "title": "Кольцо падения перышком",
+    "asset": "ring",
     "type": "Кольцо",
     "rarity": "редкое",
     "attunement": true,
@@ -293,6 +313,7 @@
   },
   "embers_of_power": {
     "title": "Угли силы",
+    "asset": "trinket",
     "type": "Чудесный предмет",
     "rarity": "редкий",
     "attunement": true,
