@@ -19,7 +19,7 @@
 .header h1 {
   margin: 8px 0 4px 0;
   height: 100%;
-  vertical-align: baseline;
+  vertical-align: top;
   color: #b82500;
   font-family: "El Messiri", sans-serif;
   font-size: 1.6rem;
@@ -28,8 +28,9 @@
 .header nav {
   display: inline-block;
   text-align: right;
-  vertical-align: baseline;
-  width: calc(100% - 80px);
+  vertical-align: top;
+  width: calc(100% - 55px);
+  margin-top: 12px;
 }
 
 .header .mobile {
@@ -81,7 +82,7 @@
     display: none;
   }
   .header nav {
-    width: calc(100% - 300px);
+    width: calc(100% - 280px);
   }
 }
 
