@@ -55,6 +55,11 @@
   font-size: 1rem;
   line-height: 1.2rem;
   font-weight: bold;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 .itemIcon {
