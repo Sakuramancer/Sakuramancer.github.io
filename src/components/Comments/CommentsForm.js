@@ -1,3 +1,4 @@
+import { useReducer } from "react";
 import {
   Form,
   useNavigate,
@@ -9,17 +10,52 @@ import {
 
 import classes from "./CommentsForm.module.css";
 
+const nameReducer = (state, action) => {
+  if (action.type === "USER_INPUT") {
+    const isValid = action.value.trim().length > 0;
+    return {
+      value: action.value,
+      showValidation: !isValid,
+      isValid: isValid,
+    };
+  }
+  if (action.type === "INPUT_BLUR") {
+    const isValid = state.value.trim().length > 0;
+    return {
+      value: state.value,
+      showValidation: !isValid,
+      isValid: isValid,
+    };
+  }
+  return { value: "", showValidation: true, isValid: false };
+};
+
 const CommentsForm = () => {
   const data = useActionData();
   const navigate = useNavigate();
   const navigation = useNavigation();
-
   const isSubmitting = navigation.state === "submitting";
 
-  function cancelHandler() {
+  let name = localStorage.getItem("commentator_name");
+  if (name === null) name = "";
+
+  const [nameState, dispatchName] = useReducer(nameReducer, {
+    value: name,
+    showValidation: false,
+    isValid: name.trim().length > 0,
+  });
+
+  const changeNameHandler = (event) => {
+    dispatchName({ type: "USER_INPUT", value: event.target.value });
+  };
+
+  const validateNameHandler = () => {
+    dispatchName({ type: "INPUT_BLUR" });
+  };
+
+  const cancelHandler = () => {
     navigate("..");
-  }
-  const name = "";
+  };
 
   return (
     <Form method="POST" className={classes.form}>
@@ -32,15 +68,22 @@ const CommentsForm = () => {
         </ul>
       )}
       <p>
-        <label htmlFor="name">Имя</label>
+        <label htmlFor="name">
+          Имя
+          {nameState.showValidation && (
+            <span className={classes.invalid}>Введите имя</span>
+          )}
+        </label>
         <input
           id="name"
           type="text"
           name="name"
           required
           autoComplete="on"
-          autoFocus
-          defaultValue={name ? name : ""}
+          autoFocus={!name}
+          defaultValue={name}
+          onChange={changeNameHandler}
+          onBlur={validateNameHandler}
         />
       </p>
       <p>
@@ -50,6 +93,7 @@ const CommentsForm = () => {
           name="comment"
           rows="5"
           required
+          autoFocus={!!name}
           defaultValue={""}
         />
       </p>
@@ -57,7 +101,7 @@ const CommentsForm = () => {
         <button type="button" onClick={cancelHandler} disabled={isSubmitting}>
           Отмена
         </button>
-        <button disabled={isSubmitting}>
+        <button disabled={isSubmitting || !nameState.isValid}>
           {isSubmitting ? "Отправка..." : "Отправить"}
         </button>
       </div>
@@ -69,9 +113,10 @@ export default CommentsForm;
 
 export async function action({ request }) {
   const data = await request.formData();
-
+  const name = data.get("name");
+  localStorage.setItem("commentator_name", name);
   const commentData = {
-    name: data.get("name"),
+    name: name,
     comment: data.get("comment"),
     datetime: new Date().toLocaleString(),
   };

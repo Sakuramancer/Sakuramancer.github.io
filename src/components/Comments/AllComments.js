@@ -2,17 +2,19 @@ import { useLoaderData } from "react-router-dom";
 import classes from "./AllComments.module.css";
 
 const AllComments = () => {
-  const commentsData = useLoaderData();
-  console.log(commentsData);
+  let commentsData = useLoaderData();
+
   return (
     <section className={classes.main}>
-      {Object.entries(commentsData).map(([key, item]) => (
-        <div key={key} className={classes.card}>
-          <div className={classes.name}>{item.name}</div>
-          <div className={classes.datetime}>{item.datetime}</div>
-          <div className={classes.comment}>{item.comment}</div>
-        </div>
-      ))}
+      {!commentsData && <div className={classes.card}>Комментариев нет</div>}
+      {commentsData &&
+        Object.entries(commentsData).map(([key, item]) => (
+          <div key={key} className={classes.card}>
+            <div className={classes.name}>{item.name}</div>
+            <div className={classes.datetime}>{item.datetime}</div>
+            <div className={classes.comment}>{item.comment}</div>
+          </div>
+        ))}
     </section>
   );
 };

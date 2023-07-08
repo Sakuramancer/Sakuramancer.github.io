@@ -40,6 +40,12 @@
   border: 1px #b82500 solid;
 }
 
+.invalid {
+  padding-left: 20px;
+  font-style: italic;
+  color: #b82500;
+}
+
 .actions {
   display: flex;
   gap: 1rem;
@@ -69,4 +75,10 @@
 .actions button[type="button"]:hover {
   background-color: #b82500;
   color: #fffef5;
+}
+
+.actions button:disabled,
+.actions button[disabled] {
+  background-color: #eeeeee;
+  color: #888888;
 }
