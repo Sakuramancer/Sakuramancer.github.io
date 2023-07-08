@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.bbeff887.css",
-    "main.js": "/static/js/main.a2fc007d.js",
+    "main.css": "/static/css/main.20093256.css",
+    "main.js": "/static/js/main.f3ff6b17.js",
     "static/media/map.png": "/static/media/map.4633e1dd78ad25dac8dc.png",
     "static/media/Placeholder h300.png": "/static/media/Placeholder h300.d6d62be4999d34f875a2.png",
     "static/media/Selena h300.png": "/static/media/Selena h300.b665fe82dfb1df01ff12.png",
@@ -9,20 +9,20 @@
     "static/media/Talisin h300.png": "/static/media/Talisin h300.b8d33ddb10e04d42013c.png",
     "static/media/Unda'aratel h300.png": "/static/media/Unda'aratel h300.d7748df666f2701d593b.png",
     "static/media/daeruth.png": "/static/media/daeruth.eca4aef2efb90fafe1fc.png",
-    "static/media/bindle.svg": "/static/media/bindle.96e69ee2a8fd97a68ac98bbe9fcce151.svg",
-    "static/media/lamellar.svg": "/static/media/lamellar.6d7382dd2b0795ebbc9e3f9ea4ca18ad.svg",
-    "static/media/swap-bag.svg": "/static/media/swap-bag.b58d969812a8b8da3783858776931d03.svg",
-    "static/media/round-bottom-flask.svg": "/static/media/round-bottom-flask.221eabc762ae57d9211471289831d7d7.svg",
-    "static/media/axe-sword.svg": "/static/media/axe-sword.688c617682436352d15a0d2e9523e786.svg",
-    "static/media/diamond-ring.svg": "/static/media/diamond-ring.7fcf779d0737af9f892aa395dd8bd36a.svg",
+    "static/media/bindle.svg": "/static/media/bindle.acadd971afa37dd695d2cd58e713390d.svg",
+    "static/media/lamellar.svg": "/static/media/lamellar.78634c06526616836061d38544f81fc2.svg",
+    "static/media/swap-bag.svg": "/static/media/swap-bag.a60ad493f3571ec007d855cb384131bc.svg",
+    "static/media/round-bottom-flask.svg": "/static/media/round-bottom-flask.0ddb2786c75282ed0f4f566fe3b47595.svg",
+    "static/media/axe-sword.svg": "/static/media/axe-sword.478846d5a5eeaa122b8a6ac39551d739.svg",
+    "static/media/diamond-ring.svg": "/static/media/diamond-ring.dc994c5c3f35b96ae9a599097ea3efd0.svg",
     "index.html": "/index.html",
     "static/media/addcomment.svg": "/static/media/addcomment.be6371b5c7c293ba1d84180528b0d8c4.svg",
     "static/media/scrollarrow.svg": "/static/media/scrollarrow.117749c500940ea80fa09653f545d7a4.svg",
-    "main.bbeff887.css.map": "/static/css/main.bbeff887.css.map",
-    "main.a2fc007d.js.map": "/static/js/main.a2fc007d.js.map"
+    "main.20093256.css.map": "/static/css/main.20093256.css.map",
+    "main.f3ff6b17.js.map": "/static/js/main.f3ff6b17.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbeff887.css",
-    "static/js/main.a2fc007d.js"
+    "static/css/main.20093256.css",
+    "static/js/main.f3ff6b17.js"
   ]
 }
