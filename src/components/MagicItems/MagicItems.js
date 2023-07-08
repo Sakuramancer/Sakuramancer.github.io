@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { itemIconAssets } from "../../assets/Assets";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,6 +12,20 @@ import classes from "./MagicItems.module.css";
 
 const MagicItems = (props) => {
   const { entries } = props;
+  const { pathname } = useLocation();
+  const storageKey = `swiper_${pathname}_activeIndex`;
+  const [swiper, setSwiper] = useState();
+
+  const initialSlide = sessionStorage.getItem(storageKey);
+  sessionStorage.removeItem(storageKey);
+
+  const swiperHandler = (sw) => {
+    setSwiper(sw);
+  };
+  const linkClickedHandler = () => {
+    if (swiper) sessionStorage.setItem(storageKey, swiper.activeIndex);
+  };
+
   return (
     <section className={classes.main}>
       <div className={classes.header}>
@@ -20,6 +35,8 @@ const MagicItems = (props) => {
         </div> */}
       </div>
       <Swiper
+        onSwiper={swiperHandler}
+        initialSlide={initialSlide ? initialSlide : 0}
         slidesPerView={"auto"}
         spaceBetween={10}
         navigation={true}
@@ -31,7 +48,11 @@ const MagicItems = (props) => {
       >
         {entries.map(([key, item]) => (
           <SwiperSlide key={key} className={classes.slide}>
-            <Link to={`/magicItems/${key}`} className={classes.link}>
+            <Link
+              to={`/magicItems/${key}`}
+              className={classes.link}
+              onClick={linkClickedHandler}
+            >
               <img
                 src={itemIconAssets[item.asset].path}
                 alt={itemIconAssets[item.asset].alt}
