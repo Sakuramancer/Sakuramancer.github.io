@@ -1,12 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.20093256.css",
-    "main.js": "/static/js/main.f3ff6b17.js",
+    "main.css": "/static/css/main.be835d78.css",
+    "main.js": "/static/js/main.f6e8244a.js",
     "static/media/map.png": "/static/media/map.4633e1dd78ad25dac8dc.png",
     "static/media/Placeholder h300.png": "/static/media/Placeholder h300.d6d62be4999d34f875a2.png",
     "static/media/Selena h300.png": "/static/media/Selena h300.b665fe82dfb1df01ff12.png",
     "static/media/Andrakas h300.png": "/static/media/Andrakas h300.0e1b61dfc388aaddbf19.png",
     "static/media/Talisin h300.png": "/static/media/Talisin h300.b8d33ddb10e04d42013c.png",
+    "static/media/abishai h300.png": "/static/media/abishai h300.686c4e470eaf2740c7f4.png",
+    "static/media/chort h300.png": "/static/media/chort h300.77cc1e18232e58240e2c.png",
+    "static/media/scriber h300.png": "/static/media/scriber h300.8f2c3f704c29899eef41.png",
     "static/media/Unda'aratel h300.png": "/static/media/Unda'aratel h300.d7748df666f2701d593b.png",
     "static/media/daeruth.png": "/static/media/daeruth.eca4aef2efb90fafe1fc.png",
     "static/media/bindle.svg": "/static/media/bindle.acadd971afa37dd695d2cd58e713390d.svg",
@@ -18,11 +21,11 @@
     "index.html": "/index.html",
     "static/media/addcomment.svg": "/static/media/addcomment.be6371b5c7c293ba1d84180528b0d8c4.svg",
     "static/media/scrollarrow.svg": "/static/media/scrollarrow.117749c500940ea80fa09653f545d7a4.svg",
-    "main.20093256.css.map": "/static/css/main.20093256.css.map",
-    "main.f3ff6b17.js.map": "/static/js/main.f3ff6b17.js.map"
+    "main.be835d78.css.map": "/static/css/main.be835d78.css.map",
+    "main.f6e8244a.js.map": "/static/js/main.f6e8244a.js.map"
   },
   "entrypoints": [
-    "static/css/main.20093256.css",
-    "static/js/main.f3ff6b17.js"
+    "static/css/main.be835d78.css",
+    "static/js/main.f6e8244a.js"
   ]
 }
