@@ -4,6 +4,8 @@ import HomePage from "./components/pages/HomePage";
 import SheetPage from "./components/pages/SheetPage";
 import ErrorPage from "./components/pages/ErrorPage";
 import MagicItemPage from "./components/pages/MagicItemPage";
+import MonsterListPage from "./components/pages/MonsterListPage";
+import MonsterPage from "./components/pages/MonsterPage";
 import AddCommentPage from "./components/pages/AddCommentPage";
 import { action as sendCommentsAction } from "./components/Comments/CommentsForm";
 import AllCommentsPage from "./components/pages/AllCommentsPage";
@@ -18,6 +20,8 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "sheets/:id", element: <SheetPage /> },
       { path: "magicItems/:id", element: <MagicItemPage /> },
+      { path: "monsters", element: <MonsterListPage /> },
+      { path: "monsters/:id", element: <MonsterPage /> },
       {
         path: "addcomment",
         element: <AddCommentPage />,

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import classes from "./Character.module.css";
+import classes from "./Avatar.module.css";
 
-const Character = (props) => {
-  const { id, title, img, alt } = props;
+const Avatar = (props) => {
+  const { id, title, path, img, alt } = props;
 
   return (
     <li className={classes.card}>
-      <Link to={`sheets/${id}`}>
+      <Link to={`${path}/${id}`}>
         <img className={classes.image} src={img} alt={alt} />
         <div className={classes.title}>{title}</div>
       </Link>
@@ -14,4 +14,4 @@ const Character = (props) => {
   );
 };
 
-export default Character;
+export default Avatar;

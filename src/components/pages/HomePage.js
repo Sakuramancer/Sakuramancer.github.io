@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Characters from "../Sheet/Characters";
+import CharacterList from "../Sheet/CharacterList";
 import MagicItems from "../MagicItems/MagicItems";
 import magicItems from "../../data/magicItems.json";
 
@@ -14,7 +14,7 @@ const HomePage = (props) => {
 
   return (
     <Fragment>
-      <Characters />
+      <CharacterList />
       <MagicItems entries={items} />
     </Fragment>
   );

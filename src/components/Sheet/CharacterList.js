@@ -1,16 +1,17 @@
-import Character from "./Character";
-import classes from "./Characters.module.css";
+import Avatar from "../Avatar/Avatar";
+import classes from "./CharacterList.module.css";
 import { characterAssets } from "../../assets/Assets";
 import sheets from "../../data/sheets.json";
 
-const Characters = (props) => {
+const CharacterList = (props) => {
   return (
     <section className={classes.characters}>
       <ul>
         {Object.entries(sheets).map(([key, item]) => (
-          <Character
+          <Avatar
             key={key}
             id={key}
+            path={"sheets"}
             title={item.name}
             img={characterAssets[key].path}
             alt={characterAssets[key].alt}
@@ -21,4 +22,4 @@ const Characters = (props) => {
   );
 };
 
-export default Characters;
+export default CharacterList;

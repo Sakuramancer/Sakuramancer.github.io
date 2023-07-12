@@ -13,13 +13,13 @@ const SheetPage = (props) => {
   const params = useParams();
 
   if (params !== undefined && sheets[params.id] !== undefined) {
-    const sheetData = sheets[params.id];
-    document.title = `${sheetData.name} | Кампания из Эвенглена`;
-    sheet = sheetData;
+    sheet = sheets[params.id];
     asset = characterAssets[params.id];
     items = Object.entries(magicItems)
-      .filter(([key, _]) => !key.startsWith("NOT_"))
-      .filter(([_, item]) => item.state.owner === params.id);
+    .filter(([key, _]) => !key.startsWith("NOT_"))
+    .filter(([_, item]) => item.state.owner === params.id);
+    
+    document.title = `${sheet.name} | Кампания из Эвенглена`;
   }
   return (
     <>

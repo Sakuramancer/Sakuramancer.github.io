@@ -51,7 +51,7 @@ const Sheet = (props) => {
           <span className={classes.tag_value}>{sheet.initiative}</span>
         </div>
         <div className={`${classes.tag} ${classes.armor}`}>
-          <span>класс защиты</span>
+          <span>класс доспеха</span>
           <span className={classes.tag_value}>{sheet.armor}</span>
         </div>
         <div className={`${classes.tag} ${classes.proficiency}`}>

@@ -13,6 +13,10 @@ import trinketIcon from "./itemIcons/swap-bag.svg";
 import backpackIcon from "./itemIcons/bindle.svg";
 // magic items
 import daeruthImage from "./magicItems/daeruth.png";
+//monsters
+import scriberImage from "./monsters/scriber h300.png";
+import chortImage from "./monsters/chort h300.png";
+import abishaiImage from "./monsters/abishai h300.png";
 
 export const characterAssets = {
   andrakas: {
@@ -47,26 +51,41 @@ export const magicItemsAssets = {
 export const itemIconAssets = {
   weapon: {
     path: weaponIcon,
-    alt: "axe-sword icon from game-icons.net"
+    alt: "axe-sword icon from game-icons.net",
   },
   armor: {
     path: armorIcon,
-    alt: "lamellar icon from game-icons.net"
+    alt: "lamellar icon from game-icons.net",
   },
   ring: {
     path: ringIcon,
-    alt: "diamond-ring icon from game-icons.net"
+    alt: "diamond-ring icon from game-icons.net",
   },
   potion: {
     path: potionIcon,
-    alt: "round-bottom-flask icon from game-icons.net"
+    alt: "round-bottom-flask icon from game-icons.net",
   },
   trinket: {
     path: trinketIcon,
-    alt: "swap-bag icon from game-icons.net"
+    alt: "swap-bag icon from game-icons.net",
   },
   backpack: {
     path: backpackIcon,
-    alt: "bindle icon from game-icons.net"
+    alt: "bindle icon from game-icons.net",
   },
+};
+
+export const monsterAssets = {
+  scriber: {
+    path: scriberImage,
+    alt: "Scribe devil from Tome of Beasts 2 by Kobold Press"
+  },
+  chort: {
+    path: chortImage,
+    alt: "Chort devil from Tome of Beasts by Kobold Press"
+  },
+  abishai: {
+    path: abishaiImage,
+    alt: "Abishai from Monster Manual"
+  }
 }
