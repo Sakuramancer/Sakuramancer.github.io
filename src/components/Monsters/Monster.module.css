@@ -39,10 +39,15 @@
 }
 
 .block h3 {
+  position: sticky;
+  top: 52px;
   margin: 8px 0;
+  padding-bottom: 4px;
   text-align: left;
   text-indent: 1rem;
+  background-color: #fffef5;
   color: #b82500;
+  border-bottom: 2px #b82500 solid;
 }
 
 .block span {

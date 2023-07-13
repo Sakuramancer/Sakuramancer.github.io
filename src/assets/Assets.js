@@ -17,6 +17,7 @@ import daeruthImage from "./magicItems/daeruth.png";
 import scriberImage from "./monsters/scriber h300.png";
 import chortImage from "./monsters/chort h300.png";
 import abishaiImage from "./monsters/abishai h300.png";
+import sanguineDryadImage from "./monsters/sanguine dryad h300.png";
 
 export const characterAssets = {
   andrakas: {
@@ -87,5 +88,9 @@ export const monsterAssets = {
   abishai: {
     path: abishaiImage,
     alt: "Abishai from Monster Manual"
+  },
+  sanguine_dryad: {
+    path: sanguineDryadImage,
+    alt: "Corrupted dryad by Linda Lithén @lindalithen"
   }
 }

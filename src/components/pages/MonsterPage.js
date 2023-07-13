@@ -12,11 +12,10 @@ const MonsterPage = (props) => {
   if (params !== undefined && monsters[params.id] !== undefined) {
     monster = monsters[params.id];
     asset = monsterAssets[params.id];
+    if (!asset) asset = { path: "", alt: "" };
     document.title = `${monster.name} | Кампания из Эвенглена`;
   }
-  return (
-    <Monster monster={{id: params.id, ...monster}} asset={asset} />
-  );
+  return <Monster monster={{ id: params.id, ...monster }} asset={asset} />;
 };
 
 export default MonsterPage;

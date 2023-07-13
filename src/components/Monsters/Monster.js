@@ -47,126 +47,168 @@ const Monster = (props) => {
         ))}
       </section>
       <section className={classes.block}>
-        <p>
-          <strong>Инициатива</strong> {monster.initiative}
-        </p>
-        <p>
-          <strong>Навыки</strong>{" "}
-          {monster.skills
-            .map((item) => `${item.name} ${item.value}`)
-            .join(", ")}
-        </p>
-        <p>
-          <strong>Сопротивление урону</strong> {monster.resistances.join(", ")}
-        </p>
-        <p>
-          <strong>Чувства</strong> {monster.senses.join(", ")}
-        </p>
-        <p>
-          <strong>Языки</strong> {monster.languages.join(", ")}
-          {monster.languages_extra.length > 0 &&
-            `; ${monster.languages_extra.join(", ")}`}{" "}
-        </p>
-        <p>
-          <strong>Бонус мастерства</strong> {monster.proficiency}
-        </p>
+        {monster.initiative && (
+          <p>
+            <strong>Инициатива</strong> {monster.initiative}
+          </p>
+        )}
+        {monster.skills && (
+          <p>
+            <strong>Навыки</strong>{" "}
+            {monster.skills
+              .map((item) => `${item.name} ${item.value}`)
+              .join(", ")}
+          </p>
+        )}
+        {monster.resistances && (
+          <p>
+            <strong>Сопротивление к урону</strong>{" "}
+            {monster.resistances.join(", ")}
+          </p>
+        )}
+        {monster.immunities && (
+          <p>
+            <strong>Иммунитет к урону</strong> {monster.immunities.join(", ")}
+          </p>
+        )}
+        {monster.condition_immunities && (
+          <p>
+            <strong>Иммунитет к состоянию</strong>{" "}
+            {monster.condition_immunities.join(", ")}
+          </p>
+        )}
+        {monster.senses && (
+          <p>
+            <strong>Чувства</strong> {monster.senses.join(", ")}
+          </p>
+        )}
+        {monster.languages && (
+          <p>
+            <strong>Языки</strong> {monster.languages.join(", ")}
+            {monster.languages_extra &&
+              monster.languages_extra.length > 0 &&
+              `; ${monster.languages_extra.join(", ")}`}
+          </p>
+        )}
+        {monster.proficiency && (
+          <p>
+            <strong>Бонус мастерства</strong> {monster.proficiency}
+          </p>
+        )}
       </section>
       <div className={classes.line} />
-      <section className={classes.block}>
-        <h3>Действия</h3>
-        {monster.actions.map((item, index) => (
-          <div key={index}>
-            {item.name && <p className={classes.feature_title}>{item.name}</p>}
-            {item.uses && (
-              <p className={classes.feature_uses}>
-                {[...Array(item.uses.value).keys()].map((index) => {
-                  const id = `${monster.id}_${item.uses.id}_${index}`;
-                  let checked = localStorage.getItem(id) === "true";
-                  return (
-                    <input
-                      type="checkbox"
-                      key={index}
-                      id={id}
-                      className={classes.use_button}
-                      onClick={checkboxHandler}
-                      defaultChecked={checked}
-                    />
-                  );
-                })}
-                <span>{`${item.uses.value} ${item.uses.word}`}</span>
-                {item.concentration && <span>{item.concentration}</span>}
-              </p>
-            )}
-            {item.description.map((line, index) => (
-              <ReactMarkdown key={index}>{line}</ReactMarkdown>
-            ))}
-          </div>
-        ))}
-      </section>
-      <div className={classes.line} />
-      <section className={classes.block}>
-        <h3>Бонусные действия</h3>
-        {monster.bonus_actions.map((item, index) => (
-          <div key={index}>
-            {item.name && <p className={classes.feature_title}>{item.name}</p>}
-            {item.uses && (
-              <p className={classes.feature_uses}>
-                {[...Array(item.uses.value).keys()].map((index) => {
-                  const id = `${monster.id}_${item.uses.id}_${index}`;
-                  let checked = localStorage.getItem(id) === "true";
-                  return (
-                    <input
-                      type="checkbox"
-                      key={index}
-                      id={id}
-                      className={classes.use_button}
-                      onClick={checkboxHandler}
-                      defaultChecked={checked}
-                    />
-                  );
-                })}
-                <span>{`${item.uses.value} ${item.uses.word}`}</span>
-                {item.concentration && <span>{item.concentration}</span>}
-              </p>
-            )}
-            {item.description.map((line, index) => (
-              <ReactMarkdown key={index}>{line}</ReactMarkdown>
-            ))}
-          </div>
-        ))}
-      </section>
-      <div className={classes.line} />
-      <section className={classes.block}>
-        <h3>Реакции</h3>
-        {monster.reactions.map((item, index) => (
-          <div key={index}>
-            {item.name && <p className={classes.feature_title}>{item.name}</p>}
-            {item.uses && (
-              <p className={classes.feature_uses}>
-                {[...Array(item.uses.value).keys()].map((index) => {
-                  const id = `${monster.id}_${item.uses.id}_${index}`;
-                  let checked = localStorage.getItem(id) === "true";
-                  return (
-                    <input
-                      type="checkbox"
-                      key={index}
-                      id={id}
-                      className={classes.use_button}
-                      onClick={checkboxHandler}
-                      defaultChecked={checked}
-                    />
-                  );
-                })}
-                <span>{`${item.uses.value} ${item.uses.word}`}</span>
-                {item.concentration && <span>{item.concentration}</span>}
-              </p>
-            )}
-          {item.description.map((line, index) => (
-              <ReactMarkdown key={index}>{line}</ReactMarkdown>
-            ))}
-          </div>
-        ))}
-      </section>
+      {monster.features && monster.features.length > 0 && (
+        <section className={classes.block}>
+          {monster.features.map((item, index) => (
+            <ReactMarkdown key={index}>{item}</ReactMarkdown>
+          ))}
+        </section>
+      )}
+      {monster.actions && monster.actions.length > 0 && (
+        <section className={classes.block}>
+          <h3>Действия</h3>
+          {monster.actions.map((item, index) => (
+            <div key={index}>
+              {item.name && (
+                <p className={classes.feature_title}>{item.name}</p>
+              )}
+              {item.uses && (
+                <p className={classes.feature_uses}>
+                  {[...Array(item.uses.value).keys()].map((index) => {
+                    const id = `${monster.id}_${item.uses.id}_${index}`;
+                    let checked = localStorage.getItem(id) === "true";
+                    return (
+                      <input
+                        type="checkbox"
+                        key={index}
+                        id={id}
+                        className={classes.use_button}
+                        onClick={checkboxHandler}
+                        defaultChecked={checked}
+                      />
+                    );
+                  })}
+                  <span>{`${item.uses.value} ${item.uses.word}`}</span>
+                  {item.concentration && <span>{item.concentration}</span>}
+                </p>
+              )}
+              {item.description.map((line, index) => (
+                <ReactMarkdown key={index}>{line}</ReactMarkdown>
+              ))}
+            </div>
+          ))}
+        </section>
+      )}
+      {monster.bonus_actions && monster.bonus_actions.length > 0 && (
+        <section className={classes.block}>
+          <h3>Бонусные действия</h3>
+          {monster.bonus_actions.map((item, index) => (
+            <div key={index}>
+              {item.name && (
+                <p className={classes.feature_title}>{item.name}</p>
+              )}
+              {item.uses && (
+                <p className={classes.feature_uses}>
+                  {[...Array(item.uses.value).keys()].map((index) => {
+                    const id = `${monster.id}_${item.uses.id}_${index}`;
+                    let checked = localStorage.getItem(id) === "true";
+                    return (
+                      <input
+                        type="checkbox"
+                        key={index}
+                        id={id}
+                        className={classes.use_button}
+                        onClick={checkboxHandler}
+                        defaultChecked={checked}
+                      />
+                    );
+                  })}
+                  <span>{`${item.uses.value} ${item.uses.word}`}</span>
+                  {item.concentration && <span>{item.concentration}</span>}
+                </p>
+              )}
+              {item.description.map((line, index) => (
+                <ReactMarkdown key={index}>{line}</ReactMarkdown>
+              ))}
+            </div>
+          ))}
+        </section>
+      )}
+      {monster.reactions && monster.reactions.length > 0 && (
+        <section className={classes.block}>
+          <h3>Реакции</h3>
+          {monster.reactions.map((item, index) => (
+            <div key={index}>
+              {item.name && (
+                <p className={classes.feature_title}>{item.name}</p>
+              )}
+              {item.uses && (
+                <p className={classes.feature_uses}>
+                  {[...Array(item.uses.value).keys()].map((index) => {
+                    const id = `${monster.id}_${item.uses.id}_${index}`;
+                    let checked = localStorage.getItem(id) === "true";
+                    return (
+                      <input
+                        type="checkbox"
+                        key={index}
+                        id={id}
+                        className={classes.use_button}
+                        onClick={checkboxHandler}
+                        defaultChecked={checked}
+                      />
+                    );
+                  })}
+                  <span>{`${item.uses.value} ${item.uses.word}`}</span>
+                  {item.concentration && <span>{item.concentration}</span>}
+                </p>
+              )}
+              {item.description.map((line, index) => (
+                <ReactMarkdown key={index}>{line}</ReactMarkdown>
+              ))}
+            </div>
+          ))}
+        </section>
+      )}
     </section>
   );
 };
