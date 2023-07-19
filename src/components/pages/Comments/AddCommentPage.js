@@ -1,4 +1,4 @@
-import CommentsForm from "../Comments/CommentsForm";
+import CommentsForm from "../../Comments/CommentsForm";
 
 const AddCommentPage = () => {
   document.title = "Оставить комментарий | Кампания из Эвенглена";

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import Monster from "../Monsters/Monster";
-import monsters from "../../data/monsters.json";
-import { monsterAssets } from "../../assets/Assets";
+import Monster from "../../Monsters/Monster";
+import monsters from "../../../data/monsters.json";
+import { monsterAssets } from "../../../assets/Assets";
 
 const MonsterPage = (props) => {
   let monster = undefined;

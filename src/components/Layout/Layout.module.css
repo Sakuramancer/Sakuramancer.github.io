@@ -3,6 +3,7 @@
   padding: 8px;
   margin: auto;
   margin-top: -10rem;
+  margin-bottom: 5rem;
   max-width: 1200px;
 }
 
@@ -19,7 +20,7 @@
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  top: 88vh;
+  top: 85vh;
   left: 85vw;
   background-color: #fff59d;
   opacity: 0.9;

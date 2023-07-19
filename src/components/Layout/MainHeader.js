@@ -13,14 +13,16 @@ const MainHeader = (props) => {
       </NavLink>
       <nav>
         <ul>
-          <NavLink to="/addcomment" className={classes.link}>
-            <img
-              src={addCommentImage}
-              alt="Оставить комментарий"
-              className={classes.commentIcon}
-            />
-            <span className={classes.tooltip}>Оставить комментарий</span>
-          </NavLink>
+          <li>
+            <NavLink to="/addcomment" className={classes.link}>
+              <img
+                src={addCommentImage}
+                alt="Оставить комментарий"
+                className={classes.commentIcon}
+              />
+              <span className={classes.tooltip}>Оставить комментарий</span>
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

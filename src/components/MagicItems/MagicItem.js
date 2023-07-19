@@ -15,9 +15,11 @@ const MagicItem = (props) => {
           item.attunement ? " (требуется настройка)" : ""
         }`}
       </em>
-      <div className={classes.owner}>
-        Владелец: <Link to={`/sheets/${item.state.owner}`}>{ownerName}</Link>
-      </div>
+      {item.state && item.state.owner && (
+        <div className={classes.owner}>
+          Владелец: <Link to={`/sheets/${item.state.owner}`}>{ownerName}</Link>
+        </div>
+      )}
       <div className={classes.description}>
         {item.description.map((line, index) => (
           <ReactMarkdown key={index}>{line}</ReactMarkdown>
