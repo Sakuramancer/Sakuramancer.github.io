@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4b470038.css",
-    "main.js": "/static/js/main.ad12a132.js",
+    "main.css": "/static/css/main.b06242ea.css",
+    "main.js": "/static/js/main.d80b244e.js",
     "static/media/map.png": "/static/media/map.4633e1dd78ad25dac8dc.png",
     "static/media/Placeholder h300.png": "/static/media/Placeholder h300.d6d62be4999d34f875a2.png",
     "static/media/sanguine dryad h300.png": "/static/media/sanguine dryad h300.8505fd1b59968713f14b.png",
@@ -22,11 +22,11 @@
     "index.html": "/index.html",
     "static/media/addcomment.svg": "/static/media/addcomment.be6371b5c7c293ba1d84180528b0d8c4.svg",
     "static/media/scrollarrow.svg": "/static/media/scrollarrow.117749c500940ea80fa09653f545d7a4.svg",
-    "main.4b470038.css.map": "/static/css/main.4b470038.css.map",
-    "main.ad12a132.js.map": "/static/js/main.ad12a132.js.map"
+    "main.b06242ea.css.map": "/static/css/main.b06242ea.css.map",
+    "main.d80b244e.js.map": "/static/js/main.d80b244e.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b470038.css",
-    "static/js/main.ad12a132.js"
+    "static/css/main.b06242ea.css",
+    "static/js/main.d80b244e.js"
   ]
 }
