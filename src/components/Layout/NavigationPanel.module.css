@@ -1,0 +1,93 @@
+.panel {
+  position: fixed;
+  top: calc(100vh - 52px);
+  left: 5vw;
+  height: 52px;
+  width: 90vw;
+  padding: 0 5%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff59d;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  display: inline-block;
+}
+
+.panel a {
+  text-decoration: none;
+}
+
+.panel li {
+  display:inline-block;
+  margin: auto 20px;
+}
+
+.panel .mobile {
+  display: inline-block;
+}
+
+.panel .desktop {
+  display: none;
+}
+
+.panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  position: relative;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  margin-top: 4px;
+  border: 2px transparent solid;
+  border-radius: 8px;
+  font-family: "El Messiri", sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #b82500;
+
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  top: -35px;
+  left: -100px;
+  z-index: 1;
+  width: 150px;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #fff59d;
+  color: #b82500;
+}
+
+@media (min-width: 30rem) {
+  .panel .desktop {
+    display: inline-block;
+  }
+  .panel .mobile {
+    display: none;
+  }
+  .panel nav {
+    width: calc(100% - 280px);
+  }
+}
+
+@media (hover: hover) {
+  .link:hover .button {
+    border: 2px #b82500 solid;
+  }
+
+  .link:hover .tooltip {
+    visibility: visible;
+  }
+}

@@ -29,16 +29,17 @@
   font-weight: bold;
 }
 
-.block {
+.section {
   text-align: left;
   padding: 0 3%;
+  scroll-margin-top: 52px;
 }
 
-.block p {
+.section p {
   margin: 4px 0;
 }
 
-.block h3 {
+.section h3 {
   position: sticky;
   top: 52px;
   margin: 8px 0;
@@ -50,7 +51,7 @@
   border-bottom: 2px #b82500 solid;
 }
 
-.block span {
+.section span {
   padding: 0 2px;
 }
 
@@ -99,11 +100,13 @@
   font-size: 1.2rem;
 }
 
-.block .feature_title {
-  margin-top: 20px;
-  margin-bottom: 0;
+.section .feature_title {
   font-weight: bold;
   text-indent: 0.85rem;
+}
+
+.block {
+  margin-bottom: 16px;
 }
 
 .feature_uses {
@@ -119,6 +122,5 @@
   width: 20px;
   height: 20px;
   margin: 0 6px;
-  border: 1px #b82500 solid;
   vertical-align: middle;
 }

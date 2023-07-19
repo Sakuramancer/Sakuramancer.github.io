@@ -96,8 +96,7 @@
         ],
         "uses": {
           "id": "scorching_ray",
-          "value": 2,
-          "word": "использования"
+          "value": 2
         }
       },
       {
@@ -107,8 +106,7 @@
         ],
         "uses": {
           "id": "fiend_flesh",
-          "value": 1,
-          "word": "использование"
+          "value": 1
         },
         "concentration": "Концентрация, вплоть до 1 часа"
       },
@@ -120,8 +118,7 @@
         ],
         "uses": {
           "id": "haste",
-          "value": 1,
-          "word": "использование"
+          "value": 1
         },
         "concentration": "Концентрация, вплоть до 1 минуты"
       }
@@ -134,8 +131,7 @@
         ],
         "uses": {
           "id": "commanders_strike",
-          "value": 2,
-          "word": "использования"
+          "value": 2
         }
       },
       {
@@ -145,8 +141,7 @@
         ],
         "uses": {
           "id": "infernal_conduit",
-          "value": 2,
-          "word": "использования"
+          "value": 2
         }
       },
       {
@@ -156,8 +151,7 @@
         ],
         "uses": {
           "id": "rage_seal",
-          "value": 2,
-          "word": "использования"
+          "value": 2
         }
       }
     ],
@@ -169,8 +163,7 @@
         ],
         "uses": {
           "id": "hellish_rebuke",
-          "value": 2,
-          "word": "использования"
+          "value": 2
         }
       }
     ]
@@ -268,8 +261,7 @@
         ],
         "uses": {
           "id": "entangle",
-          "value": 1,
-          "word": "использование"
+          "value": 1
         },
         "concentration": "Концентрация, вплоть до 1 минуты"
       },
@@ -280,8 +272,7 @@
         ],
         "uses": {
           "id": "briar_cage",
-          "value": 1,
-          "word": "использование"
+          "value": 1
         }
       },
       {
@@ -291,8 +282,7 @@
         ],
         "uses": {
           "id": "bloodberries",
-          "value": 1,
-          "word": "использование"
+          "value": 1
         }
       },
       {
@@ -303,8 +293,7 @@
         ],
         "uses": {
           "id": "fairy_nightmare",
-          "value": 1,
-          "word": "использование"
+          "value": 1
         }
       },
       {
@@ -314,8 +303,7 @@
         ],
         "uses": {
           "id": "bloody_flourish",
-          "value": 1,
-          "word": "использование"
+          "value": 1
         }
       }
     ],
