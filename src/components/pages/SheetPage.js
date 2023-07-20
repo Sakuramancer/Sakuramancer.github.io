@@ -17,7 +17,7 @@ const SheetPage = (props) => {
     asset = characterAssets[params.id];
     items = Object.entries(magicItems)
     .filter(([key, _]) => !key.startsWith("NOT_"))
-    .filter(([_, item]) => item.state.owner === params.id);
+    .filter(([_, item]) => item.state && item.state.owner === params.id);
     
     document.title = `${sheet.name} | Кампания из Эвенглена`;
   }

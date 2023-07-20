@@ -1,9 +1,11 @@
 // characters
 import placeholderImage from "./characters/Placeholder h300.png";
+import efelamonImage from "./characters/Efelamon h300.png";
 import andrakasImage from "./characters/Andrakas h300.png";
 import talisinImage from "./characters/Talisin h300.png";
 import selenaImage from "./characters/Selena h300.png";
 import undaaratelImage from "./characters/Unda'aratel h300.png";
+import taznarImage from "./characters/Taznar h300.png";
 // magic icons
 import weaponIcon from "./itemIcons/axe-sword.svg";
 import armorIcon from "./itemIcons/lamellar.svg";
@@ -20,6 +22,10 @@ import abishaiImage from "./monsters/abishai h300.png";
 import sanguineDryadImage from "./monsters/sanguine dryad h300.png";
 
 export const characterAssets = {
+  _placeholder: {
+    path: placeholderImage,
+    alt: "The Last Spark by Eleonor Piteira @eleonorpiteira",
+  },
   andrakas: {
     path: andrakasImage,
     alt: "D&D Halfling Fighter/Rogue/Bearstander by Brendon Chang @bchangart",
@@ -29,8 +35,8 @@ export const characterAssets = {
     alt: "Elf by BoissB",
   },
   efelamon: {
-    path: placeholderImage,
-    alt: "The Last Spark by Eleonor Piteira @eleonorpiteira",
+    path: efelamonImage,
+    alt: "Tibalt, The Fiend Blooded by Peter Mohrbacher @petemohrbacher",
   },
   selena: {
     path: selenaImage,
@@ -39,6 +45,10 @@ export const characterAssets = {
   undaaratel: {
     path: undaaratelImage,
     alt: "Witch by @euna.draw",
+  },
+  taznar: {
+    path: taznarImage,
+    alt: "Kolyat Krios, Mass Effect",
   },
 };
 
@@ -79,18 +89,18 @@ export const itemIconAssets = {
 export const monsterAssets = {
   scriber: {
     path: scriberImage,
-    alt: "Scribe devil from Tome of Beasts 2 by Kobold Press"
+    alt: "Scribe devil from Tome of Beasts 2 by Kobold Press",
   },
   chort: {
     path: chortImage,
-    alt: "Chort devil from Tome of Beasts by Kobold Press"
+    alt: "Chort devil from Tome of Beasts by Kobold Press",
   },
   abishai: {
     path: abishaiImage,
-    alt: "Abishai from Monster Manual"
+    alt: "Abishai from Monster Manual",
   },
   sanguine_dryad: {
     path: sanguineDryadImage,
-    alt: "Corrupted dryad by Linda Lithén @lindalithen"
-  }
-}
+    alt: "Corrupted dryad by Linda Lithén @lindalithen",
+  },
+};

@@ -508,5 +508,108 @@
       "не может быть очарована, испугана или одержима нежитью"
     ],
     "disadvantages": []
+  },
+  "taznar": {
+    "name": "Тазнар",
+    "origin": "Хлассарец",
+    "classes": [
+      {
+        "name": "Изобретатель",
+        "archetype": "Артиллерист",
+        "value": 4,
+        "style": { "backgroundColor": "#546E7A" }
+      },
+      {
+        "name": "Колдун",
+        "archetype": "Бездонный",
+        "value": 6,
+        "style": { "backgroundColor": "#AB47BC" }
+      }
+    ],
+    "abilities": [
+      {
+        "abbr": "СИЛ",
+        "value": 8,
+        "mod": "-1",
+        "save": "-1"
+      },
+      {
+        "abbr": "ЛОВ",
+        "value": 14,
+        "mod": "+2",
+        "save": "+2"
+      },
+      {
+        "abbr": "ТЕЛ",
+        "value": 10,
+        "mod": "+0",
+        "save": "+4"
+      },
+      {
+        "abbr": "ИНТ",
+        "value": 12,
+        "mod": "+1",
+        "save": "+5"
+      },
+      {
+        "abbr": "МДР",
+        "value": 14,
+        "mod": "+2",
+        "save": "+2"
+      },
+      {
+        "abbr": "ХАР",
+        "value": 16,
+        "mod": "+3",
+        "save": "+3"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Анализ",
+        "value": "+5"
+      },
+      {
+        "name": "Магия",
+        "value": "+5"
+      },
+      {
+        "name": "Внимательность",
+        "value": "+6"
+      },
+      {
+        "name": "Медицина",
+        "value": "+6"
+      }
+    ],
+    "hitpoints": 53,
+    "hitdices": "10d8",
+    "armor": 16,
+    "initiative": "+2",
+    "proficiency": "+4",
+    "speed": 30,
+    "size": "Средний",
+    "spellSlots": "3+0+2",
+    "spellLevel": 3,
+    "passives": [
+      {
+        "name": "Анализ",
+        "value": 15
+      },
+      {
+        "name": "Внимательность",
+        "value": 16
+      },
+      {
+        "name": "Проницательность",
+        "value": 12
+      }
+    ],
+    "languages": ["Общий", "Эльфийский", "Сильван", "Инфернальный", "Хлассарский"],
+    "tools": ["Кузнец", "Вор", "Плотник"],
+    "senses": ["Темное зрение 60 ф."],
+    "resistances": [],
+    "advantages": [],
+    "disadvantages": []
   }
 }
