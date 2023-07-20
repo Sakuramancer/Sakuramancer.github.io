@@ -1,12 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.b06242ea.css",
-    "main.js": "/static/js/main.d80b244e.js",
+    "main.js": "/static/js/main.3c23c684.js",
     "static/media/map.png": "/static/media/map.4633e1dd78ad25dac8dc.png",
+    "static/media/Efelamon h300.png": "/static/media/Efelamon h300.922f6c345bf4378a36f4.png",
     "static/media/Placeholder h300.png": "/static/media/Placeholder h300.d6d62be4999d34f875a2.png",
     "static/media/sanguine dryad h300.png": "/static/media/sanguine dryad h300.8505fd1b59968713f14b.png",
     "static/media/Selena h300.png": "/static/media/Selena h300.b665fe82dfb1df01ff12.png",
     "static/media/Andrakas h300.png": "/static/media/Andrakas h300.0e1b61dfc388aaddbf19.png",
+    "static/media/Taznar h300.png": "/static/media/Taznar h300.7e8cd585b925e4b22379.png",
     "static/media/Talisin h300.png": "/static/media/Talisin h300.b8d33ddb10e04d42013c.png",
     "static/media/abishai h300.png": "/static/media/abishai h300.686c4e470eaf2740c7f4.png",
     "static/media/chort h300.png": "/static/media/chort h300.77cc1e18232e58240e2c.png",
@@ -23,10 +25,10 @@
     "static/media/addcomment.svg": "/static/media/addcomment.be6371b5c7c293ba1d84180528b0d8c4.svg",
     "static/media/scrollarrow.svg": "/static/media/scrollarrow.117749c500940ea80fa09653f545d7a4.svg",
     "main.b06242ea.css.map": "/static/css/main.b06242ea.css.map",
-    "main.d80b244e.js.map": "/static/js/main.d80b244e.js.map"
+    "main.3c23c684.js.map": "/static/js/main.3c23c684.js.map"
   },
   "entrypoints": [
     "static/css/main.b06242ea.css",
-    "static/js/main.d80b244e.js"
+    "static/js/main.3c23c684.js"
   ]
 }
