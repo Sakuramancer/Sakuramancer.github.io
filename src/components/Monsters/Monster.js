@@ -3,7 +3,7 @@ import Error from "../UI/Error";
 import classes from "./Monster.module.css";
 import UseCheckers from "./UseCheckers";
 import NavigationPanel from "../Layout/NavigationPanel";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 const links = [
   {
@@ -22,12 +22,39 @@ const links = [
     tooltip: "Реакции",
   },
 ];
+
+const initCheckers = (monster) => {
+  if (monster === undefined) return undefined;
+  const checkers = {};
+  [monster.actions, monster.bonus_actions, monster.reactions].forEach(
+    (list) => {
+      if (!list) return;
+      list.forEach((item) => {
+        if (item.uses) checkers[item.uses.id] = 0;
+      });
+    }
+  );
+  return checkers;
+};
 const Monster = (props) => {
   const { monster, asset } = props;
+  let defaultCheckers = initCheckers(monster);
+  const storageCheckers = JSON.parse(localStorage.getItem(monster.id));
+  if (storageCheckers) defaultCheckers = storageCheckers;
+
+  const [checkers, setCheckers] = useState(defaultCheckers);
+
   if (monster === undefined || asset === undefined) return <Error />;
 
   const checkboxHandler = (event) => {
-    localStorage.setItem(event.target.id, event.target.checked);
+    const [id, strIndex] = event.target.id.split("__");
+    const index = parseInt(strIndex);
+    const xorBit = 2 ** index;
+    setCheckers((dict) => {
+      dict[id] = dict[id] ^ xorBit
+      localStorage.setItem(monster.id, JSON.stringify(dict));
+      return dict;
+    });
   };
 
   return (
@@ -136,8 +163,9 @@ const Monster = (props) => {
                 {item.uses && (
                   <p className={classes.feature_uses}>
                     <UseCheckers
+                      checkers={checkers}
                       value={item.uses.value}
-                      id={`${monster.id}_${item.uses.id}`}
+                      id={item.uses.id}
                       onCheck={checkboxHandler}
                     />
                     {item.concentration && <span>{item.concentration}</span>}
@@ -161,8 +189,9 @@ const Monster = (props) => {
                 {item.uses && (
                   <p className={classes.feature_uses}>
                     <UseCheckers
+                      checkers={checkers}
                       value={item.uses.value}
-                      id={`${monster.id}_${item.uses.id}`}
+                      id={item.uses.id}
                       onCheck={checkboxHandler}
                     />
                     {item.concentration && <span>{item.concentration}</span>}
@@ -186,8 +215,9 @@ const Monster = (props) => {
                 {item.uses && (
                   <p className={classes.feature_uses}>
                     <UseCheckers
+                      checkers={checkers}
                       value={item.uses.value}
-                      id={`${monster.id}_${item.uses.id}`}
+                      id={item.uses.id}
                       onCheck={checkboxHandler}
                     />
                     {item.concentration && <span>{item.concentration}</span>}

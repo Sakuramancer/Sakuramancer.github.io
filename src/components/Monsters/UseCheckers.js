@@ -8,16 +8,17 @@ const word = (value) => {
   return "использований";
 };
 
-const UseCheckers = ({ value, id, onCheck }) => {
+const UseCheckers = ({ checkers, value, id, onCheck }) => {
   return (
     <Fragment>
       {[...Array(value).keys()].map((index) => {
-        const checked = localStorage.getItem(id) === "true";
+        const andBit = 2 ** index;
+        const checked = (checkers[id] & andBit) === andBit;
         return (
           <input
             type="checkbox"
             key={index}
-            id={`${id}_${index}`}
+            id={`${id}__${index}`}
             className={classes.checker}
             onClick={onCheck}
             defaultChecked={checked}

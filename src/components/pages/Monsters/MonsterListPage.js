@@ -9,10 +9,7 @@ const MonsterListPage = (props) => {
       ([_f, first], [_s, second]) =>
         (first.title > second.title) - (first.title < second.title)
     );
-    console.log(items);
-  return (
-      <MonsterList items={items} />
-  );
+  return <MonsterList items={items} />;
 };
 
 export default MonsterListPage;
