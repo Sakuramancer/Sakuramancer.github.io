@@ -29,7 +29,10 @@ const MagicItems = (props) => {
   return (
     <section className={classes.main}>
       <div className={classes.header}>
-        <h1>Магические предметы</h1>
+        <h1>Предметы</h1>
+        <div className={classes.allItems}>
+          <Link to="/magicItems">Все предметы</Link>
+        </div>
         {/* <div className={classes.search}>
         <form><input></input></form>
         </div> */}

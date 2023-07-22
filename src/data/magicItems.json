@@ -343,7 +343,7 @@
     ]
   },
   "tome_of_draconic_enchantment": {
-    "access": "link-first",
+    "access": "none",
     "title": "Фолиант драконьих чар",
     "asset": "backpack",
     "type": "Чудесный предмет",

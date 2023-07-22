@@ -6,6 +6,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   background-color: #fffef5;
+  scroll-margin-top: 56px;
 }
 
 .main img {
@@ -50,4 +51,15 @@
 
 .description p {
   margin: 8px 0;
+}
+
+.link {
+  display: block;
+  margin: 10px auto;
+  padding: 0 12px;
+  max-width: 800px;
+  text-align: right;
+  font-family: "El Messiri", sans-serif;
+  text-decoration: underline;
+  color: black;
 }

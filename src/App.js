@@ -3,6 +3,7 @@ import Layout from "./components/Layout/Layout";
 import HomePage from "./components/pages/HomePage";
 import SheetPage from "./components/pages/SheetPage";
 import ErrorPage from "./components/pages/ErrorPage";
+import MagicItemsTablePage from "./components/pages/MagicItems/MagicItemsTablePage";
 import MagicItemPage from "./components/pages/MagicItems/MagicItemPage";
 import MonsterListPage from "./components/pages/Monsters/MonsterListPage";
 import MonsterPage from "./components/pages/Monsters/MonsterPage";
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "sheets/:id", element: <SheetPage /> },
+      { path: "magicItems", element: <MagicItemsTablePage /> },
       { path: "magicItems/:id", element: <MagicItemPage /> },
       { path: "monsters", element: <MonsterListPage /> },
       { path: "monsters/:id", element: <MonsterPage /> },
