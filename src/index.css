@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
 
+:root {
+  --bckg-color: #fffef5;
+  --main-color: #b82500;
+  --sec-color: #fff59d;
+  --black-color: #3f3f3f;
+  --font-family: "El Messiri", sans-serif;
+  --box-shadow:  0 2px 8px rgba(0, 0, 0, 0.25);
+  --border-radius: 8px;
+  --border: 1px var(--black-color) solid;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,10 +22,10 @@ html {
 
 body {
   margin: 0;
-  background-color: #fffef5;
+  background-color: var(--bckg-color);
 }
 
 h1 {
-  color: #b82500;
-  font-family: "El Messiri", sans-serif;
+  color: var(--main-color);
+  font-family: var(--font-family);
 }

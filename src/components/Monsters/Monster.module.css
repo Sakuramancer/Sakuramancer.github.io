@@ -7,10 +7,10 @@
   margin-bottom: 10px;
   margin-left: 5%;
   padding: 0rem;
-  border: 1px #3f3f3f solid;
-  border-radius: 8px;
-  background-color: #fffef5;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--bckg-color);
+  box-shadow: var(--box-shadow);
   overflow: hidden;
   width: 38%;
   max-width: 212px;
@@ -24,7 +24,7 @@
 .title {
   padding: 4px;
   text-align: center;
-  font-family: "El Messiri", sans-serif;
+  font-family: var(--font-family);
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -46,9 +46,9 @@
   padding-bottom: 4px;
   text-align: left;
   text-indent: 1rem;
-  background-color: #fffef5;
-  color: #b82500;
-  border-bottom: 2px #b82500 solid;
+  background-color: var(--bckg-color);
+  color: var(--main-color);
+  border-bottom: 2px var(--main-color) solid;
 }
 
 .section span {
@@ -57,7 +57,7 @@
 
 .line {
   margin: 1rem 3%;
-  border-bottom: 1px #3f3f3f solid;
+  border-bottom: var(--border);
 }
 
 .abilities {
@@ -66,11 +66,11 @@
 
 .ability {
   display: inline-block;
-  background-color: #fffef5;
+  background-color: var(--bckg-color);
   margin: 8px 2px;
   padding: 3px;
-  border: 1px #3f3f3f solid;
-  border-radius: 8px;
+  border: var(--border);
+  border-radius: var(--border-radius);
   min-width: 40px;
   max-width: 60px;
   width: 15%;
@@ -96,7 +96,7 @@
 }
 
 .ability_save {
-  border-top: 1px #3f3f3f solid;
+  border-top: var(--border);
   font-size: 1.2rem;
 }
 

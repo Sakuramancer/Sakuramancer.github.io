@@ -2,10 +2,10 @@
   display: inline-block;
   margin: 4px;
   padding: 0rem;
-  border: 1px #3f3f3f solid;
-  border-radius: 8px;
-  background-color: #fffef5;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: var(--bckg-color);
+  box-shadow: var(--box-shadow);
   overflow: hidden;
   width: 45%;
   max-width: 212px;
@@ -34,10 +34,10 @@
 }
 
 .title {
-  color: #3f3f3f;
+  color: var(--black-color);
   padding: 4px;
   text-align: center;
-  font-family: "El Messiri", sans-serif;
+  font-family: var(--font-family);
   font-size: 1.2rem;
   font-weight: bold;
 }

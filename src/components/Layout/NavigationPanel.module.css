@@ -7,10 +7,10 @@
   padding: 0 5%;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff59d;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  background-color: var(--sec-color);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
   z-index: 10;
   display: inline-block;
 }
@@ -47,11 +47,11 @@
   height: 40px;
   margin-top: 4px;
   border: 2px transparent solid;
-  border-radius: 8px;
-  font-family: "El Messiri", sans-serif;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
   font-size: 1.6rem;
   font-weight: bold;
-  color: #b82500;
+  color: var(--main-color);
 
 }
 
@@ -66,8 +66,8 @@
   border-radius: 4px;
   text-align: center;
   font-size: 0.8rem;
-  background-color: #fff59d;
-  color: #b82500;
+  background-color: var(--sec-color);
+  color: var(--main-color);
 }
 
 @media (min-width: 30rem) {
@@ -84,7 +84,7 @@
 
 @media (hover: hover) {
   .link:hover .button {
-    border: 2px #b82500 solid;
+    border: 2px var(--main-color) solid;
   }
 
   .link:hover .tooltip {

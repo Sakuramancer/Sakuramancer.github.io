@@ -1,10 +1,10 @@
 .main {
   margin: 2rem auto;
-  background-color: #fffef5;
-  border: 1px #3f3f3f solid;
-  border-radius: 8px;
+  background-color: var(--bckg-color);
+  border: var(--border);
+  border-radius: var(--border-radius);
   padding: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
 }
 
 .card {

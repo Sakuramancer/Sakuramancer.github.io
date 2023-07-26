@@ -1,11 +1,11 @@
 .form {
   max-width: 40rem;
   margin: 2rem auto;
-  background-color: #fffef5;
-  border: 1px #3f3f3f solid;
-  border-radius: 8px;
+  background-color: var(--bckg-color);
+  border: var(--border);
+  border-radius: var(--border-radius);
   padding: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
   text-align: left;
 }
 
@@ -26,7 +26,7 @@
 .form textarea {
   font: inherit;
   padding: 0.25rem;
-  border: 1px #3f3f3f solid;
+  border: var(--border);
   border-radius: 4px;
 }
 
@@ -37,13 +37,13 @@
 .form input:focus,
 .form textarea:focus {
   outline: none;
-  border: 1px #b82500 solid;
+  border: 1px var(--main-color) solid;
 }
 
 .invalid {
   padding-left: 20px;
   font-style: italic;
-  color: #b82500;
+  color: var(--main-color);
 }
 
 .actions {
@@ -57,24 +57,24 @@
   cursor: pointer;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
-  background-color: #fff59d;
-  color: #b82500;
+  background-color: var(--sec-color);
+  color: var(--main-color);
   border: none;
 }
 
 .actions button[type="button"] {
   background-color: transparent;
-  color: #3f3f3f;
+  color: var(--black-color);
 }
 
 .actions button:hover {
-  background-color: #b82500;
-  color: #fffef5;
+  background-color: var(--main-color);
+  color: var(--bckg-color);
 }
 
 .actions button[type="button"]:hover {
-  background-color: #b82500;
-  color: #fffef5;
+  background-color: var(--main-color);
+  color: var(--bckg-color);
 }
 
 .actions button:disabled,
