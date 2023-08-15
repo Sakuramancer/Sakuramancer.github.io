@@ -4,7 +4,7 @@
 
 .avatar {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   margin-left: 5%;
   padding: 0rem;
   border: var(--border);
@@ -14,6 +14,42 @@
   overflow: hidden;
   width: 38%;
   max-width: 212px;
+}
+
+.token {
+  text-align: left;
+  margin-left: 5%;
+  margin-bottom: 5px;
+  padding: 0rem;
+}
+
+.token_svg {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 0 2px;
+  vertical-align: middle;
+}
+
+.token_button {
+  display: inline-block;
+  margin: 0 2px;
+  vertical-align: middle;
+  font: inherit;
+  font-family: var(--font-family);
+  text-decoration: underline;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: var(--bckg-color);
+  color: var(--black-color);
+  border: none;
+}
+
+.token_link {
+  font-family: var(--font-family);
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--black-color);
 }
 
 .image {

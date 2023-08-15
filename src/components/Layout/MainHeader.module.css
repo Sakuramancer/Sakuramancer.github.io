@@ -52,8 +52,6 @@
 }
 
 .commentIcon {
-  width: 32px;
-  height: 32px;
   border: 2px transparent solid;
   vertical-align: bottom;
 }
@@ -71,6 +69,7 @@
   font-size: 0.8rem;
   background-color: var(--bckg-color);
   color: var(--main-color);
+  box-shadow: var(--box-shadow);
 }
 
 @media (min-width: 30rem) {

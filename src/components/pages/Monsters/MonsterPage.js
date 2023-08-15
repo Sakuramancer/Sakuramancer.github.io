@@ -19,3 +19,23 @@ const MonsterPage = (props) => {
 };
 
 export default MonsterPage;
+
+export const monsterHandle = {
+  links: [
+    {
+      link: "#actions",
+      src: "Д",
+      tooltip: "Действия",
+    },
+    {
+      link: "#bonus_actions",
+      src: "БД",
+      tooltip: "Бонусные действия",
+    },
+    {
+      link: "#reactions",
+      src: "Р",
+      tooltip: "Реакции",
+    },
+  ],
+};

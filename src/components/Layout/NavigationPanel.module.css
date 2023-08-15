@@ -1,14 +1,12 @@
 .panel {
   position: fixed;
   top: calc(100vh - 52px);
-  left: 5vw;
+  left: 0;
   height: 52px;
-  width: 90vw;
-  padding: 0 5%;
-  align-items: center;
-  justify-content: space-between;
+  width: 95vw;
+  max-width: 400px;
+  padding: 8px;
   background-color: var(--sec-color);
-  border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   z-index: 10;
@@ -19,24 +17,30 @@
   text-decoration: none;
 }
 
-.panel li {
-  display:inline-block;
-  margin: auto 20px;
+.panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+.panel li {
+  margin: 0 6px;
+  float: left;
+}
+
+.panel .vertical {
+  height: 40px;
+  margin: 0 12px;
+  /* border-left: 1px var(--main-color) solid; */
+}
+/* 
 .panel .mobile {
   display: inline-block;
 }
 
 .panel .desktop {
   display: none;
-}
-
-.panel ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+} */
 
 .link {
   position: relative;
@@ -45,29 +49,45 @@
 .button {
   width: 40px;
   height: 40px;
-  margin-top: 4px;
-  border: 2px transparent solid;
+  text-align: center;
+  border: 1px transparent solid;
   border-radius: var(--border-radius);
+}
+
+.letter {
   font-family: var(--font-family);
   font-size: 1.6rem;
   font-weight: bold;
   color: var(--main-color);
-
 }
 
 .tooltip {
   visibility: hidden;
   position: absolute;
-  top: -35px;
-  left: -100px;
+  top: -45px;
+  left: 0px;
   z-index: 1;
   width: 150px;
   padding: 5px;
   border-radius: 4px;
+  box-shadow: var(--box-shadow);
   text-align: center;
   font-size: 0.8rem;
   background-color: var(--sec-color);
   color: var(--main-color);
+}
+
+.token {
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  /* border: 1px transparent solid; */
+  border-radius: 20px;
+}
+
+.token_svg {
+  width: 36px;
+  height: 36px;
 }
 
 @media (min-width: 30rem) {
@@ -84,7 +104,10 @@
 
 @media (hover: hover) {
   .link:hover .button {
-    border: 2px var(--main-color) solid;
+    border: 1px var(--main-color) solid;
+  }
+  .link:hover .token {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   }
 
   .link:hover .tooltip {

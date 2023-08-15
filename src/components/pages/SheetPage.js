@@ -16,14 +16,14 @@ const SheetPage = (props) => {
     sheet = sheets[params.id];
     asset = characterAssets[params.id];
     items = Object.entries(magicItems)
-    .filter(([key, _]) => !key.startsWith("NOT_"))
-    .filter(([_, item]) => item.state && item.state.owner === params.id);
-    
+      .filter(([key, _]) => !key.startsWith("NOT_"))
+      .filter(([_, item]) => item.state && item.state.owner === params.id);
+
     document.title = `${sheet.name} | Кампания из Эвенглена`;
   }
   return (
     <>
-      <Sheet sheet={sheet} asset={asset} />
+      <Sheet sheetId={params.id} sheet={sheet} asset={asset} />
       {items && items.length > 0 && <MagicItems entries={items} />}
     </>
   );

@@ -2,6 +2,10 @@
   "andrakas": {
     "name": "Андракас",
     "origin": "Полурослик коренастый",
+    "token": {
+      "mainColor": "#FFFF33",
+      "backColor": "#00AFFF"
+    },
     "classes": [
       {
         "name": "Воин",
@@ -109,6 +113,10 @@
   "talisin": {
     "name": "Талисин",
     "origin": "Полуэльф",
+    "token": {
+      "mainColor": "#F6FF9C",
+      "backColor": "#120068"
+    },
     "classes": [
       {
         "name": "Жрец",
@@ -204,6 +212,10 @@
   "efelamon": {
     "name": "Эфеламон",
     "origin": "Тифлинг",
+    "token": {
+      "mainColor": "#E21CE2",
+      "backColor": "#8CC840"
+    },
     "classes": [
       {
         "name": "Волшебник",
@@ -296,6 +308,10 @@
   "selena": {
     "name": "Селена",
     "origin": "Наследие фей",
+    "token": {
+      "mainColor": "#AB00E7",
+      "backColor": "#FFFFD0"
+    },
     "classes": [
       {
         "name": "Друид",
@@ -411,6 +427,10 @@
   "undaaratel": {
     "name": "Унда'аратель",
     "origin": "Шадар-кай",
+    "token": {
+      "mainColor": "#FF000B",
+      "backColor": "#000000"
+    },
     "classes": [
       {
         "name": "Паладин",
@@ -512,6 +532,10 @@
   "taznar": {
     "name": "Тазнар",
     "origin": "Хлассарец",
+    "token": {
+      "mainColor": "#FD9F67",
+      "backColor": "#328996"
+    },
     "classes": [
       {
         "name": "Изобретатель",

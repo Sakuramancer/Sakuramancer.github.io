@@ -1,14 +1,51 @@
+import { Link } from "react-router-dom";
 import Error from "../UI/Error";
+import TokenSvg from "../svg/TokenSvg";
 import classes from "./Sheet.module.css";
+import { useStorage } from "../../hooks/useStorage";
 
-const Sheet = (props) => {
-  const { sheet, asset } = props;
+const Sheet = ({ sheetId, sheet, asset }) => {
+  const [storage, dispatch] = useStorage();
+  const checked = storage.navTokens[sheetId] !== undefined;
+
   if (sheet === undefined || asset === undefined) return <Error />;
+
+  const tokenHandler = () => {
+    dispatch("TOGGLE_NAV_TOKEN", {
+      id: sheetId,
+      mainColor: sheet.token.mainColor,
+      backColor: sheet.token.backColor,
+      name: sheet.name,
+    });
+  };
+
   return (
     <section className={classes.main}>
       <section className={classes.avatar}>
         <img className={classes.image} src={asset.path} alt={asset.alt} />
         <div className={classes.title}>{sheet.name}</div>
+      </section>
+      <section className={classes.token}>
+        <TokenSvg
+          className={classes.token_svg}
+          mainColor={sheet.token.mainColor}
+          backColor={sheet.token.backColor}
+          letter={sheet.name}
+          checked={checked}
+        />
+        <button
+          type="button"
+          className={classes.token_button}
+          onClick={tokenHandler}
+        >
+          {checked ? "Открепить" : "Закрепить"}
+        </button>
+        <Link
+          className={classes.token_link}
+          to={`/changeToken?sheet=${sheetId}`}
+        >
+          Изменить
+        </Link>
       </section>
       <section className={classes.classList}>
         {sheet.classes.map((item, index) => (

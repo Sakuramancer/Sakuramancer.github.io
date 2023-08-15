@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
+import AddCommentSvg from "../svg/AddCommentSvg";
 import classes from "./MainHeader.module.css";
-import addCommentImage from "../../assets/addcomment.svg";
 
 const MainHeader = (props) => {
   return (
@@ -15,11 +15,7 @@ const MainHeader = (props) => {
         <ul>
           <li>
             <NavLink to="/addcomment" className={classes.link}>
-              <img
-                src={addCommentImage}
-                alt="Оставить комментарий"
-                className={classes.commentIcon}
-              />
+              <AddCommentSvg className={classes.commentIcon} />
               <span className={classes.tooltip}>Оставить комментарий</span>
             </NavLink>
           </li>

@@ -1,0 +1,67 @@
+.main {
+  margin: 16px auto;
+  padding: 8px 0;
+  background-color: var(--bckg-color);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.vertical {
+  display: inline-block;
+  width: 0;
+  height: 320px;
+  margin-top: 20px;
+  border-left: 1px var(--main-color) solid;
+  vertical-align: top;
+}
+
+.header {
+  margin: 0px;
+}
+
+.pickerBlock {
+  display: inline-block;
+  margin: 8px 4px;
+}
+
+.picker {
+  max-width: 175px;
+}
+
+.tokenBlock {
+  display: inline-block;
+  margin: 8px 8px 0;
+}
+
+.tokenTest {
+  display: inline-block;
+  margin: 8px 8px 0;
+}
+
+.tokenTest_map {
+  width: 350px;
+}
+
+.tokenTest_svg {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: -105px;
+  left: -175px;
+}
+
+.svg_max {
+  width: 200px;
+  height: 200px;
+}
+
+.svg_48 {
+  width: 48px;
+  height: 48px;
+}
+
+.svg_24 {
+  width: 24px;
+  height: 24px;
+}
