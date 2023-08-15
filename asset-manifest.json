@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.f2857475.css",
-    "main.js": "/static/js/main.acbe493b.js",
+    "main.css": "/static/css/main.0ca5c58f.css",
+    "main.js": "/static/js/main.15e936a6.js",
     "static/media/map.png": "/static/media/map.4633e1dd78ad25dac8dc.png",
+    "static/media/tokenTestMap.png": "/static/media/tokenTestMap.e65dd8714ccb4a6993b9.png",
     "static/media/Efelamon h300.png": "/static/media/Efelamon h300.922f6c345bf4378a36f4.png",
     "static/media/Placeholder h300.png": "/static/media/Placeholder h300.d6d62be4999d34f875a2.png",
     "static/media/sanguine dryad h300.png": "/static/media/sanguine dryad h300.8505fd1b59968713f14b.png",
@@ -22,13 +23,11 @@
     "static/media/axe-sword.svg": "/static/media/axe-sword.478846d5a5eeaa122b8a6ac39551d739.svg",
     "static/media/diamond-ring.svg": "/static/media/diamond-ring.dc994c5c3f35b96ae9a599097ea3efd0.svg",
     "index.html": "/index.html",
-    "static/media/addcomment.svg": "/static/media/addcomment.be6371b5c7c293ba1d84180528b0d8c4.svg",
-    "static/media/scrollarrow.svg": "/static/media/scrollarrow.117749c500940ea80fa09653f545d7a4.svg",
-    "main.f2857475.css.map": "/static/css/main.f2857475.css.map",
-    "main.acbe493b.js.map": "/static/js/main.acbe493b.js.map"
+    "main.0ca5c58f.css.map": "/static/css/main.0ca5c58f.css.map",
+    "main.15e936a6.js.map": "/static/js/main.15e936a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2857475.css",
-    "static/js/main.acbe493b.js"
+    "static/css/main.0ca5c58f.css",
+    "static/js/main.15e936a6.js"
   ]
 }
