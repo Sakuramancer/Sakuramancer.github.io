@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import HomePage from "./components/pages/HomePage";
 import SheetPage from "./components/pages/SheetPage";
+import BloodwoodMapPage from "./components/pages/BloodwoodMapPage";
 import ChangeTokenPage from "./components/pages/ChangeTokenPage";
 import ErrorPage from "./components/pages/ErrorPage";
 import MagicItemsTablePage from "./components/pages/MagicItems/MagicItemsTablePage";
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "sheets/:id", element: <SheetPage /> },
+      { path: "bloodwoodMap", element: <BloodwoodMapPage /> },
       { path: "changeToken", element: <ChangeTokenPage /> },
       { path: "magicItems", element: <MagicItemsTablePage /> },
       { path: "magicItems/:id", element: <MagicItemPage /> },

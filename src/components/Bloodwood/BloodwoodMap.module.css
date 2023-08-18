@@ -1,0 +1,91 @@
+.main {
+  max-width: 800px;
+  margin: auto;
+  padding: 8px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: var(--bckg-color);
+  scroll-margin-top: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  margin: auto;
+  width: 100%;
+  height: 500px;
+  background-color: #a37878;
+}
+
+.obelisk1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  fill: white;
+  z-index: 1;
+}
+
+.obelisk2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 32px;
+  left: 100px;
+  fill: white;
+  z-index: 1;
+}
+
+.grid {
+  width: calc(100%-16px);
+  position: absolute;
+  top: 0;
+  left: 8px;
+  fill: none;
+  stroke: white;
+  z-index: 1;
+  /* border: var(--border); */
+}
+
+.mark {
+  width: 6%;
+  z-index: 2;
+  /* border: var(--border); */
+}
+
+.mark:hover {
+  fill: white;
+}
+
+.mark_sangueia {
+  position: absolute;
+  top: 106px;
+  left: 32.7%;
+  fill: red;
+}
+.mark_alseids {
+  position: absolute;
+  top: 175px;
+  left: 300px;
+  fill: bisque;
+}
+.mark_avonleigh {
+  position: absolute;
+  top: 32%;
+  left: 380px;
+  fill: green;
+}
+.mark_bargest {
+  position: absolute;
+  top: 32%;
+  left: 67.3%;
+  fill: orange;
+}
+.mark_camp {
+  position: absolute;
+  top: 60px;
+  left: 340px;
+  fill: blue;
+}
