@@ -4,6 +4,8 @@ import HomePage from "./components/pages/HomePage";
 import SheetPage from "./components/pages/SheetPage";
 import BloodwoodMapPage from "./components/pages/BloodwoodMapPage";
 import ChangeTokenPage from "./components/pages/ChangeTokenPage";
+import InitiativePage from "./components/pages/Initiative/InitiativePage";
+import InitiativeListPage from "./components/pages/Initiative/InitiativeListPage";
 import ErrorPage from "./components/pages/ErrorPage";
 import MagicItemsTablePage from "./components/pages/MagicItems/MagicItemsTablePage";
 import MagicItemPage from "./components/pages/MagicItems/MagicItemPage";
@@ -26,6 +28,8 @@ const router = createBrowserRouter([
       { path: "sheets/:id", element: <SheetPage /> },
       { path: "bloodwoodMap", element: <BloodwoodMapPage /> },
       { path: "changeToken", element: <ChangeTokenPage /> },
+      { path: "initiatives", element: <InitiativeListPage /> },
+      { path: "initiatives/:id", element: <InitiativePage /> },
       { path: "magicItems", element: <MagicItemsTablePage /> },
       { path: "magicItems/:id", element: <MagicItemPage /> },
       { path: "monsters", element: <MonsterListPage /> },
@@ -42,9 +46,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  { path: "/stream/initiatives/:id", element: <InitiativePage stream={true} /> },
 ]);
 
-const App = (props) => {
+const App = () => {
   return <RouterProvider router={router} />;
 };
 
