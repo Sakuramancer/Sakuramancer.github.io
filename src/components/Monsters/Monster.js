@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import UseCheckers from "./UseCheckers";
 import Error from "../UI/Error";
@@ -45,6 +46,11 @@ const Monster = (props) => {
         <div className={classes.title}>{monster.name}</div>
       </section>
       <section className={classes.section}>
+        <Link to="/monsters" className={classes.link}>
+          Назад к списку монстров
+        </Link>
+      </section>
+      <section className={classes.section}>
         <p>
           <em>{monster.category}</em>
         </p>
@@ -56,6 +62,9 @@ const Monster = (props) => {
         </p>
         <p>
           <strong>Скорость</strong> {monster.speed} ф.
+          {monster.speed_extra &&
+            monster.speed_extra.length > 0 &&
+            `; ${monster.speed_extra.join(", ")}`}
         </p>
       </section>
       <section className={classes.abilities}>
@@ -92,6 +101,9 @@ const Monster = (props) => {
           <p>
             <strong>Сопротивление к урону</strong>{" "}
             {monster.resistances.join(", ")}
+            {monster.resistances_extra &&
+              monster.resistances_extra.length > 0 &&
+              `; ${monster.resistances_extra.join(", ")}`}
           </p>
         )}
         {monster.immunities && (

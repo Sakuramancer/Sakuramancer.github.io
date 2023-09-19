@@ -1,9 +1,15 @@
+.total {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  background-color: var(--bckg-color);
+}
+
 .layout {
   text-align: center;
   padding: 8px;
   margin: auto;
   margin-top: -10rem;
-  margin-bottom: 5rem;
   max-width: 1200px;
   scroll-margin-top: 5rem;
 }

@@ -3,8 +3,8 @@
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  top: calc(100vh - 120px);
-  left: calc(95vw - 50px);
+  bottom: 70px;
+  right: 5vw;
   background-color: var(--sec-color);
   opacity: 0.9;
   box-shadow: var(--box-shadow);

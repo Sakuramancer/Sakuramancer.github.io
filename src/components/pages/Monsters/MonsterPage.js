@@ -23,6 +23,11 @@ export default MonsterPage;
 export const monsterHandle = {
   links: [
     {
+      link: "#top",
+      src: "В",
+      tooltip: "Вверх",
+    },
+    {
       link: "#actions",
       src: "Д",
       tooltip: "Действия",

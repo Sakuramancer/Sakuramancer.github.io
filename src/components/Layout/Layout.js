@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
 import MainHeader from "./MainHeader";
@@ -13,7 +12,7 @@ const Layout = (props) => {
   const links = useNavigationLinks();
 
   return (
-    <Fragment>
+    <div className={classes.total}>
       <MainHeader />
       <div className={classes.backgroundMap} />
       <main id="top" className={classes.layout}>
@@ -22,7 +21,7 @@ const Layout = (props) => {
       </main>
       {showButton && <ScrollToTop />}
       <NavigationPanel links={links} />
-    </Fragment>
+    </div>
   );
 };
 

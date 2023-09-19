@@ -81,21 +81,18 @@ const ChangeToken = ({ sheet, sheetId }) => {
             mainColor={tokenState.mainColor}
             backColor={tokenState.backColor}
             letter={tokenState.letter}
-            checked={false}
           />
           <TokenSvg
             className={classes.svg_48}
             mainColor={tokenState.mainColor}
             backColor={tokenState.backColor}
             letter={tokenState.letter}
-            checked={false}
           />
           <TokenSvg
             className={classes.svg_24}
             mainColor={tokenState.mainColor}
             backColor={tokenState.backColor}
             letter={tokenState.letter}
-            checked={false}
           />
         </div>
         <div className={classes.tokenTest}>
@@ -109,7 +106,6 @@ const ChangeToken = ({ sheet, sheetId }) => {
             mainColor={tokenState.mainColor}
             backColor={tokenState.backColor}
             letter={tokenState.letter}
-            checked={false}
           />
         </div>
       </section>

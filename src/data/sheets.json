@@ -1,5 +1,6 @@
 {
   "andrakas": {
+    "id": "andrakas",
     "name": "Андракас",
     "origin": "Полурослик коренастый",
     "token": {
@@ -111,6 +112,7 @@
     "disadvantages": ["Скрытность в доспехах"]
   },
   "talisin": {
+    "id": "talisin",
     "name": "Талисин",
     "origin": "Полуэльф",
     "token": {
@@ -210,6 +212,7 @@
     "disadvantages": []
   },
   "efelamon": {
+    "id": "efelamon",
     "name": "Эфеламон",
     "origin": "Тифлинг",
     "token": {
@@ -306,6 +309,7 @@
     "disadvantages": []
   },
   "selena": {
+    "id": "selena",
     "name": "Селена",
     "origin": "Наследие фей",
     "token": {
@@ -425,6 +429,7 @@
     "disadvantages": []
   },
   "undaaratel": {
+    "id": "undaaratel",
     "name": "Унда'аратель",
     "origin": "Шадар-кай",
     "token": {
@@ -530,6 +535,7 @@
     "disadvantages": []
   },
   "taznar": {
+    "id": "taznar",
     "name": "Тазнар",
     "origin": "Хлассарец",
     "token": {
@@ -629,7 +635,13 @@
         "value": 12
       }
     ],
-    "languages": ["Общий", "Эльфийский", "Сильван", "Инфернальный", "Хлассарский"],
+    "languages": [
+      "Общий",
+      "Эльфийский",
+      "Сильван",
+      "Инфернальный",
+      "Хлассарский"
+    ],
     "tools": ["Кузнец", "Вор", "Плотник"],
     "senses": ["Темное зрение 60 ф."],
     "resistances": [],

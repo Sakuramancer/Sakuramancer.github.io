@@ -27,5 +27,4 @@ export const useStorage = (shouldListen = true) => {
 export const initStorage = (userActions, initialState) => {
   actions = { ...actions, ...userActions };
   if (initialState) globalState = { ...globalState, ...initialState };
-  console.log(actions);
 };

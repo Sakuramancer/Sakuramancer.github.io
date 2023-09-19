@@ -7,8 +7,8 @@
   background-color: var(--bckg-color);
   box-shadow: var(--box-shadow);
   overflow: hidden;
-  width: 45%;
-  max-width: 212px;
+  width: 30%;
+  max-width: 159px;
 }
 
 .card:hover {
@@ -35,11 +35,12 @@
 
 .title {
   color: var(--black-color);
-  padding: 4px;
+  padding: 4px 2px;
   text-align: center;
   font-family: var(--font-family);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
+  line-height: 1.2rem;
 }
 
 .card a {

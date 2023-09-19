@@ -6,13 +6,13 @@ const MonsterList = ({ items }) => {
   return (
     <section className={classes.monsters}>
       <ul>
-        {items.map(([key, item]) => {
-          let asset = monsterAssets[key];
+        {items.map((item) => {
+          let asset = monsterAssets[item.id];
           if (!asset) asset = { path: "", alt: "" };
           return (
             <Avatar
-              key={key}
-              id={key}
+              key={item.id}
+              id={item.id}
               path={"."}
               title={item.name}
               img={asset.path}

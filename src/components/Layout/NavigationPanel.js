@@ -13,7 +13,6 @@ const NavigationPanel = ({ links }) => {
         mainColor={item.mainColor}
         backColor={item.backColor}
         letter={item.name}
-        checked={false}
       />
     ),
     tooltip: item.name,

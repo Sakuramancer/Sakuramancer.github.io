@@ -18,7 +18,7 @@
   display: inline-block;
   margin: 16px;
   margin-top: 0;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .allItems {
@@ -36,13 +36,14 @@
   width: 100%;
   height: 100%;
   --swiper-theme-color: var(--main-color);
-  --swiper-navigation-size: 32px;
+  --swiper-navigation-size: 30px;
+  --swiper-pagination-bottom: 0px;
 }
 
 .slide {
-  max-width: 150px;
-  height: 150px;
-  padding: 8px;
+  max-width: 120px;
+  height: 120px;
+  padding: 6px;
   text-align: center;
   background: var(--bckg-color);
   border: var(--border);
@@ -63,8 +64,8 @@
   text-decoration: none;
   color: black;
   font-family: var(--font-family);
-  font-size: 1rem;
-  line-height: 1.2rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
   font-weight: bold;
   user-select: none;
   -moz-user-select: none;
@@ -94,16 +95,11 @@
   }
 
   .slide {
-    max-width: 200px;
-    height: 200px;
+    max-width: 140px;
+    height: 140px;
   }
 
   .link {
-    font-size: 1.2rem;
-  }
-
-  .itemIcon {
-    margin: 8px;
-    margin-bottom: 16px;
+    font-size: 1rem;
   }
 }

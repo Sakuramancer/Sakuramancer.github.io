@@ -8,11 +8,10 @@ import { useQuery } from "../../hooks/useQuery";
 import classes from "./MagicItemsTable.module.css";
 import { Fragment } from "react";
 
-const MagicItemsTable = (props) => {
-  const { entries } = props;
+const MagicItemsTable = ({ items }) => {
   const dict = {};
-  entries.forEach(([key, item]) => {
-    dict[key] = item;
+  items.forEach((item) => {
+    dict[item.id] = item;
   });
   const query = useQuery();
 
@@ -40,18 +39,18 @@ const MagicItemsTable = (props) => {
         </div> */}
         </div>
         <ul className={classes.list}>
-          {entries.map(([key, item]) => (
+          {items.map((item) => (
             <NavHashLink
               smooth
-              to={`?item=${key}#content`}
-              key={key}
+              to={`?item=${item.id}#content`}
+              key={item.id}
               className={classes.link}
             >
               <li
                 className={
                   (() => {
                     const itemId = query.get("item");
-                    return key === itemId
+                    return item.id === itemId
                       ? `${classes.slide} ${classes.activeSlide}`
                       : `${classes.slide} ${classes.notActiveSlide}`;
                   })()

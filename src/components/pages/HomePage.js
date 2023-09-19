@@ -5,23 +5,23 @@ import magicItems from "../../data/magicItems.json";
 
 const HomePage = (props) => {
   document.title = "Кампания из Эвенглена";
-  const items = Object.entries(magicItems)
-    .filter(([key, item]) => {
+  const items = Object.values(magicItems)
+    .filter((item) => {
       if (!item.access) return true;
       if (item.access === "link-first")
-        return localStorage.getItem(`${key}_access`) === "true";
+        return localStorage.getItem(`${item.id}_access`) === "true";
       if (item.access === "none") return false;
       return true;
     })
     .sort(
-      ([_f, first], [_s, second]) =>
+      (first, second) =>
         (first.title > second.title) - (first.title < second.title)
     );
 
   return (
     <Fragment>
       <CharacterList />
-      <MagicItems entries={items} />
+      <MagicItems items={items} />
     </Fragment>
   );
 };

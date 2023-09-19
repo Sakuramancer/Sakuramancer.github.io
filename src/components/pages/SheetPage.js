@@ -15,16 +15,15 @@ const SheetPage = (props) => {
   if (params !== undefined && sheets[params.id] !== undefined) {
     sheet = sheets[params.id];
     asset = characterAssets[params.id];
-    items = Object.entries(magicItems)
-      .filter(([key, _]) => !key.startsWith("NOT_"))
-      .filter(([_, item]) => item.state && item.state.owner === params.id);
+    items = Object.values(magicItems)
+      .filter((item) => item.state && item.state.owner === params.id);
 
     document.title = `${sheet.name} | Кампания из Эвенглена`;
   }
   return (
     <>
       <Sheet sheetId={params.id} sheet={sheet} asset={asset} />
-      {items && items.length > 0 && <MagicItems entries={items} />}
+      {items && items.length > 0 && <MagicItems items={items} />}
     </>
   );
 };

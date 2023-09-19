@@ -10,8 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import classes from "./MagicItems.module.css";
 
-const MagicItems = (props) => {
-  const { entries } = props;
+const MagicItems = ({ items }) => {
   const { pathname } = useLocation();
   const storageKey = `swiper_${pathname}_activeIndex`;
   const [swiper, setSwiper] = useState();
@@ -49,10 +48,10 @@ const MagicItems = (props) => {
         modules={[Navigation, Pagination]}
         className={classes.swiper}
       >
-        {entries.map(([key, item]) => (
-          <SwiperSlide key={key} className={classes.slide}>
+        {items.map((item) => (
+          <SwiperSlide key={item.id} className={classes.slide}>
             <Link
-              to={`/magicItems/${key}`}
+              to={`/magicItems/${item.id}`}
               className={classes.link}
               onClick={linkClickedHandler}
             >

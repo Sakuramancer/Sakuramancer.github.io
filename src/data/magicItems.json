@@ -1,5 +1,6 @@
 {
   "daeruth": {
+    "id": "daeruth",
     "title": "Даэрут, Клинок памяти",
     "asset": "weapon",
     "type": "Оружие (короткий меч)",
@@ -20,6 +21,7 @@
     }
   },
   "revenge_of_the_crippled_souls": {
+    "id": "revenge_of_the_crippled_souls",
     "title": "Месть искалеченных душ",
     "asset": "weapon",
     "type": "Оружие (короткий меч)",
@@ -39,6 +41,7 @@
     }
   },
   "bloodied_cloak": {
+    "id": "bloodied_cloak",
     "title": "Окровавленный плащ",
     "asset": "backpack",
     "type": "Чудесный предмет",
@@ -56,6 +59,7 @@
     }
   },
   "bag_of_holding": {
+    "id": "bag_of_holding",
     "title": "Сумка хранения",
     "asset": "backpack",
     "type": "Чудесный предмет",
@@ -71,10 +75,12 @@
     }
   },
   "bloody_shard": {
+    "id": "bloody_shard",
     "title": "Кровавый осколок",
     "access": "none"
   },
   "dust_of_dryness": {
+    "id": "dust_of_dryness",
     "title": "Порошок сухости",
     "asset": "trinket",
     "type": "Чудесный предмет",
@@ -90,6 +96,7 @@
     }
   },
   "ring_of_slow_motion": {
+    "id": "ring_of_slow_motion",
     "title": "Кольцо замедления",
     "asset": "ring",
     "type": "Кольцо",
@@ -106,6 +113,7 @@
     }
   },
   "slippers_of_spider_climbing": {
+    "id": "slippers_of_spider_climbing",
     "title": "Туфли паука",
     "asset": "backpack",
     "type": "Чудесный предмет",
@@ -120,6 +128,7 @@
     }
   },
   "unmistakable_pen": {
+    "id": "unmistakable_pen",
     "title": "Безошибочное перо",
     "asset": "trinket",
     "type": "Чудесный предмет",
@@ -133,6 +142,7 @@
     }
   },
   "star_serpent_brooch": {
+    "id": "star_serpent_brooch",
     "title": "Брошь Звездного змея",
     "asset": "ring",
     "type": "Чудесный предмет",
@@ -146,6 +156,7 @@
     }
   },
   "ring_of_healthy_sleeping": {
+    "id": "ring_of_healthy_sleeping",
     "title": "Кольцо здорового сна",
     "asset": "ring",
     "type": "Кольцо",
@@ -162,6 +173,7 @@
     }
   },
   "glamoured_studded_leather": {
+    "id": "glamoured_studded_leather",
     "title": "Красивый проклепанный доспех",
     "asset": "armor",
     "type": "Доспех (проклёпанная кожа)",
@@ -175,6 +187,7 @@
     }
   },
   "lunar_shard": {
+    "id": "lunar_shard",
     "title": "Лунный осколок",
     "asset": "trinket",
     "type": "Чудесный предмет",
@@ -190,6 +203,7 @@
     }
   },
   "shield_of_twilight": {
+    "id": "shield_of_twilight",
     "title": "Щит сумерек",
     "asset": "armor",
     "type": "Доспех (щит)",
@@ -203,6 +217,7 @@
     }
   },
   "sanguine_war_crescent": {
+    "id": "sanguine_war_crescent",
     "title": "Кровавый боевой полумесяц",
     "asset": "weapon",
     "type": "Оружие (боевой полумесяц)",
@@ -218,6 +233,7 @@
     }
   },
   "vestments_of_the_channeled_arcana": {
+    "id": "vestments_of_the_channeled_arcana",
     "title": "Облачение направленной арканы",
     "asset": "armor",
     "type": "Доспех",
@@ -239,6 +255,7 @@
     }
   },
   "fisheye_headband": {
+    "id": "fisheye_headband",
     "title": "Обруч рыбьего глаза",
     "asset": "backpack",
     "type": "Чудесный предмет",
@@ -255,6 +272,7 @@
     }
   },
   "lightweight_elven_dagger": {
+    "id": "lightweight_elven_dagger",
     "title": "Легкий эльфийский кинжал",
     "asset": "weapon",
     "type": "Оружие (кинжал)",
@@ -270,6 +288,7 @@
     }
   },
   "negotiators_bracelet": {
+    "id": "negotiators_bracelet",
     "title": "Браслет переговорщиков",
     "asset": "ring",
     "type": "Чудесный предмет",
@@ -284,6 +303,7 @@
     }
   },
   "boots_of_winterlands": {
+    "id": "boots_of_winterlands",
     "title": "Заполярные сапоги",
     "asset": "backpack",
     "type": "Чудесный предмет",
@@ -301,6 +321,7 @@
     }
   },
   "ring_of_feather_falling": {
+    "id": "ring_of_feather_falling",
     "title": "Кольцо падения перышком",
     "asset": "ring",
     "type": "Кольцо",
@@ -315,6 +336,7 @@
     }
   },
   "embers_of_power": {
+    "id": "embers_of_power",
     "title": "Угли силы",
     "asset": "trinket",
     "type": "Чудесный предмет",
@@ -330,6 +352,7 @@
     }
   },
   "imperfect_medallion_of_thoughts": {
+    "id": "imperfect_medallion_of_thoughts",
     "access": "link-first",
     "title": "Незавершенный медальон мыслей",
     "asset": "trinket",
@@ -343,6 +366,7 @@
     ]
   },
   "tome_of_draconic_enchantment": {
+    "id": "tome_of_draconic_enchantment",
     "access": "none",
     "title": "Фолиант драконьих чар",
     "asset": "backpack",

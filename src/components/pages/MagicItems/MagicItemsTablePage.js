@@ -4,20 +4,20 @@ import magicItems from "../../../data/magicItems.json";
 const MagicItemsTablePage = (props) => {
   document.title = "Предметы | Кампания из Эвенглена";
 
-  const items = Object.entries(magicItems)
-    .filter(([key, item]) => {
+  const items = Object.values(magicItems)
+    .filter((item) => {
       if (!item.access) return true;
       if (item.access === "link-first")
-        return localStorage.getItem(`${key}_access`) === "true";
+        return localStorage.getItem(`${item.id}_access`) === "true";
       if (item.access === "none") return false;
       return true;
     })
     .sort(
-      ([_f, first], [_s, second]) =>
+      (first, second) =>
         (first.title > second.title) - (first.title < second.title)
     );
 
-  return <MagicItemsTable entries={items} />;
+  return <MagicItemsTable items={items} />;
 };
 
 export default MagicItemsTablePage;

@@ -52,6 +52,11 @@
   color: var(--black-color);
 }
 
+.token_button:hover,
+.token_link:hover {
+  text-decoration: none;
+}
+
 .image {
   max-width: 100%;
   height: auto;

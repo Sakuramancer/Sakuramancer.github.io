@@ -7,14 +7,14 @@ const CharacterList = (props) => {
   return (
     <section className={classes.characters}>
       <ul>
-        {Object.entries(sheets).map(([key, item]) => (
+        {Object.values(sheets).map((item) => (
           <Avatar
-            key={key}
-            id={key}
+            key={item.id}
+            id={item.id}
             path={"sheets"}
             title={item.name}
-            img={characterAssets[key].path}
-            alt={characterAssets[key].alt}
+            img={characterAssets[item.id].path}
+            alt={characterAssets[item.id].alt}
           />
         ))}
       </ul>
