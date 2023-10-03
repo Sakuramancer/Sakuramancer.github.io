@@ -1,6 +1,7 @@
 .total {
-  min-width: 100vw;
+  width: 100vw;
   min-height: 100vh;
+  max-width: 100%;
   padding-bottom: 5rem;
   background-color: var(--bckg-color);
 }
