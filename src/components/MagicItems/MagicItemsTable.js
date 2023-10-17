@@ -51,9 +51,9 @@ const MagicItemsTable = ({ items }) => {
                   (() => {
                     const itemId = query.get("item");
                     return item.id === itemId
-                      ? `${classes.slide} ${classes.activeSlide}`
-                      : `${classes.slide} ${classes.notActiveSlide}`;
-                  })()
+                      ? [classes.slide, classes.activeSlide]
+                      : [classes.slide, classes.notActiveSlide];
+                  })().join(" ")
                   // classes.slide
                 }
               >

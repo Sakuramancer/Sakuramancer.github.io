@@ -1,7 +1,12 @@
+import { useState } from "react";
+import ReactDOM from "react-dom";
 import { HashLink } from "react-router-hash-link";
-import classes from "./NavigationPanel.module.css";
 import TokenSvg from "../svg/TokenSvg";
 import { useStorage } from "../../hooks/useStorage";
+import MenuSvg from "../svg/MenuSvg";
+import Menu from "./Menu";
+import Backdrop from "./Backdrop";
+import classes from "./NavigationPanel.module.css";
 
 const NavigationPanel = ({ links }) => {
   const navTokens = useStorage()[0].navTokens;
@@ -17,10 +22,30 @@ const NavigationPanel = ({ links }) => {
     ),
     tooltip: item.name,
   }));
+  const [menuVisible, setMenuVisible] = useState(false);
+  const menuHandler = () => {
+    setMenuVisible((value) => !value);
+  };
 
   return (
     <nav className={classes.panel}>
       <ul>
+        <li key="menu" className={classes.link}>
+          <div className={classes.token} onClick={menuHandler}>
+            <MenuSvg />
+          </div>
+          {!menuVisible && <span className={classes.tooltip}>Меню</span>}
+          {menuVisible &&
+            ReactDOM.createPortal(
+              <Backdrop onClick={menuHandler} />,
+              document.getElementById("backdrop-root")
+            )}
+          {menuVisible &&
+            ReactDOM.createPortal(
+              <Menu className={classes.menu} onConfirm={menuHandler} />,
+              document.getElementById("overlay-root")
+            )}
+        </li>
         {tokens.map((item, index) => (
           <li key={index}>
             <HashLink smooth to={item.link} className={classes.link}>

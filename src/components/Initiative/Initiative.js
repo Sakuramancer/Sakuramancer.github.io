@@ -25,7 +25,7 @@ const Initiative = ({ stream = false, data }) => {
               const dead_or_alive = item.dead ? classes.dead : classes.alive;
               return (
                 <Link to={`/${item.type}/${item.id}`} key={index}>
-                <div className={`${dead_or_alive} ${classes.unit}`}>
+                <div className={[dead_or_alive, classes.unit].join(" ")}>
                   <TokenSvg
                     className={classes.token}
                     mainColor={item.token.mainColor}

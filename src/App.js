@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import HomePage from "./components/pages/HomePage";
+import CharactersPage from "./components/pages/CharactersPage";
 import SheetPage from "./components/pages/SheetPage";
 import BloodwoodMapPage from "./components/pages/BloodwoodMapPage";
 import ChangeTokenPage from "./components/pages/ChangeTokenPage";
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
+      { path: "characters", element: <CharactersPage /> },
       { path: "sheets/:id", element: <SheetPage /> },
       { path: "bloodwoodMap", element: <BloodwoodMapPage /> },
       { path: "changeToken", element: <ChangeTokenPage /> },

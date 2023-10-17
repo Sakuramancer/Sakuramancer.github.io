@@ -11,7 +11,7 @@ const CharacterList = (props) => {
           <Avatar
             key={item.id}
             id={item.id}
-            path={"sheets"}
+            path={"/sheets"}
             title={item.name}
             img={characterAssets[item.id].path}
             alt={characterAssets[item.id].alt}

@@ -4,6 +4,8 @@ import TokenSvg from "../svg/TokenSvg";
 import classes from "./Sheet.module.css";
 import { useStorage } from "../../hooks/useStorage";
 
+const tagClass = (val) => [classes.tag, val].join(" ");
+
 const Sheet = ({ sheetId, sheet, asset }) => {
   const [storage, dispatch] = useStorage();
   const checked = storage.navTokens[sheetId] !== undefined;
@@ -75,38 +77,38 @@ const Sheet = ({ sheetId, sheet, asset }) => {
         ))}
       </section>
       <section>
-        <div className={`${classes.tag} ${classes.hitpoints}`}>
+        <div className={tagClass(classes.hitpoints)}>
           <span>хиты</span>
           <span className={classes.tag_value}>{sheet.hitpoints}</span>
         </div>
-        <div className={`${classes.tag} ${classes.hitdices}`}>
+        <div className={tagClass(classes.hitdices)}>
           <span>кости хитов</span>
           <span className={classes.tag_value}>{sheet.hitdices}</span>
         </div>
-        <div className={`${classes.tag} ${classes.initiative}`}>
+        <div className={tagClass(classes.initiative)}>
           <span>инициатива</span>
           <span className={classes.tag_value}>{sheet.initiative}</span>
         </div>
-        <div className={`${classes.tag} ${classes.armor}`}>
+        <div className={tagClass(classes.armor)}>
           <span>класс доспеха</span>
           <span className={classes.tag_value}>{sheet.armor}</span>
         </div>
-        <div className={`${classes.tag} ${classes.proficiency}`}>
+        <div className={tagClass(classes.proficiency)}>
           <span>бонус мастерства</span>
           <span className={classes.tag_value}>{sheet.proficiency}</span>
         </div>
-        <div className={`${classes.tag} ${classes.speed}`}>
+        <div className={tagClass(classes.speed)}>
           <span>скорость</span>
           <span className={classes.tag_value}>{sheet.speed}</span>
           <span>ф.</span>
         </div>
-        <div className={`${classes.tag} ${classes.size}`}>
+        <div className={tagClass(classes.size)}>
           <span>размер</span>
           <span className={classes.tag_value}>{sheet.size}</span>
         </div>
       </section>
-      <div className={`${classes.table} ${classes.skills}`}>
-        <div className={`${classes.table_header} ${classes.skills}`}>
+      <div className={[classes.table, classes.skills].join(" ")}>
+        <div className={[classes.table_header, classes.skills].join(" ")}>
           владение навыками
         </div>
         {sheet.skills.map((item, index) => (
@@ -116,8 +118,8 @@ const Sheet = ({ sheetId, sheet, asset }) => {
           </div>
         ))}
       </div>
-      <div className={`${classes.table} ${classes.passives}`}>
-        <div className={`${classes.table_header} ${classes.passives}`}>
+      <div className={[classes.table, classes.passives].join(" ")}>
+        <div className={[classes.table_header, classes.passives].join(" ")}>
           пассивные навыки
         </div>
         {sheet.passives.map((item, index) => (
@@ -127,8 +129,8 @@ const Sheet = ({ sheetId, sheet, asset }) => {
           </div>
         ))}
       </div>
-      <div className={`${classes.table} ${classes.senses}`}>
-        <div className={`${classes.table_header} ${classes.senses}`}>
+      <div className={[classes.table, classes.senses].join(" ")}>
+        <div className={[classes.table_header, classes.senses].join(" ")}>
           чувства
         </div>
         {sheet.senses.map((item, index) => (
@@ -137,8 +139,8 @@ const Sheet = ({ sheetId, sheet, asset }) => {
           </div>
         ))}
       </div>
-      <div className={`${classes.table} ${classes.resistances}`}>
-        <div className={`${classes.table_header} ${classes.resistances}`}>
+      <div className={[classes.table, classes.resistances].join(" ")}>
+        <div className={[classes.table_header, classes.resistances].join(" ")}>
           сопротивления
         </div>
         {sheet.resistances.map((item, index) => (
@@ -147,8 +149,8 @@ const Sheet = ({ sheetId, sheet, asset }) => {
           </div>
         ))}
       </div>
-      <div className={`${classes.table} ${classes.languages}`}>
-        <div className={`${classes.table_header} ${classes.languages}`}>
+      <div className={[classes.table, classes.languages].join(" ")}>
+        <div className={[classes.table_header, classes.languages].join(" ")}>
           языки
         </div>
         {sheet.languages.map((item, index) => (
@@ -157,8 +159,8 @@ const Sheet = ({ sheetId, sheet, asset }) => {
           </div>
         ))}
       </div>
-      <div className={`${classes.table} ${classes.tools}`}>
-        <div className={`${classes.table_header} ${classes.tools}`}>
+      <div className={[classes.table, classes.tools].join(" ")}>
+        <div className={[classes.table_header, classes.tools].join(" ")}>
           инструменты
         </div>
         {sheet.tools.map((item, index) => (
@@ -167,8 +169,8 @@ const Sheet = ({ sheetId, sheet, asset }) => {
           </div>
         ))}
       </div>
-      <div className={`${classes.table} ${classes.advantages}`}>
-        <div className={`${classes.table_header} ${classes.advantages}`}>
+      <div className={[classes.table, classes.advantages].join(" ")}>
+        <div className={[classes.table_header, classes.advantages].join(" ")}>
           преимущества
         </div>
         {sheet.advantages.map((item, index) => (
@@ -177,8 +179,8 @@ const Sheet = ({ sheetId, sheet, asset }) => {
           </div>
         ))}
       </div>
-      <div className={`${classes.table} ${classes.disadvantages}`}>
-        <div className={`${classes.table_header} ${classes.disadvantages}`}>
+      <div className={[classes.table, classes.disadvantages].join(" ")}>
+        <div className={[classes.table_header, classes.disadvantages].join(" ")}>
           помехи
         </div>
         {sheet.disadvantages.map((item, index) => (

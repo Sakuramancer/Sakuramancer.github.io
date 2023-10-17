@@ -1,7 +1,7 @@
 import MagicItemsTable from "../../MagicItems/MagicItemsTable";
 import magicItems from "../../../data/magicItems.json";
 
-const MagicItemsTablePage = (props) => {
+const MagicItemsTablePage = () => {
   document.title = "Предметы | Кампания из Эвенглена";
 
   const items = Object.values(magicItems)

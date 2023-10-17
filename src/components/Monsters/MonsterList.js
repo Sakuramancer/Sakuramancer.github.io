@@ -13,7 +13,7 @@ const MonsterList = ({ items }) => {
             <Avatar
               key={item.id}
               id={item.id}
-              path={"."}
+              path={"/monsters"}
               title={item.name}
               img={asset.path}
               alt={asset.alt}

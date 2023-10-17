@@ -92,6 +92,13 @@
   height: 36px;
 }
 
+.menu {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+  z-index: 21;
+}
+
 @media (min-width: 30rem) {
   .panel .desktop {
     display: inline-block;

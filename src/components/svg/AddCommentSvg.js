@@ -3,7 +3,7 @@ import classes from "./AddCommentSvg.module.css";
 const AddCommentSvg = ({ className }) => {
   return (
     <svg
-      className={`${classes.svg} ${className}`}
+      className={[classes.svg, className].join(" ")}
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
     >

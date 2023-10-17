@@ -17,23 +17,23 @@ const BloodwoodMap = (props) => {
       {/* <ObeliskSvg className={classes.obelisk1} />
       <ObeliskSvg className={classes.obelisk2} /> */}
       <MarkSvg
-        className={`${classes.mark} ${classes.mark_sangueia}`}
+        className={[classes.mark, classes.mark_sangueia].join(" ")}
         letter={"З"}
       />
       <MarkSvg
-        className={`${classes.mark} ${classes.mark_alseids}`}
+        className={[classes.mark, classes.mark_alseids].join(" ")}
         letter={"А"}
       />
       <MarkSvg
-        className={`${classes.mark} ${classes.mark_avonleigh}`}
+        className={[classes.mark, classes.mark_avonleigh].join(" ")}
         letter={"Д"}
       />
       <MarkSvg
-        className={`${classes.mark} ${classes.mark_bargest}`}
+        className={[classes.mark, classes.mark_bargest].join(" ")}
         letter={"К"}
       />
       <MarkSvg
-        className={`${classes.mark} ${classes.mark_camp}`}
+        className={[classes.mark, classes.mark_camp].join(" ")}
         letter={"Л"}
       />
       {showGrid && (

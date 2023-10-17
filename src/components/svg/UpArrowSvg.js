@@ -3,7 +3,7 @@ import classes from "./UpArrowSvg.module.css";
 const UpArrowSvg = ({ className }) => {
   return (
     <svg
-      className={`${classes.svg} ${className}`}
+      className={[classes.svg, className].join(" ")}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
