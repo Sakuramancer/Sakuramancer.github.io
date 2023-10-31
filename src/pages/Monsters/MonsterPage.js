@@ -1,0 +1,44 @@
+import { useParams } from "react-router-dom";
+import { Monster, monsters, monsterAssets } from "../../features/Monsters";
+
+const MonsterPage = () => {
+  let monster = undefined;
+  let asset = undefined;
+  document.title = "Кампания из Эвенглена";
+  const params = useParams();
+
+  if (params !== undefined && monsters[params.id] !== undefined) {
+    monster = monsters[params.id];
+    asset = monsterAssets[params.id];
+    if (!asset) asset = { path: "", alt: "" };
+    document.title = `${monster.name} | Кампания из Эвенглена`;
+  }
+  return <Monster monster={{ id: params.id, ...monster }} asset={asset} />;
+};
+
+export default MonsterPage;
+
+export const monsterHandle = {
+  links: [
+    {
+      link: "#top",
+      src: "В",
+      tooltip: "Вверх",
+    },
+    {
+      link: "#actions",
+      src: "Д",
+      tooltip: "Действия",
+    },
+    {
+      link: "#bonus_actions",
+      src: "БД",
+      tooltip: "Бонусные действия",
+    },
+    {
+      link: "#reactions",
+      src: "Р",
+      tooltip: "Реакции",
+    },
+  ],
+};

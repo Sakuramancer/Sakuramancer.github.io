@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import classes from "./Error.module.css";
 
-const Error = (props) => {
+const Error = () => {
   document.title = "Кампания из Эвенглена";
 
   return (

@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import classes from "./Avatar.module.css";
 
-const Avatar = (props) => {
-  const { id, title, path, img, alt } = props;
-
+const Avatar = ({ id, title, path, img, alt }) => {
   return (
     <li className={classes.card}>
       <Link to={`${path}/${id}`}>
