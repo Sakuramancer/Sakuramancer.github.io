@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, createSearchParams } from "react-router-dom";
 import Error from "../../../components/UI/Error";
 import TokenSvg from "../../../components/svg/TokenSvg";
 import { useStorage } from "../../../hooks/useStorage";
@@ -48,7 +48,15 @@ const Sheet = ({ sheetId }) => {
         </button>
         <Link
           className={classes.token_link}
-          to={`/changeToken?sheet=${sheetId}`}
+          to={[
+            "/changeToken",
+            createSearchParams({
+              sheet: sheetId,
+              mainColor: sheet.token.mainColor,
+              backColor: sheet.token.backColor,
+              letter: sheet.name[0],
+            }).toString()
+          ].join("?")}
         >
           Изменить
         </Link>
