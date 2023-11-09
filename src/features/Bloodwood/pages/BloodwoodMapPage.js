@@ -1,4 +1,4 @@
-import { BloodwoodMap } from "../features/Bloodwood";
+import BloodwoodMap from "../components/BloodwoodMap";
 
 const BloodwoodMapPage = () => {
   document.title = "Кровавый лес | Кампания из Эвенглена";

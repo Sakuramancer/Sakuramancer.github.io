@@ -1,4 +1,5 @@
-import { InitiativeList, initiatives } from "../../features/Initiative";
+import InitiativeList from "../components/InitiativeList";
+import initiatives from "../data/initiatives.json";
 
 const InitiativeListPage = () => {
   document.title = "Инициативы | Кампания из Эвенглена";

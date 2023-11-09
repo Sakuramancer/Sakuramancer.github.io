@@ -11,7 +11,7 @@ import classes from "./NavigationPanel.module.css";
 const NavigationPanel = ({ links }) => {
   const navTokens = useStorage()[0].navTokens;
   const tokens = Object.entries(navTokens).map(([key, item]) => ({
-    link: `/sheets/${key}#top`,
+    link: `/characters/${key}#top`,
     src: (
       <TokenSvg
         className={classes.token_svg}

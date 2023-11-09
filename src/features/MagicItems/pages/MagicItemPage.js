@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import { MagicItem, magicItems } from "../../features/MagicItems";
+import MagicItem from "../components/MagicItem";
+import magicItems from "../data/magicItems.json";
 
 const MagicItemPage = () => {
   document.title = "Кампания из Эвенглена";

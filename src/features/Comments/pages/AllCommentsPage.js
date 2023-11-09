@@ -1,4 +1,4 @@
-import { AllComments } from "../../features/Comments";
+import AllComments from "../components/AllComments";
 
 const AllCommentsPage = () => {
   document.title = "Все комментарии | Кампания из Эвенглена";

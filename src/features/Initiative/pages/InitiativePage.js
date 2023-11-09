@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import { Initiative } from "../../features/Initiative";
-import initiatives from "../../features/Initiative/data/initiatives.json";
+import Initiative from "../components/Initiative";
+import initiatives from "../data/initiatives.json";
 
 const InitiativePage = ({ stream }) => {
   let data = undefined;

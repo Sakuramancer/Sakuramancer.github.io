@@ -1,17 +1,18 @@
+import { useLoaderData } from "react-router-dom";
 import Avatar from "../../../components/Avatar/Avatar";
-import classes from "./CharacterList.module.css";
 import { characterAssets } from "../assets/Assets";
-import sheets from "../data/sheets.json";
+import classes from "./CharacterList.module.css";
 
 const CharacterList = () => {
+  const characters = useLoaderData();
   return (
     <section className={classes.characters}>
       <ul>
-        {Object.values(sheets).map((item) => (
+        {Object.entries(characters).map(([key, item]) => (
           <Avatar
-            key={item.id}
+            key={key}
             id={item.id}
-            path={"/sheets"}
+            path={"/characters"}
             title={item.name}
             img={characterAssets[item.id].path}
             alt={characterAssets[item.id].alt}
@@ -23,3 +24,9 @@ const CharacterList = () => {
 };
 
 export default CharacterList;
+
+export async function loader() {
+  return await fetch(
+    "https://evenglen-campaign-default-rtdb.europe-west1.firebasedatabase.app/characters.json"
+  );
+}

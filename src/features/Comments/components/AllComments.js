@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import classes from "./AllComments.module.css";
 
 const AllComments = () => {
-  let commentsData = useLoaderData();
+  const commentsData = useLoaderData();
 
   return (
     <section className={classes.main}>

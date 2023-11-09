@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
-import { Sheet, sheets } from "../features/Characters";
-import { MagicItems, magicItems } from "../features/MagicItems";
+import Sheet from "../components/Sheet";
+import sheets from "../data/sheets.json";
+import { MagicItems, magicItems } from "../../MagicItems";
 
 const SheetPage = () => {
   let sheet = undefined;

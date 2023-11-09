@@ -1,4 +1,5 @@
-import { MonsterList, monsters } from "../../features/Monsters";
+import MonsterList from "../components/MonsterList";
+import monsters from "../data/monsters.json";
 
 const MonsterListPage = () => {
   document.title = "Монстры КиЭ 35 | Кампания из Эвенглена";

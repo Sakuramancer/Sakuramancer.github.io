@@ -32,7 +32,7 @@ const MagicItem = (props) => {
         {item.state && item.state.owner && (
           <div className={classes.owner}>
             Владелец:{" "}
-            <Link to={`/sheets/${item.state.owner}`}>{ownerName}</Link>
+            <Link to={`/characters/${item.state.owner}`}>{ownerName}</Link>
           </div>
         )}
         <div className={classes.description}>

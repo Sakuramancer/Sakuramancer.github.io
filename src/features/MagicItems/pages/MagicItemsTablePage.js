@@ -1,4 +1,5 @@
-import { MagicItemsTable, magicItems } from "../../features/MagicItems";
+import MagicItemsTable from "../components/MagicItemsTable";
+import magicItems from "../data/magicItems.json";
 
 const MagicItemsTablePage = () => {
   document.title = "Предметы | Кампания из Эвенглена";
