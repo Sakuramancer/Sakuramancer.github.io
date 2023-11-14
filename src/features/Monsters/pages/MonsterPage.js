@@ -1,21 +1,35 @@
 import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { Error, LoadSpinner } from "../../../components/UI";
+import { fetchMonster } from "../../../utils/http";
 import Monster from "../components/Monster";
-import monsters from "../data/monsters.json";
 import { monsterAssets } from "../assets/Assets";
 
 const MonsterPage = () => {
-  let monster = undefined;
-  let asset = undefined;
-  document.title = "Кампания из Эвенглена";
-  const params = useParams();
+  const { id } = useParams();
+  const {
+    data: monster,
+    isPending,
+    isError,
+    error,
+  } = useQuery({
+    queryKey: ["monsters", { id }],
+    queryFn: ({ signal }) => fetchMonster({ signal, id }),
+    staleTime: 60 * 1000
+  });
 
-  if (params !== undefined && monsters[params.id] !== undefined) {
-    monster = monsters[params.id];
-    asset = monsterAssets[params.id];
-    if (!asset) asset = { path: "", alt: "" };
-    document.title = `${monster.name} | Кампания из Эвенглена`;
+  if (isPending) {
+    return <LoadSpinner />;
   }
-  return <Monster monster={{ id: params.id, ...monster }} asset={asset} />;
+  if (isError) {
+    return (
+      <Error message={error.info || "Мы потеряли этого монстра!"} />
+    );
+  }
+  let asset = monsterAssets[id];
+  if (!asset) asset = { path: "", alt: "" };
+  document.title = `${monster.name} | Кампания из Эвенглена`;
+  return <Monster monster={{ id, ...monster }} asset={asset} />;
 };
 
 export default MonsterPage;

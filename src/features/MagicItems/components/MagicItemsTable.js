@@ -1,13 +1,14 @@
-import { Fragment } from "react";
+import { Fragment, useMemo } from "react";
+import { useLocation } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import MagicItem from "./MagicItem";
 import { itemIconAssets } from "../assets/Assets";
-import { useQuery } from "../../../hooks/useQuery";
 
 import classes from "./MagicItemsTable.module.css";
 
 const MagicItemsTable = ({ items }) => {
-  const query = useQuery();
+  const { search } = useLocation();
+  const query =  useMemo(() => new URLSearchParams(search), [search]);
   const itemId = query.get("item");
 
   return (

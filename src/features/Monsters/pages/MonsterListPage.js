@@ -1,14 +1,31 @@
+import { useQuery } from "@tanstack/react-query";
 import MonsterList from "../components/MonsterList";
-import monsters from "../data/monsters.json";
+import { fetchMonsters } from "../../../utils/http";
+import { Error, LoadSpinner } from "../../../components/UI";
 
 const MonsterListPage = () => {
-  document.title = "Монстры КиЭ 35 | Кампания из Эвенглена";
-  const items = Object.values(monsters)
-    .sort(
-      (first, second) =>
-        (first.title > second.title) - (first.title < second.title)
+  const { data, isPending, isError, error } = useQuery({
+    queryKey: ["monsters"],
+    queryFn: fetchMonsters,
+    staleTime: 60 * 1000
+  });
+
+  document.title = "Монстры | Кампания из Эвенглена";
+  if (isPending) {
+    return <LoadSpinner />;
+  }
+  if (isError) {
+    return (
+      <Error message={error.info || "Мы потеряли список монстров!"} />
     );
-  return <MonsterList items={items} />;
+  }
+  if (data) {
+    const items = Object.values(data).sort(
+      (first, second) =>
+        (first.name > second.name) - (first.name < second.name)
+    );
+    return <MonsterList items={items} />;
+  }
 };
 
 export default MonsterListPage;
