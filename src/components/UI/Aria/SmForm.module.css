@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  background-color: var(--sec-color);
+  color: var(--main-color);
+  border: none;
+}
+
+.actions button[type="reset"] {
+  background-color: transparent;
+  color: var(--black-color);
+}
+
+.actions button:hover {
+  background-color: var(--main-color);
+  color: var(--bckg-color);
+}
+
+.actions button[type="reset"]:hover {
+  background-color: var(--main-color);
+  color: var(--bckg-color);
+}
+
+.actions button:disabled,
+.actions button[disabled] {
+  background-color: #eeeeee;
+  color: #888888;
+}

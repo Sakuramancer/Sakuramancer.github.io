@@ -1,0 +1,48 @@
+.profile {
+  text-align: left;
+  margin: 10px;
+}
+
+.tag {
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 4px;
+  color: black;
+  border: 2px solid;
+}
+
+.value {
+  font-size: 1.2rem;
+  margin-left: 12px;
+}
+
+.hitpoints {
+  border-color: #ef5350;
+}
+
+.hitdices {
+  border-color: #f57c00;
+}
+
+.initiative {
+  border-color: #388e3c;
+}
+
+.armor {
+  border-color: #455a64;
+}
+
+.proficiency {
+  border-color: #303f9f;
+}
+
+.speed {
+  border-color: #8bc34a;
+}
+
+.size {
+  border-color: #ce93d8;
+}

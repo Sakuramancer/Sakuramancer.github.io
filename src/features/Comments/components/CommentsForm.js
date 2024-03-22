@@ -12,7 +12,7 @@ import classes from "./CommentsForm.module.css";
 
 const nameReducer = (state, action) => {
   if (action.type === "USER_INPUT") {
-    const isValid = action.value.trim().length > 0;
+    const isValid = action.value.trim().length;
     return {
       value: action.value,
       showValidation: !isValid,
@@ -20,7 +20,7 @@ const nameReducer = (state, action) => {
     };
   }
   if (action.type === "INPUT_BLUR") {
-    const isValid = state.value.trim().length > 0;
+    const isValid = state.value.trim().length;
     return {
       value: state.value,
       showValidation: !isValid,
@@ -42,7 +42,7 @@ const CommentsForm = () => {
   const [nameState, dispatchName] = useReducer(nameReducer, {
     value: name,
     showValidation: false,
-    isValid: name.trim().length > 0,
+    isValid: name.trim().length,
   });
 
   const changeNameHandler = (event) => {
@@ -60,7 +60,7 @@ const CommentsForm = () => {
   return (
     <Form method="POST" className={classes.form}>
       <h1> Оставьте комментарий</h1>
-      {data && data.errors && (
+      {data?.errors && (
         <ul>
           {Object.values(data.errors).map((err) => (
             <li key={err}>{err}</li>
@@ -140,5 +140,5 @@ export async function action({ request }) {
     throw json({ message: "Ошибка при отправке." }, { status: 500 });
   }
 
-  return redirect("/");
+  return redirect("/kie");
 }

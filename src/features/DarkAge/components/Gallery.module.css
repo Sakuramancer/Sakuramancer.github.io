@@ -1,0 +1,139 @@
+.main {
+  text-align: left;
+  max-width: 700px;
+  margin: 16px auto;
+}
+
+.char {
+  margin: 12px 0;
+  vertical-align: top;
+}
+
+.right {
+  display: inline-block;
+  width: 70%;
+}
+
+.top {
+  display: block;
+  height: 65%;
+  font-family: var(--font-family);
+  color: #da1010;
+  padding: 2px;
+  background-color: #32443e;
+  border-bottom: 2px solid #daa520;
+  font-size: 1.4rem;
+}
+
+.bottom {
+  display: block;
+  height: 35%;
+  font-family: var(--font-family);
+  color: #f78080;
+  padding: 2px;
+  background-color: var(--sec-color);
+  font-size: 1rem;
+}
+
+.fullName,
+.clan,
+.road {
+  display: inline-block;
+  margin: 0 2px;
+  padding: 0 4px;
+}
+
+.generation {
+  display: none;
+  margin: 0 2px;
+  padding: 0 4px;
+}
+
+.char:hover .image::before,
+.char:active .image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 200, 200, 0.1);
+  border-bottom-left-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.image {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 30%;
+  max-width: 150px;
+}
+
+.image > img {
+  display: block;
+  width: 100%;
+  border-bottom-left-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.char:hover .top,
+.char:active .top {
+  background-color: #2c5a4b;
+  border-bottom: 2px solid gold;
+}
+.char:hover .bottom,
+.char:active .bottom {
+  background-color: var(--sec-hover-color);
+}
+
+@media (min-width: 30rem) {
+  .right {
+    height: 150px;
+    width: calc(100% - 150px);
+  }
+
+  .image > img {
+    width: 150px;
+    border-top-right-radius: 0;
+  }
+
+  .top {
+    font-size: 2rem;
+    padding: 24px 2px;
+    border-bottom: 4px solid goldenrod;
+  }
+
+  .char:hover .top,
+  .char:active .top {
+    background-color: #2c5a4b;
+    border-bottom: 4px solid gold;
+  }
+
+  .bottom {
+    font-size: 1.2rem;
+    padding: 10px 4px;
+  }
+
+  .fullName,
+  .clan,
+  .road,
+  .generation {
+    padding: 0 6px;
+  }
+}
+
+@media (min-width: 40rem) {
+  .top {
+    font-size: 2.6rem;
+    padding: 20px 8px;
+  }
+
+  .bottom {
+    font-size: 1.2rem;
+    padding: 10px 8px;
+  }
+
+  .generation {
+    display: inline-block;
+  }
+}

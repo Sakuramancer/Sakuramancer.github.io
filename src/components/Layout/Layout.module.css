@@ -10,15 +10,15 @@
   text-align: center;
   padding: 8px;
   margin: auto;
-  margin-top: -10rem;
+  margin-top: calc(5rem - var(--background-height));
   max-width: 1200px;
   scroll-margin-top: 5rem;
 }
 
 .backgroundMap {
   width: 100%;
-  height: 15rem;
-  background: url("../../assets/map.png") no-repeat;
-  background-size: cover;
-  background-position: left 55% top 100%;
+  height: var(--background-height);
+  background: var(--background-url);
+  background-size: var(--background-size);
+  background-position: var(--background-position);
 }

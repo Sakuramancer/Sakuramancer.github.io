@@ -1,0 +1,28 @@
+.main {
+  max-width: 700px;
+  margin: 16px auto;
+}
+
+.avatar {
+  position: sticky;
+  top: -103px;
+  background-color: #32443e;
+  color: #da1010;
+  width: 150px;
+  margin: 16px 4px;
+  border: 1px solid #404040;
+  box-sizing: content-box;
+}
+
+.image {
+  border-bottom: 2px solid goldenrod;
+}
+
+.name {
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+}
+
+.sheet {
+  text-align: left;
+}

@@ -1,0 +1,18 @@
+.link {
+  position: relative;
+}
+
+.token {
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  /* border: 1px transparent solid; */
+  border-radius: 20px;
+}
+
+@media (hover: hover) {
+  .link:hover .token {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+}

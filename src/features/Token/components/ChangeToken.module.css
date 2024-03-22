@@ -1,0 +1,85 @@
+.main {
+  margin: 16px auto;
+  padding: 8px 0;
+  background-color: var(--bckg-color);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.vertical {
+  display: inline-block;
+  width: 0;
+  height: 320px;
+  margin-top: 20px;
+  border-left: 1px var(--main-color) solid;
+  vertical-align: top;
+}
+
+.header {
+  margin: 0px;
+}
+
+.pickerBlock {
+  display: inline-block;
+  margin: 8px 4px;
+}
+
+.tokenBlock {
+  display: inline-block;
+  margin: 8px 8px 0;
+}
+
+.tokenTest {
+  display: inline-block;
+  position: relative;
+  margin: 8px 8px 0;
+}
+
+.tokenTest_map {
+  width: 350px;
+}
+
+.tokenTest_svg {
+  position: absolute;
+  top: 140px;
+  left: 175px;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 8px 16px;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  background-color: var(--sec-color);
+  color: var(--main-color);
+  border: none;
+}
+
+.actions button[type="button"] {
+  background-color: transparent;
+  color: var(--black-color);
+}
+
+.actions button:hover {
+  background-color: var(--main-color);
+  color: var(--bckg-color);
+}
+
+.actions button[type="button"]:hover {
+  background-color: var(--main-color);
+  color: var(--bckg-color);
+}
+
+.actions button:disabled,
+.actions button[disabled] {
+  background-color: #eeeeee;
+  color: #888888;
+}

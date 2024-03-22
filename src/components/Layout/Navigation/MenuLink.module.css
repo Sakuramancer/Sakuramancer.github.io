@@ -1,0 +1,16 @@
+.button {
+  display: block;
+  color: var(--main-color);
+  margin: 3px 0;
+  padding: 3px 10px;
+  border-top: 1px transparent solid;
+  border-bottom: 1px transparent solid;
+  text-decoration: none;
+}
+
+.button:active,
+.button:hover {
+  border-top: 1px var(--main-color) solid;
+  border-bottom: 1px var(--main-color) solid;
+  cursor: pointer;
+}

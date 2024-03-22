@@ -1,41 +1,62 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import Layout from "./components/Layout/Layout";
-import HomePage from "./pages/HomePage";
-import { charactersRoutes, charactersLoader } from "./features/Characters";
-import ChangeTokenPage from "./pages/ChangeTokenPage";
-import { action as changeTokenAction } from "./components/Token/ChangeToken";
-import { initiativesRoutes } from "./features/Initiative";
-import { InitiativePage } from "./features/Initiative";
 import ErrorPage from "./pages/ErrorPage";
-
-import { bloodwoodRoutes } from "./features/Bloodwood";
+import HomePage from "./pages/HomePage";
+import {
+  CharactersPage,
+  charactersRoutes,
+  charactersLoader,
+} from "./features/Characters";
+import { InitiativePage, initiativesRoutes } from "./features/Initiative";
 import { commentsRoutes } from "./features/Comments";
+import { changeTokenRoutes } from "./features/Token";
 import { magicItemsRoutes } from "./features/MagicItems";
 import { monstersRoutes } from "./features/Monsters";
+import { darkAgeRoutes } from "./features/DarkAge";
+import { action as passKeyAction } from "./components/PassKeyLink";
+import { rootLoader, schemeLoader } from "./utils/schemes";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <HomePage />, loader: charactersLoader },
       {
-        path: "changeToken",
-        element: <ChangeTokenPage />,
-        action: changeTokenAction,
+        index: true,
+        element: <HomePage />,
+        action: passKeyAction,
+        loader: rootLoader,
       },
-      ...bloodwoodRoutes,
-      ...charactersRoutes,
-      ...monstersRoutes,
-      ...magicItemsRoutes,
-      ...initiativesRoutes,
-      ...commentsRoutes,
+      {
+        path: "kie",
+        element: <Layout />,
+        loader: schemeLoader,
+        children: [
+          {
+            index: true,
+            element: <CharactersPage />,
+            loader: charactersLoader,
+          },
+          ...changeTokenRoutes,
+          ...charactersRoutes,
+          ...monstersRoutes,
+          ...magicItemsRoutes,
+          ...initiativesRoutes,
+          ...commentsRoutes,
+        ],
+      },
+      {
+        path: "darkAge",
+        element: <Layout />,
+        children: darkAgeRoutes,
+        loader: schemeLoader,
+      },
+      {
+        path: "/kie/stream/initiatives/:id",
+        element: <InitiativePage stream={true} />,
+        loader: schemeLoader,
+      },
     ],
-  },
-  {
-    path: "/stream/initiatives/:id",
-    element: <InitiativePage stream={true} />,
   },
 ]);

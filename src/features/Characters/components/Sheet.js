@@ -1,12 +1,13 @@
 import { Link, createSearchParams } from "react-router-dom";
-import Error from "../../../components/UI/Error";
-import TokenSvg from "../../../components/svg/TokenSvg";
-import { useStorage } from "../../../hooks/useStorage";
+import { Error } from "../../../components/UI";
+import { TokenSvg } from "../../../components/svg";
+import { useStorage } from "../../../hooks";
+import { characterAssets } from "../assets";
+import Abilities from "./Abilities";
+import Profile from "./Profile";
 import sheets from "../data/sheets.json";
-import { characterAssets } from "../assets/Assets";
-import classes from "./Sheet.module.css";
 
-const tagClass = (val) => [classes.tag, val].join(" ");
+import classes from "./Sheet.module.css";
 
 const Sheet = ({ sheetId }) => {
   const [storage, dispatch] = useStorage();
@@ -33,6 +34,7 @@ const Sheet = ({ sheetId }) => {
       </section>
       <section className={classes.token}>
         <TokenSvg
+          size="32px"
           className={classes.token_svg}
           mainColor={sheet.token.mainColor}
           backColor={sheet.token.backColor}
@@ -49,13 +51,13 @@ const Sheet = ({ sheetId }) => {
         <Link
           className={classes.token_link}
           to={[
-            "/changeToken",
+            "/kie/changeToken",
             createSearchParams({
               sheet: sheetId,
               mainColor: sheet.token.mainColor,
               backColor: sheet.token.backColor,
               letter: sheet.name[0],
-            }).toString()
+            }).toString(),
           ].join("?")}
         >
           Изменить
@@ -64,61 +66,17 @@ const Sheet = ({ sheetId }) => {
       <section className={classes.classList}>
         {sheet.classes.map((item, index) => (
           <div key={index} className={classes.class} style={item.style}>
-            <span className={classes.class_name}>{item.name}</span>
-            <span className={classes.class_value}>{item.value}</span>
+            <span
+              className={classes.class_name}
+            >{`${item.name} ${item.value}`}</span>
             {item.archetype?.length && (
               <span className={classes.class_archetype}>{item.archetype}</span>
             )}
           </div>
         ))}
       </section>
-      <section className={classes.abilities}>
-        {sheet.abilities.map((item, index) => (
-          <div key={index} className={classes.ability}>
-            <div className={classes.ability_abbr}>{item.abbr}</div>
-            <div className={classes.ability_value}>{item.value}</div>
-            <div className={classes.ability_mod}>
-              <div className={classes.ability_mark}>м.</div>
-              {item.mod}
-            </div>
-            <div className={classes.ability_save}>
-              <div className={classes.ability_mark}>сп</div>
-              {item.save}
-            </div>
-          </div>
-        ))}
-      </section>
-      <section>
-        <div className={tagClass(classes.hitpoints)}>
-          <span>хиты</span>
-          <span className={classes.tag_value}>{sheet.hitpoints}</span>
-        </div>
-        <div className={tagClass(classes.hitdices)}>
-          <span>кости хитов</span>
-          <span className={classes.tag_value}>{sheet.hitdices}</span>
-        </div>
-        <div className={tagClass(classes.initiative)}>
-          <span>инициатива</span>
-          <span className={classes.tag_value}>{sheet.initiative}</span>
-        </div>
-        <div className={tagClass(classes.armor)}>
-          <span>класс доспеха</span>
-          <span className={classes.tag_value}>{sheet.armor}</span>
-        </div>
-        <div className={tagClass(classes.proficiency)}>
-          <span>бонус мастерства</span>
-          <span className={classes.tag_value}>{sheet.proficiency}</span>
-        </div>
-        <div className={tagClass(classes.speed)}>
-          <span>скорость</span>
-          <span className={classes.tag_value}>{sheet.speed}</span>
-          <span>ф.</span>
-        </div>
-        <div className={tagClass(classes.size)}>
-          <span>размер</span>
-          <span className={classes.tag_value}>{sheet.size}</span>
-        </div>
-      </section>
+      <Abilities sheet={sheet} />
+      <Profile sheet={sheet} />
       <div className={[classes.table, classes.skills].join(" ")}>
         <div className={[classes.table_header, classes.skills].join(" ")}>
           владение навыками

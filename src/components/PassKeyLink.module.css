@@ -1,0 +1,85 @@
+a {
+  text-decoration: none;
+}
+
+.main {
+  margin: 16px 0;
+  padding: 8px;
+  min-height: 100px;
+  color: var(--main-color);
+  background-color: var(--sec-color);
+  box-shadow: var(--box-shadow);
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+}
+
+.hoverable:hover,
+.hoverable:active {
+  background-color: var(--sec-hover-color, #fdd7e4);
+  border: 1px solid var(--main-color);
+}
+
+.main h1 {
+  text-align: center;
+  margin: 16px 0;
+  /* line-height: 2.2rem; */
+}
+
+.main label {
+  display: block;
+  font-size: 1rem;
+  text-indent: 0.5rem;
+}
+
+.main input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 2px solid var(--sec-color);
+}
+
+.main input:hover {
+  border: 2px solid var(--main-hover-color);
+}
+
+.main input:focus {
+  outline: none;
+  border: 2px solid var(--main-color);
+}
+
+.error {
+  padding: 0 10px;
+  color: red;
+  font-weight: bolder;
+}
+
+.actions {
+  display: flex;
+  margin: 8px 2px 0px;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.actions button {
+  font: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  width: 50%;
+  background-color: var(--sec-color);
+  color: var(--main-color);
+  border: none;
+}
+
+.actions button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.actions button:disabled,
+.actions button[disabled] {
+  background-color: #eeeeee;
+  color: #888888;
+}

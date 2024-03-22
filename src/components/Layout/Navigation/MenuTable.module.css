@@ -1,0 +1,17 @@
+.menu {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+  z-index: 21;
+  width: 200px;
+  height: 400px;
+  background-color: var(--sec-color);
+  color: var(--main-color);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  padding: 4px;
+}
+
+.line {
+  border-bottom: 1px #ccc solid;
+}

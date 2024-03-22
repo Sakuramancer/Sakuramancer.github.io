@@ -8,13 +8,15 @@ export function scrollToTop() {
   window.scrollTo(0, 0);
 }
 
-export function useScrollToTop() {
+export function useScrollToTop({ behavior }) {
   const [showButton, setShowButton] = useState(false);
   const { pathname } = useLocation();
 
+  const scrollMethod = behavior === "smooth" ? scrollToTopSmooth : scrollToTop;
+
   useEffect(() => {
-    scrollToTopSmooth();
-  }, [pathname]);
+    scrollMethod();
+  }, [pathname, scrollMethod]);
 
   useEffect(() => {
     const handleScrollToTop = () => {
@@ -25,5 +27,5 @@ export function useScrollToTop() {
       window.removeEventListener("scroll", handleScrollToTop);
     };
   }, []);
-  return showButton;
+  return [showButton, scrollMethod];
 }

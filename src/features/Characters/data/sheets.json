@@ -11,7 +11,7 @@
       {
         "name": "Воин",
         "archetype": "Мастер боевых искусств",
-        "value": 7,
+        "value": 8,
         "style": { "backgroundColor": "#8D6E63" }
       },
       {
@@ -81,8 +81,8 @@
         "value": "+6"
       }
     ],
-    "hitpoints": 81,
-    "hitdices": "7d10 + 3d8",
+    "hitpoints": 89,
+    "hitdices": "8d10 + 3d8",
     "armor": 18,
     "initiative": "+4",
     "proficiency": "+4",
@@ -123,7 +123,7 @@
       {
         "name": "Жрец",
         "archetype": "Домен знания",
-        "value": 8,
+        "value": 9,
         "style": { "backgroundColor": "#FDD835", "color": "#000000" }
       },
       {
@@ -172,15 +172,15 @@
       }
     ],
     "skills": [],
-    "hitpoints": 53,
-    "hitdices": "10d8",
+    "hitpoints": 58,
+    "hitdices": "11d8",
     "armor": 18,
     "initiative": "+3",
     "proficiency": "+4",
     "speed": 30,
     "size": "Средний",
-    "spellSlots": "4 + 3 + 3 + 3 + 2",
-    "spellLevel": 4,
+    "spellSlots": "4 + 3 + 3 + 3 + 2 + 1",
+    "spellLevel": 5,
     "passives": [
       {
         "name": "Анализ",
@@ -223,7 +223,7 @@
       {
         "name": "Волшебник",
         "archetype": "Школа некромантии",
-        "value": 6,
+        "value": 7,
         "style": { "backgroundColor": "#1976D2" }
       },
       {
@@ -271,16 +271,33 @@
         "save": "+3"
       }
     ],
-    "skills": [],
-    "hitpoints": 66,
-    "hitdices": "10d6",
+    "skills": [
+      {
+        "name": "История",
+        "value": "+8"
+      },
+      {
+        "name": "Магия",
+        "value": "+8"
+      },
+      {
+        "name": "Медицина",
+        "value": "+4"
+      },
+      {
+        "name": "Проницательность",
+        "value": "+4"
+      }
+    ],
+    "hitpoints": 72,
+    "hitdices": "11d6",
     "armor": 14,
     "initiative": "+0",
     "proficiency": "+4",
     "speed": 30,
     "size": "Средний",
-    "spellSlots": "4 + 3 + 3 + 3 + 2",
-    "spellLevel": 3,
+    "spellSlots": "4 + 3 + 3 + 3 + 2 + 1",
+    "spellLevel": 4,
     "passives": [
       {
         "name": "Анализ",
@@ -304,7 +321,7 @@
     ],
     "tools": [],
     "senses": ["Темное зрение 60 ф."],
-    "resistances": ["Огонь", "Силовое поле"],
+    "resistances": ["Дробящий", "Огонь", "Силовое поле"],
     "advantages": [],
     "disadvantages": []
   },
@@ -320,7 +337,7 @@
       {
         "name": "Друид",
         "archetype": "Круг пастыря",
-        "value": 10,
+        "value": 11,
         "style": { "backgroundColor": "#4CAF50" }
       }
     ],
@@ -388,15 +405,15 @@
         "value": "+8"
       }
     ],
-    "hitpoints": 83,
-    "hitdices": "10d8",
+    "hitpoints": 91,
+    "hitdices": "11d8",
     "armor": 19,
     "initiative": "+2",
     "proficiency": "+4",
     "speed": 30,
     "size": "Средний",
-    "spellSlots": "4 + 3 + 3 + 3 + 2",
-    "spellLevel": 5,
+    "spellSlots": "4 + 3 + 3 + 3 + 2 + 1",
+    "spellLevel": 6,
     "passives": [
       {
         "name": "Анализ",
@@ -418,9 +435,9 @@
       "Сильван",
       "Друидический"
     ],
-    "tools": ["Травник", "Верховая езда"],
+    "tools": ["Травник", "Верховая езда", "Лира"],
     "senses": ["Темное зрение 60 ф."],
-    "resistances": ["Огонь", "Силовое поле"],
+    "resistances": ["Кислота", "Яд"],
     "advantages": [
       "против очарования",
       "невозможно магически усыпить",
@@ -445,7 +462,8 @@
       },
       {
         "name": "Воин",
-        "value": 2,
+        "archetype": "Рунный рыцарь",
+        "value": 3,
         "style": { "backgroundColor": "#8D6E63" }
       }
     ],
@@ -501,8 +519,8 @@
         "value": "+7"
       }
     ],
-    "hitpoints": 94,
-    "hitdices": "10d10",
+    "hitpoints": 103,
+    "hitdices": "11d10",
     "armor": 16,
     "initiative": "+4",
     "proficiency": "+4",
@@ -524,11 +542,15 @@
         "value": 9
       }
     ],
-    "languages": ["Общий", "Эльфийский"],
-    "tools": [],
+    "languages": ["Общий", "Эльфийский", "Сильван", "Великаний"],
+    "tools": ["Кузнец"],
     "senses": ["Темное зрение 60 ф."],
     "resistances": ["Некротическая энергия", "Холод"],
     "advantages": [
+      "Проницательность",
+      "Ловкость рук",
+      "Обман",
+      "нельзя ослепить",
       "против очарования",
       "не может быть очарована, испугана или одержима нежитью"
     ],
@@ -552,7 +574,7 @@
       {
         "name": "Колдун",
         "archetype": "Бездонный",
-        "value": 6,
+        "value": 7,
         "style": { "backgroundColor": "#AB47BC" }
       }
     ],
@@ -612,14 +634,15 @@
         "value": "+6"
       }
     ],
-    "hitpoints": 53,
-    "hitdices": "10d8",
+    "hitpoints": 58,
+    "hitdices": "11d8",
     "armor": 16,
     "initiative": "+2",
     "proficiency": "+4",
     "speed": 30,
+    "speed_extra": ["40 ф. плавая"],
     "size": "Средний",
-    "spellSlots": "3+0+2",
+    "spellSlots": "3 + 0 + 0 + 2",
     "spellLevel": 3,
     "passives": [
       {
@@ -644,7 +667,7 @@
     ],
     "tools": ["Кузнец", "Вор", "Плотник"],
     "senses": ["Темное зрение 60 ф."],
-    "resistances": [],
+    "resistances": ["Холод"],
     "advantages": [],
     "disadvantages": []
   }

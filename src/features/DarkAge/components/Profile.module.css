@@ -1,0 +1,23 @@
+.profile {
+}
+
+.group {
+  display: inline-block;
+  width: 50%;
+  min-width: max-content;
+}
+
+.line {
+  text-align: left;
+  margin-left: 12px;
+}
+
+.name {
+  margin: 4px;
+  font-size: 0.8rem;
+}
+
+.value {
+  margin: 4px;
+  font-size: 1rem;
+}

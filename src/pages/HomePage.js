@@ -1,10 +1,9 @@
-import { CharacterList } from "../features/Characters";
+import HomeMenu from "../components/HomeMenu";
 
 const HomePage = () => {
-  document.title = "Кампания из Эвенглена";
-  return (
-    <CharacterList />
-  );
+  document.title = "Главная | Сакурамант";
+
+  return <HomeMenu />;
 };
 
 export default HomePage;

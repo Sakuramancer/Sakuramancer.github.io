@@ -1,0 +1,42 @@
+.textField {
+  --field-border-color: var(--black-color);
+  --field-border-color-disabled: var(--gray-color);
+  --field-background: white;
+  --text-color: var(--black-color);
+  --text-color-disabled: var(--gray-color);
+  --focus-ring-color: var(--main-color);
+  --invalid-color: red;
+
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+
+  .input,
+  .textArea {
+    padding: 0.4rem 0.4rem 0.2rem;
+    margin: 0;
+    border: 1px solid var(--field-border-color);
+    border-radius: var(--border-radius);
+    background: var(--field-background);
+    font-size: 1rem;
+    color: var(--text-color);
+
+    &[data-focused] {
+      outline: none;
+      border-color: var(--focus-ring-color);
+      /* box-shadow: 0 0 0 1px var(--focus-ring-color); */
+    }
+  }
+}
+
+@media (forced-colors: active) {
+  .textField {
+    --field-border-color: ButtonBorder;
+    --field-border-color-disabled: GrayText;
+    --field-background: Field;
+    --text-color: FieldText;
+    --text-color-disabled: GrayText;
+    --focus-ring-color: Highlight;
+    --invalid-color: LinkText;
+  }
+}

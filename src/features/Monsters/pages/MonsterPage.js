@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Error, LoadSpinner } from "../../../components/UI";
 import { fetchMonster } from "../../../utils/http";
 import Monster from "../components/Monster";
-import { monsterAssets } from "../assets/Assets";
+import { monsterAssets } from "../assets";
 
 const MonsterPage = () => {
   const { id } = useParams();
@@ -15,16 +15,14 @@ const MonsterPage = () => {
   } = useQuery({
     queryKey: ["monsters", { id }],
     queryFn: ({ signal }) => fetchMonster({ signal, id }),
-    staleTime: 60 * 1000
+    staleTime: 60 * 1000,
   });
 
   if (isPending) {
     return <LoadSpinner />;
   }
   if (isError) {
-    return (
-      <Error message={error.info || "Мы потеряли этого монстра!"} />
-    );
+    return <Error message={error.info || "Мы потеряли этого монстра!"} />;
   }
   let asset = monsterAssets[id];
   if (!asset) asset = { path: "", alt: "" };

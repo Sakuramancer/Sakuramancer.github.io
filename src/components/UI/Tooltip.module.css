@@ -1,0 +1,25 @@
+.tooltip {
+  position: relative;
+}
+
+.label {
+  visibility: hidden;
+  position: absolute;
+  top: -45px;
+  left: -5px;
+  z-index: 1;
+  width: 100px;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: var(--sec-color);
+  color: var(--main-color);
+}
+
+@media (hover: hover) {
+  .tooltip:hover .label {
+    visibility: visible;
+  }
+}

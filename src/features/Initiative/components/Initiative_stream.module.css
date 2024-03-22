@@ -1,13 +1,9 @@
 .main {
   display: inline-block;
-  max-width: 800px;
+  /* max-width: 2000px; */
   margin: 0px;
   padding: 4px;
   background-color: transparent;
-}
-
-.description {
-  display: none;
 }
 
 .order a {
@@ -16,16 +12,18 @@
 
 .unit {
   text-align: center;
-  display: block;
+  display: inline-block;
+  width: 140px;
   margin: 6px 4px;
   padding: 8px;
   border: var(--border);
   border-radius: var(--border-radius);
-  line-height: 1.6rem;
+  line-height: 2rem;
+  min-width: 120px;
 }
 
 .alive {
-  background-color: var(--bckg-color);
+  background-color: #fffef5;
 }
 
 .dead {
@@ -33,22 +31,18 @@
 }
 
 .token {
-  width: 48px;
+  width: 64px;
 }
 
 .name {
   font-family: var(--font-family);
   color: var(--black-color);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .value {
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-decoration: none;
   color: var(--black-color);
-}
-
-.links {
-  display: none;
 }

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import UseCheckers from "./UseCheckers";
-import Error from "../../../components/UI/Error";
+import UsedCheckers from "./UsedCheckers";
+import { Error } from "../../../components/UI";
 import classes from "./Monster.module.css";
 
 const initCheckers = (monster) => {
@@ -18,6 +18,7 @@ const initCheckers = (monster) => {
   );
   return checkers;
 };
+
 const Monster = ({ monster, asset }) => {
   let defaultCheckers = initCheckers(monster);
   const storageCheckers = JSON.parse(localStorage.getItem(monster.id));
@@ -45,7 +46,7 @@ const Monster = ({ monster, asset }) => {
         <div className={classes.title}>{monster.name}</div>
       </section>
       <section className={classes.section}>
-        <Link to="/monsters" className={classes.link}>
+        <Link to="/kie/monsters" className={classes.link}>
           Назад к списку монстров
         </Link>
       </section>
@@ -61,8 +62,7 @@ const Monster = ({ monster, asset }) => {
         </p>
         <p>
           <strong>Скорость</strong> {monster.speed} ф.
-          {monster.speed_extra &&
-            monster.speed_extra.length > 0 &&
+          {monster.speed_extra?.length > 0 &&
             `; ${monster.speed_extra.join(", ")}`}
         </p>
       </section>
@@ -136,14 +136,14 @@ const Monster = ({ monster, asset }) => {
         )}
       </section>
       <div className={classes.line} />
-      {monster.features && monster.features.length > 0 && (
+      {monster.features?.length > 0 && (
         <section className={classes.section}>
           {monster.features.map((item, index) => (
             <ReactMarkdown key={index}>{item}</ReactMarkdown>
           ))}
         </section>
       )}
-      {monster.actions && monster.actions.length > 0 && (
+      {monster.actions?.length > 0 && (
         <section id="actions" className={classes.section}>
           <h3>Действия</h3>
           {monster.actions.map((item, index) => (
@@ -153,7 +153,7 @@ const Monster = ({ monster, asset }) => {
               )}
               {item.uses && (
                 <p className={classes.feature_uses}>
-                  <UseCheckers
+                  <UsedCheckers
                     checkers={checkers}
                     value={item.uses.value}
                     id={item.uses.id}
@@ -169,7 +169,7 @@ const Monster = ({ monster, asset }) => {
           ))}
         </section>
       )}
-      {monster.bonus_actions && monster.bonus_actions.length > 0 && (
+      {monster.bonus_actions?.length > 0 && (
         <section id="bonus_actions" className={classes.section}>
           <h3>Бонусные действия</h3>
           {monster.bonus_actions.map((item, index) => (
@@ -179,7 +179,7 @@ const Monster = ({ monster, asset }) => {
               )}
               {item.uses && (
                 <p className={classes.feature_uses}>
-                  <UseCheckers
+                  <UsedCheckers
                     checkers={checkers}
                     value={item.uses.value}
                     id={item.uses.id}
@@ -195,7 +195,7 @@ const Monster = ({ monster, asset }) => {
           ))}
         </section>
       )}
-      {monster.reactions && monster.reactions.length > 0 && (
+      {monster.reactions?.length > 0 && (
         <section id="reactions" className={classes.section}>
           <h3>Реакции</h3>
           {monster.reactions.map((item, index) => (
@@ -205,7 +205,7 @@ const Monster = ({ monster, asset }) => {
               )}
               {item.uses && (
                 <p className={classes.feature_uses}>
-                  <UseCheckers
+                  <UsedCheckers
                     checkers={checkers}
                     value={item.uses.value}
                     id={item.uses.id}

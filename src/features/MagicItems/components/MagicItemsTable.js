@@ -1,18 +1,18 @@
-import { Fragment, useMemo } from "react";
+import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import MagicItem from "./MagicItem";
-import { itemIconAssets } from "../assets/Assets";
+import { itemIconAssets } from "../assets";
 
 import classes from "./MagicItemsTable.module.css";
 
 const MagicItemsTable = ({ items }) => {
   const { search } = useLocation();
-  const query =  useMemo(() => new URLSearchParams(search), [search]);
+  const query = useMemo(() => new URLSearchParams(search), [search]);
   const itemId = query.get("item");
 
   return (
-    <Fragment>
+    <>
       <section className={classes.main}>
         <div className={classes.header}>
           <h1>Магические предметы</h1>
@@ -52,7 +52,7 @@ const MagicItemsTable = ({ items }) => {
       </section>
       {!itemId && <div id="content" className={classes.hidden} />}
       {itemId && <MagicItem itemId={itemId} />}
-    </Fragment>
+    </>
   );
 };
 

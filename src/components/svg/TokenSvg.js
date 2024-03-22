@@ -1,7 +1,7 @@
-import { Fragment } from "react";
 import classes from "./TokenSvg.module.css";
 
 const TokenSvg = ({
+  size = "48px",
   className,
   mainColor,
   backColor,
@@ -13,6 +13,7 @@ const TokenSvg = ({
   if (checked === undefined) checked = false;
   return (
     <svg
+      style={{ height: size, width: size }}
       className={className}
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +30,7 @@ const TokenSvg = ({
         {letter[0].toUpperCase()}
       </text>
       {checked && (
-        <Fragment>
+        <>
           <circle fill="#25A864" cx="38" cy="38" r="10" />
           <path
             fill="#ffffff"
@@ -42,7 +43,7 @@ const TokenSvg = ({
               l -6 6
               z"
           />
-        </Fragment>
+        </>
       )}
     </svg>
   );

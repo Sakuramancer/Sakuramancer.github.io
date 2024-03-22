@@ -7,7 +7,7 @@
     "order": [
       {
         "id": "selena",
-        "type": "sheets",
+        "type": "characters",
         "name": "Селена",
         "mod": "+2",
         "value": 0,
@@ -18,7 +18,7 @@
       },
       {
         "id": "andrakas",
-        "type": "sheets",
+        "type": "characters",
         "name": "Андракас",
         "mod": "+4",
         "value": 0,
@@ -29,7 +29,7 @@
       },
       {
         "id": "undaaratel",
-        "type": "sheets",
+        "type": "characters",
         "name": "Унда'аратель",
         "mod": "+4",
         "value": 0,
@@ -111,7 +111,7 @@
     "order": [
       {
         "id": "selena",
-        "type": "sheets",
+        "type": "characters",
         "name": "Селена",
         "mod": "+2",
         "value": 0,
@@ -122,7 +122,7 @@
       },
       {
         "id": "andrakas",
-        "type": "sheets",
+        "type": "characters",
         "name": "Андракас",
         "mod": "+4",
         "value": 0,
@@ -133,7 +133,7 @@
       },
       {
         "id": "undaaratel",
-        "type": "sheets",
+        "type": "characters",
         "name": "Унда'аратель",
         "mod": "+4",
         "value": 0,
@@ -202,7 +202,7 @@
     "order": [
       {
         "id": "selena",
-        "type": "sheets",
+        "type": "characters",
         "name": "Селена",
         "mod": "+2",
         "value": 5,
@@ -213,7 +213,7 @@
       },
       {
         "id": "andrakas",
-        "type": "sheets",
+        "type": "characters",
         "name": "Андракас",
         "mod": "+4",
         "value": 24,
@@ -224,7 +224,7 @@
       },
       {
         "id": "undaaratel",
-        "type": "sheets",
+        "type": "characters",
         "name": "Унда'аратель",
         "mod": "+4",
         "value": 7,
@@ -267,7 +267,7 @@
     "order": [
       {
         "id": "selena",
-        "type": "sheets",
+        "type": "characters",
         "name": "Селена",
         "mod": "+2",
         "value": 0,
@@ -278,7 +278,7 @@
       },
       {
         "id": "andrakas",
-        "type": "sheets",
+        "type": "characters",
         "name": "Андракас",
         "mod": "+4",
         "value": 0,
@@ -289,7 +289,7 @@
       },
       {
         "id": "undaaratel",
-        "type": "sheets",
+        "type": "characters",
         "name": "Унда'аратель",
         "mod": "+4",
         "value": 0,
@@ -358,7 +358,7 @@
     "order": [
       {
         "id": "selena",
-        "type": "sheets",
+        "type": "characters",
         "name": "Селена",
         "mod": "+2",
         "value": 0,
@@ -369,7 +369,7 @@
       },
       {
         "id": "andrakas",
-        "type": "sheets",
+        "type": "characters",
         "name": "Андракас",
         "mod": "+4",
         "value": 0,
@@ -380,7 +380,7 @@
       },
       {
         "id": "undaaratel",
-        "type": "sheets",
+        "type": "characters",
         "name": "Унда'аратель",
         "mod": "+4",
         "value": 0,
@@ -451,6 +451,249 @@
           "mainColor": "white",
           "backColor": "green",
           "border": false
+        }
+      }
+    ]
+  },
+  "kie39_succubus": {
+    "id": "kie39_succubus",
+    "date": "28.12.2023",
+    "session": "КиЭ 39",
+    "title": "Веспера, Манящая Дева",
+    "order": [
+      {
+        "id": "selena",
+        "type": "characters",
+        "name": "Селена",
+        "mod": "+2",
+        "value": 0,
+        "token": {
+          "mainColor": "#AB00E7",
+          "backColor": "#FFFFD0"
+        }
+      },
+      {
+        "id": "efelamon",
+        "type": "characters",
+        "name": "Эфеламон",
+        "mod": "+0",
+        "value": 0,
+        "token": {
+          "mainColor": "#E21CE2",
+          "backColor": "#8CC840"
+        }
+      },
+      {
+        "id": "taznar",
+        "type": "characters",
+        "name": "Тазнар",
+        "mod": "+2",
+        "value": 0,
+        "token": {
+          "mainColor": "#FD9F67",
+          "backColor": "#328996"
+        }
+      },
+      {
+        "id": "satyr_thornbearer",
+        "type": "monsters",
+        "name": "Сатир",
+        "mod": "+4",
+        "value": 0,
+        "visible": true,
+        "token": {
+          "mainColor": "white",
+          "backColor": "#B96A88",
+          "border": false
+        }
+      },
+      {
+        "id": "vespera",
+        "type": "monsters",
+        "name": "Дриада",
+        "_name": "Веспера",
+        "mod": "+4",
+        "value": 0,
+        "visible": true,
+        "token": {
+          "mainColor": "#FFA7F6",
+          "backColor": "#C8192F",
+          "_border": true,
+          "border": false,
+          "letter": "Д"
+        }
+      },
+      {
+        "id": "lust_beetles",
+        "type": "monsters",
+        "name": "Рой жуков",
+        "mod": "+3",
+        "value": 0,
+        "visible": false,
+        "token": {
+          "mainColor": "white",
+          "backColor": "orange",
+          "border": false,
+          "letter": "м"
+        }
+      },
+      {
+        "id": "savan",
+        "type": "monsters",
+        "name": "Саван",
+        "mod": "+3",
+        "value": 0,
+        "visible": true,
+        "token": {
+          "mainColor": "yellow",
+          "backColor": "blue",
+          "border": false
+        }
+      }
+    ]
+  },
+  "warhammer_demons": {
+    "id": "warhammer_demons",
+    "date": "06.03.2024",
+    "session": "",
+    "title": "",
+    "order": [
+      {
+        "id": "satyr_thornbearer",
+        "type": "monsters",
+        "name": "Эберк",
+        "mod": "+4",
+        "value": 10,
+        "visible": true,
+        "token": {
+          "mainColor": "white",
+          "backColor": "orange",
+          "border": false
+        }
+      },
+      {
+        "id": "vespera",
+        "type": "monsters",
+        "name": "Ева",
+        "_name": "Веспера",
+        "mod": "+4",
+        "value": 22,
+        "visible": true,
+        "token": {
+          "mainColor": "white",
+          "backColor": "purple",
+          "_border": true,
+          "border": false
+        }
+      },
+      {
+        "id": "vespera",
+        "type": "monsters",
+        "name": "Орк Евы",
+        "_name": "Веспера",
+        "mod": "+4",
+        "value": 22,
+        "visible": true,
+        "token": {
+          "mainColor": "white",
+          "backColor": "purple",
+          "_border": true,
+          "border": false
+        }
+      },
+      {
+        "id": "vespera",
+        "type": "monsters",
+        "name": "Ви'шу",
+        "_name": "Веспера",
+        "mod": "+4",
+        "value": 9,
+        "visible": true,
+        "token": {
+          "mainColor": "white",
+          "backColor": "blue",
+          "_border": true,
+          "border": false
+        }
+      },
+      {
+        "id": "vespera",
+        "type": "monsters",
+        "name": "Лайди",
+        "_name": "Веспера",
+        "mod": "+4",
+        "value": 11,
+        "visible": true,
+        "token": {
+          "mainColor": "white",
+          "backColor": "red",
+          "_border": true,
+          "border": false
+        }
+      },
+      {
+        "id": "lust_beetles",
+        "type": "monsters",
+        "name": "Призыватель",
+        "mod": "+3",
+        "value": 20,
+        "visible": true,
+        "token": {
+          "mainColor": "darkred",
+          "backColor": "green",
+          "border": true
+        }
+      },
+      {
+        "id": "lust_beetles",
+        "type": "monsters",
+        "name": "Демонята",
+        "mod": "+3",
+        "value": 19,
+        "visible": true,
+        "token": {
+          "mainColor": "pink",
+          "backColor": "blue",
+          "border": true
+        }
+      },
+      {
+        "id": "savan",
+        "type": "monsters",
+        "name": "Эберхарт",
+        "mod": "+3",
+        "value": 11,
+        "visible": true,
+        "token": {
+          "mainColor": "black",
+          "backColor": "lightblue",
+          "border": true
+        }
+      },
+      {
+        "id": "savan",
+        "type": "monsters",
+        "name": "Мечник",
+        "mod": "+3",
+        "value": 8,
+        "visible": true,
+        "token": {
+          "mainColor": "darkred",
+          "backColor": "goldenrod",
+          "border": true
+        }
+      },
+      {
+        "id": "savan",
+        "type": "monsters",
+        "name": "Кастер",
+        "mod": "+3",
+        "value": 7,
+        "visible": true,
+        "token": {
+          "mainColor": "darkred",
+          "backColor": "green",
+          "border": true
         }
       }
     ]

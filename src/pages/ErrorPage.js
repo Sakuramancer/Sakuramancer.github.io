@@ -1,5 +1,5 @@
 import Layout from "../components/Layout/Layout";
-import Error from "../components/UI/Error";
+import { Error } from "../components/UI";
 
 const ErrorPage = () => {
   return (

@@ -1,0 +1,14 @@
+.attributes {
+  scroll-margin-top: 52px;
+}
+
+h2 {
+  position: sticky;
+  top: 52px;
+  text-align: left;
+  font-size: 1.2rem;
+  margin: 16px 6px 4px 156px;
+  padding: 2px 10px;
+  background-color: var(--bckg-color);
+  border-bottom: 2px solid #da1010;
+}

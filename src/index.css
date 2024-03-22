@@ -2,10 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
 
 :root {
-  --bckg-color: #fffef5;
-  --main-color: #b82500;
-  --sec-color: #fff59d;
   --black-color: #3f3f3f;
+  --gray-color: #cccccc;
   --font-family: "El Messiri", sans-serif;
   --box-shadow:  0 2px 8px rgba(0, 0, 0, 0.25);
   --border-radius: 8px;
@@ -25,6 +23,6 @@ body {
 }
 
 h1 {
-  color: var(--main-color);
+  color: var(--main-color, --black-color);
   font-family: var(--font-family);
 }

@@ -1,0 +1,69 @@
+:root {
+  --kie-bckg-color: #fffef5;
+  --kie-main-color: #b82500;
+  --kie-main-hover-color: #e62e00;
+  --kie-sec-color: #fff59e;
+  --kie-sec-hover-color: #fff066;
+  --kie-sec-border-color: #dddd00;
+  --kie-background-url: url("assets/map.png") no-repeat;
+  --kie-background-size: cover;
+  --kie-background-position: left 55% top 100%;
+  --kie-background-height: 15rem;
+  
+  --darkAge-bckg-color: #d6d0d0;
+  --darkAge-main-color: hsl(0, 90%, 65%);
+  --darkAge-main-hover-color: #ad1f1f;
+  --darkAge-sec-color: #400000;
+  --darkAge-sec-hover-color: #600000;
+  --darkAge-background-url: url("assets/jungle.jpg") no-repeat;
+  --darkAge-background-size: cover;
+  --darkAge-background-position: left 55% top 55%;
+  --darkAge-background-height: 15rem;
+  
+  --sakuramancer-bckg-color: #ffffff;
+  --sakuramancer-main-color: #911e42;
+  --sakuramancer-main-hover-color: #fdd7e4;
+  --sakuramancer-sec-color: #fcf4f7;
+  --sakuramancer-sec-hover-color: #fdd7e4;
+  --sakuramancer-background-url: url("assets/footer.png") no-repeat;
+  --sakuramancer-background-size: cover;
+  --sakuramancer-background-position: left 55% top 55%;
+  --sakuramancer-background-height: 30rem;
+
+}
+
+.kie {
+  --bckg-color: var(--kie-bckg-color);
+  --main-color: var(--kie-main-color);
+  --sec-color: var(--kie-sec-color);
+  --main-hover-color: var(--kie-main-hover-color);
+  --sec-hover-color: var(--kie-sec-hover-color);
+  --background-url: var(--kie-background-url);
+  --background-size: var(--kie-background-size);
+  --background-position: var(--kie-background-position);
+  --background-height: var(--kie-background-height);
+}
+
+.darkAge {
+  --bckg-color: var(--darkAge-bckg-color);
+  --main-color: var(--darkAge-main-color);
+  --sec-color: var(--darkAge-sec-color);
+  --main-hover-color: var(--darkAge-main-hover-color);
+  --sec-hover-color: var(--darkAge-sec-hover-color);
+  --background-url: var(--darkAge-background-url);
+  --background-size: var(--darkAge-background-size);
+  --background-position: var(--darkAge-background-position);
+  --background-height: var(--darkAge-background-height);
+}
+
+.sakuramancer {
+  --bckg-color: var(--sakuramancer-bckg-color);
+  --main-color: var(--sakuramancer-main-color);
+  --sec-color: var(--sakuramancer-sec-color);
+  --main-hover-color: var(--sakuramancer-main-hover-color);
+  --sec-hover-color: var(--sakuramancer-sec-hover-color);
+  --background-url: var(--sakuramancer-background-url);
+  --background-size: var(--sakuramancer-background-size);
+  --background-position: var(--sakuramancer-background-position);
+  --background-height: var(--sakuramancer-background-height);
+}

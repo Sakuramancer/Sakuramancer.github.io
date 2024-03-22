@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Avatar from "../../../components/Avatar/Avatar";
-import { characterAssets } from "../assets/Assets";
+import { characterAssets } from "../assets";
 import classes from "./CharacterList.module.css";
 
 const CharacterList = () => {
@@ -12,7 +12,7 @@ const CharacterList = () => {
           <Avatar
             key={key}
             id={item.id}
-            path={"/characters"}
+            path={"/kie/characters"}
             title={item.name}
             img={characterAssets[item.id].path}
             alt={characterAssets[item.id].alt}

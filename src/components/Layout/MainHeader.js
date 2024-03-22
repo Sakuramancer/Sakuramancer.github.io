@@ -1,14 +1,18 @@
 import { NavLink } from "react-router-dom";
+import { schemes } from "../../utils/schemes";
+
 import classes from "./MainHeader.module.css";
 
-const MainHeader = () => {
+const MainHeader = ({ schemeId }) => {
+  const scheme = schemes[schemeId];
+
   return (
     <header className={classes.header}>
-      <NavLink to="/" className={classes.mobile}>
-        <h1>КиЭ</h1>
+      <NavLink to={scheme.path} className={classes.mobile}>
+        <h1>{scheme.shortTitle}</h1>
       </NavLink>
-      <NavLink to="/" className={classes.desktop}>
-        <h1>Кампания из Эвенглена</h1>
+      <NavLink to={scheme.path} className={classes.desktop}>
+        <h1>{scheme.title}</h1>
       </NavLink>
     </header>
   );

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Sheet from "../components/Sheet";
 import sheets from "../data/sheets.json";
-import { MagicItems, magicItems } from "../../MagicItems";
+import { MagicItemsTable, magicItems } from "../../MagicItems";
 
 const SheetPage = () => {
   let sheet = undefined;
@@ -12,14 +12,18 @@ const SheetPage = () => {
   if (params !== undefined && sheets[params.id] !== undefined) {
     sheet = sheets[params.id];
     items = Object.values(magicItems)
-      .filter((item) => item.state && item.state.owner === params.id);
+      .filter((item) => item.state?.owner === params.id)
+      .sort(
+        (first, second) =>
+          (first.title > second.title) - (first.title < second.title)
+      );
 
     document.title = `${sheet.name} | Кампания из Эвенглена`;
   }
   return (
     <>
       <Sheet sheetId={params.id} />
-      {items && items.length > 0 && <MagicItems items={items} />}
+      {items?.length && <MagicItemsTable items={items} />}
     </>
   );
 };

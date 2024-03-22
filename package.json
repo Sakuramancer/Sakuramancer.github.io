@@ -4,18 +4,18 @@
   "homepage": "https://Sakuramancer.github.io",
   "private": false,
   "dependencies": {
-    "@tanstack/react-query": "^5.8.1",
-    "@testing-library/jest-dom": "^5.11.6",
+    "@tanstack/react-query": "^5.8.4",
+    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
+    "js-sha512": "^0.9.0",
     "react": "^18.0.0",
+    "react-aria-components": "^1.0.0-rc.0",
     "react-color": "^2.19.3",
     "react-dom": "^18.0.0",
     "react-markdown": "^8.0.7",
-    "react-router-dom": "^6.13.0",
+    "react-router-dom": "^6.19.0",
     "react-router-hash-link": "^2.4.3",
-    "react-scripts": "^5.0.1",
-    "swiper": "^10.0.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "react-scripts": "^5.0.1"
   }
 }

@@ -1,4 +1,4 @@
-export { monsterAssets } from "./assets/Assets";
+export { monsterAssets } from "./assets";
 
 export { default as Monster } from "./components/Monster";
 export { default as MonsterList } from "./components/MonsterList";

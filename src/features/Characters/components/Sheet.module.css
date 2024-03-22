@@ -63,7 +63,7 @@
 }
 
 .title {
-  padding: 4px;
+  padding: 0 4px;
   text-align: center;
   font-family: var(--font-family);
   font-size: 1.2rem;
@@ -71,14 +71,17 @@
 }
 
 .classList {
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
 .class {
-  display: inline-block;
-  margin: 8px;
-  padding: 4px 14px;
-  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 8px 2px;
+  padding: 6px;
+  border-radius: 12px;
   width: 45%;
   max-width: 200px;
   background-color: #ef5350;
@@ -89,13 +92,7 @@
 }
 
 .class_name {
-  margin: 4px;
-  margin-bottom: 0px;
-}
-
-.class_value {
-  margin: 4px;
-  margin-bottom: 0px;
+  margin: 0;
 }
 
 .class_archetype {
@@ -105,93 +102,9 @@
   margin-bottom: 4px;
 }
 
-.abilities {
-  display: block;
-}
-
-.ability {
-  display: inline-block;
-  background-color: var(--bckg-color);
-  margin: 8px 2px;
-  padding: 3px;
-  border: var(--border);
-  border-radius: var(--border-radius);
-  min-width: 40px;
-  max-width: 60px;
-  width: 15%;
-}
-
-.ability_abbr {
-  font-size: 1rem;
-}
-
-.ability_value {
-  font-size: 1rem;
-}
-
-.ability_mark {
-  display: inline-block;
-  padding-right: 4px;
-  color: #888888;
-  font-size: 0.8rem;
-}
-
-.ability_mod {
-  font-size: 1.2rem;
-}
-
-.ability_save {
-  border-top: var(--border);
-  font-size: 1.2rem;
-}
-
-.tag {
-  display: inline-block;
-  margin: 4px;
-  padding: 2px 14px;
-  border-radius: 16px;
-  color: black;
-  border: 2px solid;
-}
-
-.tag span {
-  margin: 0 4px;
-}
-
-.tag_value {
-  font-size: 1.2rem;
-}
-
-.hitpoints {
-  border-color: #ef5350;
-}
-
-.hitdices {
-  border-color: #f57c00;
-}
-
-.initiative {
-  border-color: #388e3c;
-}
-
-.armor {
-  border-color: #455a64;
-}
-
-.proficiency {
-  border-color: #303f9f;
-}
-
-.speed {
-  border-color: #8bc34a;
-}
-
-.size {
-  border-color: #ce93d8;
-}
-
 .table {
   display: inline-block;
+  vertical-align: top;
   margin: 4px;
   padding: 6px 0px;
   border-radius: 16px;

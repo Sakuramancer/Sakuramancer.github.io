@@ -1,0 +1,25 @@
+{
+  "short_name": "Dark Age",
+  "name": "Vampire. Dark Age",
+  "icons": [
+    {
+      "src": "/darkAge.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/darkAge192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/darkAge512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#400000",
+  "background_color": "#d6d0d0"
+}

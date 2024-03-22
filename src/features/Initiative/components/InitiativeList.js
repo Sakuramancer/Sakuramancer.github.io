@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
+import { TokenSvg } from "../../../components/svg";
 import classes from "./InitiativeList.module.css";
-import TokenSvg from "../../../components/svg/TokenSvg";
 
 const InitiativeList = ({ data }) => {
   return (
@@ -24,12 +24,11 @@ const InitiativeList = ({ data }) => {
                     .map((item, index) => (
                       <TokenSvg
                         key={index}
+                        size="30px"
                         className={classes.token}
                         mainColor={item.token.mainColor}
                         backColor={item.token.backColor}
-                        letter={
-                          item.token.letter ? item.token.letter : item.name
-                        }
+                        letter={item.token.letter ?? item.name}
                         border={item.token.border}
                       />
                     ))}

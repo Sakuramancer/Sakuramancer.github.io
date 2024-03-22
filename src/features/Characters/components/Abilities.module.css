@@ -1,0 +1,39 @@
+.abilities {
+  display: block;
+}
+
+.ability {
+  display: inline-block;
+  background-color: var(--bckg-color);
+  margin: 8px 2px;
+  padding: 3px;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  min-width: 40px;
+  max-width: 60px;
+  width: 15%;
+}
+
+.abbr {
+  font-size: 1rem;
+}
+
+.value {
+  font-size: 1rem;
+}
+
+.mark {
+  display: inline-block;
+  padding-right: 4px;
+  color: #888888;
+  font-size: 0.8rem;
+}
+
+.mod {
+  font-size: 1.2rem;
+}
+
+.save {
+  border-top: var(--border);
+  font-size: 1.2rem;
+}
