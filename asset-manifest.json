@@ -1,21 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.93dbee67.css",
-    "main.js": "/static/js/main.fa9e0d15.js",
+    "main.css": "/static/css/main.64a1d918.css",
+    "main.js": "/static/js/main.37df4a9a.js",
     "static/media/map.png": "/static/media/map.4633e1dd78ad25dac8dc.png",
+    "static/media/footer.png": "/static/media/footer.61b2c748995bdd4e995b.png",
     "static/media/tokenTestMap.png": "/static/media/tokenTestMap.e65dd8714ccb4a6993b9.png",
+    "static/media/jungle.jpg": "/static/media/jungle.eb1dec6e57b7a6f9d6a1.jpg",
+    "static/media/hell hound h300.png": "/static/media/hell hound h300.764efbce209c680197a9.png",
     "static/media/Efelamon h300.png": "/static/media/Efelamon h300.922f6c345bf4378a36f4.png",
+    "static/media/savan h300.png": "/static/media/savan h300.86c576b6087921e8840a.png",
     "static/media/Placeholder h300.png": "/static/media/Placeholder h300.d6d62be4999d34f875a2.png",
     "static/media/sanguine dryad h300.png": "/static/media/sanguine dryad h300.8505fd1b59968713f14b.png",
     "static/media/Selena h300.png": "/static/media/Selena h300.b665fe82dfb1df01ff12.png",
     "static/media/Andrakas h300.png": "/static/media/Andrakas h300.0e1b61dfc388aaddbf19.png",
     "static/media/Taznar h300.png": "/static/media/Taznar h300.7e8cd585b925e4b22379.png",
+    "static/media/dryad h300.png": "/static/media/dryad h300.2de3eb2bd4d01f35f0ff.png",
     "static/media/Talisin h300.png": "/static/media/Talisin h300.b8d33ddb10e04d42013c.png",
     "static/media/abishai h300.png": "/static/media/abishai h300.686c4e470eaf2740c7f4.png",
+    "static/media/garund h300.png": "/static/media/garund h300.fa952af66ea8a67d05a2.png",
     "static/media/chort h300.png": "/static/media/chort h300.77cc1e18232e58240e2c.png",
     "static/media/scriber h300.png": "/static/media/scriber h300.8f2c3f704c29899eef41.png",
-    "static/media/Unda'aratel h300.png": "/static/media/Unda'aratel h300.d7748df666f2701d593b.png",
+    "static/media/Undaaratel h300.png": "/static/media/Undaaratel h300.d7748df666f2701d593b.png",
+    "static/media/logo.png": "/static/media/logo.d3442f931a3d9e6dca9e.png",
     "static/media/daeruth.png": "/static/media/daeruth.eca4aef2efb90fafe1fc.png",
+    "static/media/Kristina 150.jpg": "/static/media/Kristina 150.fa61fde803148f23684b.jpg",
+    "static/media/Placeholder 150.jpg": "/static/media/Placeholder 150.413cd756a1a8a25fd510.jpg",
+    "static/media/Morgana 150.jpg": "/static/media/Morgana 150.b8483d8a0b29b0584dcb.jpg",
+    "static/media/Kahira 150.jpg": "/static/media/Kahira 150.84ca745f4419ad0058a7.jpg",
     "static/media/bindle.svg": "/static/media/bindle.acadd971afa37dd695d2cd58e713390d.svg",
     "static/media/lamellar.svg": "/static/media/lamellar.78634c06526616836061d38544f81fc2.svg",
     "static/media/swap-bag.svg": "/static/media/swap-bag.a60ad493f3571ec007d855cb384131bc.svg",
@@ -23,11 +34,11 @@
     "static/media/axe-sword.svg": "/static/media/axe-sword.478846d5a5eeaa122b8a6ac39551d739.svg",
     "static/media/diamond-ring.svg": "/static/media/diamond-ring.dc994c5c3f35b96ae9a599097ea3efd0.svg",
     "index.html": "/index.html",
-    "main.93dbee67.css.map": "/static/css/main.93dbee67.css.map",
-    "main.fa9e0d15.js.map": "/static/js/main.fa9e0d15.js.map"
+    "main.64a1d918.css.map": "/static/css/main.64a1d918.css.map",
+    "main.37df4a9a.js.map": "/static/js/main.37df4a9a.js.map"
   },
   "entrypoints": [
-    "static/css/main.93dbee67.css",
-    "static/js/main.fa9e0d15.js"
+    "static/css/main.64a1d918.css",
+    "static/js/main.37df4a9a.js"
   ]
 }
