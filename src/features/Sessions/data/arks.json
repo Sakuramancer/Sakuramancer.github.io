@@ -1,0 +1,31 @@
+{
+  "kie_ark1": {
+    "id": "kie_ark1",
+    "name": "Плохой погоды не бывает",
+    "color": "#cfe2f3"
+  },
+  "kie_ark2": {
+    "id": "kie_ark2",
+    "name": "Сумерки миров",
+    "color": "#d9d2e9"
+  },
+  "kie_ark3": {
+    "id": "kie_ark3",
+    "name": "Сказки на озерном берегу",
+    "color": "#d9ead3"
+  },
+  "kie_ark4": {
+    "id": "kie_ark4",
+    "name": "Коронованный шмель",
+    "color": "#fff2cc"
+  },
+  "kie_ark5": {
+    "id": "kie_ark5",
+    "name": "Властители Кровавого леса",
+    "color": "#ea9999"
+  },
+  "kie_o1": {
+    "id": "kie_o1",
+    "name": "КиЭ: Ваншоты"
+  }
+}

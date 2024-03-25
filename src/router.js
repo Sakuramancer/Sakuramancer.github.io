@@ -10,6 +10,7 @@ import {
 } from "./features/Characters";
 import { InitiativePage, initiativesRoutes } from "./features/Initiative";
 import { commentsRoutes } from "./features/Comments";
+import { sessionsRoutes } from "./features/Sessions";
 import { changeTokenRoutes } from "./features/Token";
 import { magicItemsRoutes } from "./features/MagicItems";
 import { monstersRoutes } from "./features/Monsters";
@@ -41,6 +42,7 @@ export const router = createBrowserRouter([
           ...changeTokenRoutes,
           ...charactersRoutes,
           ...monstersRoutes,
+          ...sessionsRoutes,
           ...magicItemsRoutes,
           ...initiativesRoutes,
           ...commentsRoutes,
