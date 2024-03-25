@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import MagicItem from "./MagicItem";
 import { itemIconAssets } from "../assets";
@@ -7,7 +7,7 @@ import { itemIconAssets } from "../assets";
 import classes from "./MagicItemsTable.module.css";
 
 const MagicItemsTable = ({ items }) => {
-  const { search } = useLocation();
+  const { pathname, search } = useLocation();
   const query = useMemo(() => new URLSearchParams(search), [search]);
   const itemId = query.get("item");
 
@@ -15,7 +15,13 @@ const MagicItemsTable = ({ items }) => {
     <>
       <section className={classes.main}>
         <div className={classes.header}>
-          <h1>Магические предметы</h1>
+          <h1 className={classes.mobile}>Предметы</h1>
+          <h1 className={classes.desktop}>Магические предметы</h1>
+          {pathname !== "/kie/magicItems" && (
+            <div className={classes.allItems}>
+              <Link to="/kie/magicItems">Все предметы</Link>
+            </div>
+          )}
           {/* <div className={classes.search}>
         <form><input></input></form>
         </div> */}

@@ -9,10 +9,20 @@
 }
 
 .main h1 {
-  display: inline-block;
-  margin: 16px;
-  margin-top: 0;
+  margin: 8px 0;
+  text-indent: 1.5rem;
   font-size: 1.6rem;
+}
+
+.allItems {
+  display: inline-block;
+  text-align: right;
+  width: calc(100% - 150px);
+}
+
+.allItems a {
+  text-decoration: underline;
+  color: black;
 }
 
 .search {
@@ -91,8 +101,26 @@
   text-decoration: underline;
 }
 
+.mobile {
+  display: inline-block;
+}
+
+.desktop {
+  display: none;
+}
+
 @media (min-width: 30rem) {
   .slide {
     max-width: 218px;
+  }
+  .desktop {
+    display: inline-block;
+  }
+  .mobile {
+    display: none;
+  }
+
+  .allItems {
+    width: calc(100% - 290px);
   }
 }

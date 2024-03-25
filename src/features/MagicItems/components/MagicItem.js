@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { Error } from "../../../components/UI";
 import { sheets } from "../../../features/Characters";
@@ -7,8 +7,6 @@ import magicItems from "../data/magicItems.json";
 import classes from "./MagicItem.module.css";
 
 const MagicItem = ({ itemId }) => {
-  const { pathname } = useLocation();
-
   if (magicItems[itemId].access === "none") return;
   const item = magicItems[itemId];
   const asset = magicItemsAssets[itemId];
@@ -19,33 +17,26 @@ const MagicItem = ({ itemId }) => {
 
   if (item === undefined) return <Error />;
   return (
-    <>
-      <section id="content" className={classes.main}>
-        {asset && <img src={asset.path} alt={asset.alt} />}
-        <h1 className={classes.title}>{item.title}</h1>
-        <em className={classes.category}>
-          {`${item.type}, ${item.rarity}${
-            item.attunement ? " (требуется настройка)" : ""
-          }`}
-        </em>
-        {item.state?.owner && (
-          <div className={classes.owner}>
-            {"Владелец: "}
-            <Link to={`/kie/characters/${item.state.owner}`}>{ownerName}</Link>
-          </div>
-        )}
-        <div className={classes.description}>
-          {item.description.map((line, index) => (
-            <ReactMarkdown key={index}>{line}</ReactMarkdown>
-          ))}
+    <section id="content" className={classes.main}>
+      {asset && <img src={asset.path} alt={asset.alt} />}
+      <h1 className={classes.title}>{item.title}</h1>
+      <em className={classes.category}>
+        {`${item.type}, ${item.rarity}${
+          item.attunement ? " (требуется настройка)" : ""
+        }`}
+      </em>
+      {item.state?.owner && (
+        <div className={classes.owner}>
+          {"Владелец: "}
+          <Link to={`/kie/characters/${item.state.owner}`}>{ownerName}</Link>
         </div>
-      </section>
-      {pathname !== "/kie/magicItems" && (
-        <Link to="/kie/magicItems" className={classes.link}>
-          Все предметы
-        </Link>
       )}
-    </>
+      <div className={classes.description}>
+        {item.description.map((line, index) => (
+          <ReactMarkdown key={index}>{line}</ReactMarkdown>
+        ))}
+      </div>
+    </section>
   );
 };
 
